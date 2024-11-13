@@ -4,12 +4,12 @@
         class="mt-20"
     >
         <template #header>
-            <div class="flex items-center justify-center gap-4">
+            <div class="flex items-center justify-center gap-4 text-indigo-400">
                 <UIcon
                     name="fa:user-secret"
                     size="1.2rem"
                 />
-                <span>Sobre mim</span>
+                <h2 class="font-bold">Sobre mim</h2>
             </div>
         </template>
         <div class="flex justify-center items-center">

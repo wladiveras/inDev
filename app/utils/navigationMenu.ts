@@ -8,7 +8,8 @@ export const navigationMenu = ref<NavigationMenuItem[][]>([
         },
         {
             label: 'Sobre',
-            icon: 'i-lucide-book-open'
+            icon: 'i-lucide-book-open',
+            to: '#about'
         },
         {
             label: 'Experiência',
