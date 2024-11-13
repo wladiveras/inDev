@@ -167,14 +167,6 @@
 </script>
 
 <style scoped>
-    body {
-        background-color: #222;
-
-        color: #ccc;
-
-        font-family: monospace;
-    }
-
     ul {
         list-style-type: none;
 
