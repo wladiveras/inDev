@@ -83,8 +83,4 @@ useSeoMeta({
   --ui-border-accented: var(--ui-color-neutral-700);
   --ui-border-inverted: var(--color-white);
 }
-
-body {
-  @apply antialiased text-[var(--ui-text)] bg-[var(--ui-bg)];
-}
 </style>

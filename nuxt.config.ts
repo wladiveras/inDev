@@ -9,17 +9,6 @@ export default defineNuxtConfig({
   ssr: true,
   pages: true,
 
-  css: ["@nuxt/ui/dist/style.css"],
-
-  postcss: {
-    plugins: {
-      "postcss-import": {},
-      "tailwindcss/nesting": {},
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  },
-
   hub: {
     remote: true,
     ai: false,
