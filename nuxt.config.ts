@@ -8,13 +8,13 @@ export default defineNuxtConfig({
     remote: true,
     ai: false,
     blob: true,
-    database: true
-  }
-  
+    database: true,
+  },
+
   nitro: {
     experimental: {
-      openAPI: true
-    }
+      openAPI: true,
+    },
   },
 
   colorMode: {
