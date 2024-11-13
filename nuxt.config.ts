@@ -11,12 +11,23 @@ export default defineNuxtConfig({
     database: true,
   },
 
+  preset: "cloudflare-pages",
+  serveStatic: true,
+  ssr: true,
+
   nitro: {
     experimental: {
       openAPI: true,
     },
   },
 
+  storage: {
+    fs: false,
+  },
+
+  cloudflare: {
+    persistAssetsToStorage: false,
+  },
   colorMode: {
     preference: "dark",
   },

@@ -5,5 +5,12 @@
   "editor.quickSuggestions": {
     "strings": "on"
   },
-  "cSpell.words": ["nuxtjs", "pinia", "rabbitmq", "slideover", "Slideover"]
+  "cSpell.words": [
+    "cloudflare",
+    "nuxtjs",
+    "pinia",
+    "rabbitmq",
+    "slideover",
+    "Slideover"
+  ]
 }
