@@ -9,6 +9,8 @@ export default defineNuxtConfig({
   ssr: true,
   pages: true,
 
+  css: ["~/assets/css/main.css"],
+
   hub: {
     remote: true,
     ai: false,
