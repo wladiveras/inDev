@@ -17,6 +17,7 @@
     "@nuxthub/core": "^0.8.7",
     "@nuxtjs/i18n": "^9.0.0",
     "@pinia/nuxt": "^0.7.0",
+    "@unhead/vue": "^1.11.11",
     "nuxt": "^3.14.159",
     "tailwindcss": "^4.0.0-alpha.33",
     "vue": "latest",

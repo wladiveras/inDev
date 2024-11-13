@@ -2,18 +2,34 @@
 export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@pinia/nuxt", "@nuxthub/core"],
 
-  srcDir: "app/",
+  srcDir: "app",
   rootDir: ".",
   ssr: true,
   pages: true,
 
   css: ["~/assets/css/main.css"],
 
+  experimental: {
+    headNext: true,
+    inlineSSRStyles: false,
+  },
+
+  app: {
+    head: {
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1",
+    },
+  },
+
   hub: {
     remote: false,
     ai: false,
     blob: true,
     database: true,
+  },
+
+  build: {
+    transpile: ["@unhead/vue"],
   },
 
   nitro: {
@@ -23,7 +39,7 @@ export default defineNuxtConfig({
     },
     prerender: {
       crawlLinks: true,
-      routes: ["/", "/404"],
+      routes: ["/"],
     },
   },
 
