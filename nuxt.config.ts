@@ -2,40 +2,33 @@
 export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@pinia/nuxt", "@nuxthub/core"],
 
-  baseURL: "/",
   srcDir: "app/",
-  preset: "cloudflare-pages",
-  serveStatic: true,
+  rootDir: ".",
   ssr: true,
   pages: true,
 
   css: ["~/assets/css/main.css"],
 
   hub: {
-    remote: true,
+    remote: false,
     ai: false,
     blob: true,
     database: true,
   },
 
-  router: {
-    options: {
-      strict: false,
-    },
-  },
-
   nitro: {
+    preset: "cloudflare-pages",
     experimental: {
       openAPI: true,
+    },
+    prerender: {
+      crawlLinks: true,
+      routes: ["/", "/404"],
     },
   },
 
   storage: {
     fs: false,
-  },
-
-  cloudflare: {
-    persistAssetsToStorage: false,
   },
 
   colorMode: {
