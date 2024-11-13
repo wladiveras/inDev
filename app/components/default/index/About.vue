@@ -49,11 +49,11 @@
                     </p>
                 </section>
 
-                <ul class="flex flex-wrap">
+                <ul class="technology-ul flex flex-wrap">
                     <li
                         v-for="tech in technologies"
                         :key="tech.name"
-                        class="w-1/2 md:w-1/3 lg:w-1/4 p-2 flex items-center gap-2"
+                        class="technology-list w-1/2 md:w-1/3 lg:w-1/4 p-2 flex items-center gap-2"
                     >
                         <UIcon
                             :name="tech.icon"
@@ -167,7 +167,7 @@
 </script>
 
 <style scoped>
-    ul {
+    technology-ul {
         list-style-type: none;
 
         padding: 0;
@@ -175,11 +175,11 @@
         margin: 0;
     }
 
-    li {
+    technology-list {
         margin-bottom: 10px;
     }
 
-    li::before {
+    technology-list::before {
         content: '▶';
 
         color: #49e79c;
