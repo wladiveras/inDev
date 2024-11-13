@@ -11,6 +11,7 @@
     "pinia",
     "rabbitmq",
     "slideover",
-    "Slideover"
+    "Slideover",
+    "unhead"
   ]
 }

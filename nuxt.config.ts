@@ -15,10 +15,16 @@ export default defineNuxtConfig({
   },
 
   app: {
+    baseURL: "/",
+    buildAssetsDir: "/_nuxt/",
     head: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
     },
+  },
+
+  generate: {
+    fallback: true,
   },
 
   hub: {
@@ -38,10 +44,12 @@ export default defineNuxtConfig({
       openAPI: true,
     },
     prerender: {
-      crawlLinks: true,
-      routes: ["/"],
+      crawlLinks: false,
+      routes: ['/'],
+      ignore: [
+        '/api/**'
+      ]
     },
-  },
 
   storage: {
     fs: false,
