@@ -4,14 +4,11 @@ export const navigationMenu = ref<NavigationMenuItem[][]>([
     [
         {
             slot: 'logo',
-            label: 'logo',
-            to: '/'
+            label: 'logo'
         },
         {
             label: 'Sobre',
-            icon: 'i-lucide-book-open',
-            active: false,
-            to: '#about'
+            icon: 'i-lucide-book-open'
         },
         {
             label: 'Experiência',
@@ -20,7 +17,6 @@ export const navigationMenu = ref<NavigationMenuItem[][]>([
         {
             label: 'Projetos',
             icon: 'i-lucide-book-open',
-
             children: [
                 {
                     label: 'Projeto 1',

@@ -50,59 +50,16 @@
                 </section>
 
                 <ul class="flex flex-wrap">
-                    <li class="w-1/2 md:w-1/3 p-2 flex items-center gap-2">
-                        <UIcon name="i-logos-javascript" />
-                        JavaScript (ES6+)
-                    </li>
-                    <li class="w-1/2 md:w-1/3 p-2 flex items-center gap-2">
-                        <UIcon name="i-logos-typescript-icon" />
-                        typescript
-                    </li>
-                    <li class="w-1/2 md:w-1/3 p-2 flex items-center gap-2">
-                        <UIcon name="logos:vue" />
-                        Vue.js
-                    </li>
-                    <li class="w-1/2 md:w-1/3 p-2 flex items-center gap-2">
-                        <UIcon name="i-logos-nuxt-icon" />
-                        Nuxt
-                    </li>
-                    <li class="w-1/2 md:w-1/3 p-2 flex items-center gap-2">
-                        <UIcon name="i-logos-nodejs-icon" />
-                        Node.js
-                    </li>
-                    <li class="w-1/2 md:w-1/3 p-2 flex items-center gap-2">
+                    <li
+                        v-for="tech in technologies"
+                        :key="tech.name"
+                        class="w-1/2 md:w-1/3 lg:w-1/4 p-2 flex items-center gap-2"
+                    >
                         <UIcon
-                            name="logos:cloudflare-icon"
-                            size="0.5rem"
+                            :name="tech.icon"
+                            :size="tech.size"
                         />
-                        Cloudflare
-                    </li>
-                    <li class="w-1/2 md:w-1/3 p-2 flex items-center gap-2">
-                        <UIcon
-                            name="i-logos-php"
-                            size="0.5rem"
-                        />
-                        PHP
-                    </li>
-                    <li class="w-1/2 md:w-1/3 p-2 flex items-center gap-2">
-                        <UIcon name="i-logos-laravel" />
-                        Laravel
-                    </li>
-                    <li class="w-1/2 md:w-1/3 p-2 flex items-center gap-2">
-                        <UIcon name="i-logos-wordpress-icon" />
-                        WordPress
-                    </li>
-                    <li class="w-1/2 md:w-1/3 p-2 flex items-center gap-2">
-                        <UIcon name="i-logos-mysql-icon" />
-                        Mysql
-                    </li>
-                    <li class="w-1/2 md:w-1/3 p-2 flex items-center gap-2">
-                        <UIcon name="devicon:redis" />
-                        Redis
-                    </li>
-                    <li class="w-1/2 md:w-1/3 p-2 flex items-center gap-2">
-                        <UIcon name="i-logos-rabbitmq-icon" />
-                        RabbitMQ
+                        {{ tech.name }}
                     </li>
                 </ul>
             </div>
@@ -135,6 +92,69 @@
     useSeoMeta({
         title: 'Desenvolvedor Fullstack'
     })
+
+    const technologies = [
+        {
+            name: 'JavaScript (ES6+)',
+            icon: 'i-logos-javascript',
+            size: '1rem'
+        },
+        {
+            name: 'TypeScript',
+            icon: 'i-logos-typescript-icon',
+            size: ''
+        },
+        {
+            name: 'Vue.js',
+            icon: 'i-logos-vue',
+            size: '1rem'
+        },
+        {
+            name: 'Nuxt',
+            icon: 'i-logos-nuxt-icon',
+            size: '1rem'
+        },
+        {
+            name: 'Node.js',
+            icon: 'i-logos-nodejs-icon',
+            size: '1rem'
+        },
+        {
+            name: 'Cloudflare',
+            icon: 'i-logos-cloudflare-icon',
+            size: '0.5rem'
+        },
+        {
+            name: 'PHP',
+            icon: 'i-logos-php',
+            size: '0.5rem'
+        },
+        {
+            name: 'Laravel',
+            icon: 'i-logos-laravel',
+            size: '1rem'
+        },
+        {
+            name: 'WordPress',
+            icon: 'i-logos-wordpress-icon',
+            size: '1rem'
+        },
+        {
+            name: 'MySQL',
+            icon: 'i-logos-mysql',
+            size: '1rem'
+        },
+        {
+            name: 'Redis',
+            icon: 'i-logos-redis',
+            size: '1rem'
+        },
+        {
+            name: 'RabbitMQ',
+            icon: 'i-logos-rabbitmq-icon',
+            size: '1rem'
+        }
+    ]
 
     const personalPhotos = [
         'https://picsum.photos/640/640?random=1',
