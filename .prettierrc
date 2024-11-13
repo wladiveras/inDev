@@ -1,0 +1,10 @@
+{
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "none",
+    "vueIndentScriptAndStyle": true,
+    "singleAttributePerLine": true,
+    "tabWidth": 4,
+    "useTabs": false,
+    "operatorLinebreak": "before"
+}

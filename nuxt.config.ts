@@ -1,58 +1,54 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import wasm from "vite-plugin-wasm"
-
 export default defineNuxtConfig({
-  modules: ["@nuxt/ui", "@pinia/nuxt", "@nuxthub/core"],
+    modules: ['@nuxt/ui', '@pinia/nuxt', '@nuxt/eslint', '@nuxthub/core'],
 
-  ssr: true,
-  pages: true,
+    ssr: true,
 
-  css: ["~/assets/css/main.css"],
-
-  hub: {
-    remote: false,
-    ai: false,
-    blob: true,
-    database: true,
-  },
-
-  nitro: {
-    prerender: {
-      routes: ["/"],
-      crawlLinks: true,
+    hub: {
+        remote: false,
+        ai: false,
+        blob: true,
+        database: true
     },
-  },
 
-  vite: {
-    plugins: [wasm()],
-    css: {
-      preprocessorOptions: {
-        css: {
-          additionalData: "",
-        },
-      },
+    typescript: {
+        strict: false
     },
-  },
 
-  eslint: {
-    config: {
-      stylistic: {
-        commaDangle: "never",
-        braceStyle: "1tbs",
-      },
+    nitro: {
+        prerender: {
+            routes: ['/', '/docs'],
+            crawlLinks: true
+        }
     },
-  },
 
-  devtools: {
-    enabled: true,
-    timeline: {
-      enabled: true,
+    routeRules: {
+        '/': { prerender: true }
     },
-  },
 
-  colorMode: {
-    preference: "dark",
-  },
+    future: {
+        compatibilityVersion: 4
+    },
 
-  compatibilityDate: "2024-04-03",
+    eslint: {
+        config: {
+            stylistic: {
+                commaDangle: 'never',
+                braceStyle: '1tbs'
+            }
+        }
+    },
+
+    devtools: {
+        enabled: true,
+        timeline: {
+            enabled: true
+        }
+    },
+
+    colorMode: {
+        preference: 'dark'
+    },
+
+    compatibilityDate: '2024-04-03'
 })
