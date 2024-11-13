@@ -23,6 +23,17 @@ export default defineNuxtConfig({
     },
   },
 
+  vite: {
+    plugins: [wasm()],
+    css: {
+      preprocessorOptions: {
+        css: {
+          additionalData: "",
+        },
+      },
+    },
+  },
+
   eslint: {
     config: {
       stylistic: {
@@ -41,10 +52,6 @@ export default defineNuxtConfig({
 
   colorMode: {
     preference: "dark",
-  },
-
-  vite: {
-    plugins: [wasm()],
   },
 
   compatibilityDate: "2024-04-03",
