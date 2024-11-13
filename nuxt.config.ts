@@ -2,7 +2,12 @@
 export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@pinia/nuxt", "@nuxthub/core"],
 
+  baseURL: "/",
   srcDir: "app/",
+  preset: "cloudflare-pages",
+  serveStatic: true,
+  ssr: true,
+  pages: true,
 
   hub: {
     remote: true,
@@ -11,9 +16,11 @@ export default defineNuxtConfig({
     database: true,
   },
 
-  preset: "cloudflare-pages",
-  serveStatic: true,
-  ssr: true,
+  router: {
+    options: {
+      strict: false,
+    },
+  },
 
   nitro: {
     experimental: {
@@ -28,6 +35,7 @@ export default defineNuxtConfig({
   cloudflare: {
     persistAssetsToStorage: false,
   },
+
   colorMode: {
     preference: "dark",
   },
