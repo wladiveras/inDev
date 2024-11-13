@@ -1,6 +1,7 @@
 <script setup lang="ts">
-const colorMode = useColorMode()
+import favicon from "~/assets/images/favicon.svg"
 
+const colorMode = useColorMode()
 const color = computed(() => (colorMode.value === "dark" ? "#111827" : "white"))
 
 useHead({
@@ -9,14 +10,14 @@ useHead({
     { name: "viewport", content: "width=device-width, initial-scale=1" },
     { key: "theme-color", name: "theme-color", content: color },
   ],
-  link: [{ rel: "icon", href: "/favicon.ico" }],
+  link: [{ rel: "icon", type: "image/svg+xml", href: favicon }],
   htmlAttrs: {
     lang: "en",
   },
 })
 
 useSeoMeta({
-  titleTemplate: "%s - Sinta-se acompanhado",
+  titleTemplate: "Wladi Veras  • %s",
   ogImage: "https://saas-template.nuxt.dev/social-card.png",
   twitterImage: "https://saas-template.nuxt.dev/social-card.png",
   twitterCard: "summary_large_image",
@@ -40,11 +41,13 @@ useSeoMeta({
 @import "@nuxt/ui";
 
 :root {
-  --font-family-sans: "Montserrat", sans-serif;
+  font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  --font-family-sans: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+
   --breakpoint-3xl: 1920px;
 
   --ui-primary: var(--ui-color-primary-700);
-  --ui-radius: var(--radius-xl);
+  --ui-radius: var(--radius-md);
 
   --ui-text-dimmed: var(--ui-color-neutral-400);
   --ui-text-muted: var(--ui-color-neutral-500);

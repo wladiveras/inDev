@@ -1,8 +1,8 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: "rose",
-      neutral: "zinc",
+      primary: "indigo",
+      neutral: "slate",
     },
     theme: {
       transitions: "out-in",

@@ -1,71 +1,32 @@
 <template>
-  <section class="max-w-[40rem] mt-20">
-    <h2 class="text-5xl font-semibold">
-      A <span class="text-rose-400">maior plataforma</span> de acompanhantes do
-      Brasil
-    </h2>
-    <p class="text-2xl max-w-[40rem] mt-5">
-      Fatal Model é <b>respeito</b>, <b>segurança</b> e <b>dignidade</b>.
-    </p>
-  </section>
+  <section class="hero max-w-[62rem] mt-50" aria-labelledby="main-heading">
+    <span class="text-indigo-500">Olá, eu me chamo</span>
 
-  <section></section>
+    <h1 id="main-heading" class="text-5xl font-bold text-slate-300 mt-2 mb-2">
+      Wladi <span class="underline decoration-indigo-500">Veras</span>
+    </h1>
+
+    <h2
+      id="main-heading"
+      class="text-5xl font-bold text-current text-slate-500"
+    >
+      Crio soluções para a web.
+    </h2>
+
+    <div class="text-1xl gap-2 max-w-[40rem] mt-5 text-slate-300 mt-10">
+      <p>
+        Sou especializado em criar soluções digitais robustas e de alta
+        qualidade. Com mais de 8 anos de experiência, trabalhei em projetos como
+        o chatbot e o gateway de pagamento, focando sempre na segurança,
+        escalabilidade e na entrega de produtos que atendem às necessidades dos
+        usuários.
+      </p>
+    </div>
+  </section>
 
   <UCard class="mt-20">
     <template #header>
-      <div class="space-y-4 space-x-4 text-center">
-        <UModal title="Modal with title">
-          <UButton
-            label="Open"
-            color="neutral"
-            variant="subtle"
-            trailing-icon="i-lucide-chevron-up"
-          />
-
-          <template #body>
-            <Placeholder class="h-48" />
-          </template>
-        </UModal>
-        <UDrawer direction="left">
-          <UButton
-            label="Open"
-            color="neutral"
-            variant="subtle"
-            trailing-icon="i-lucide-chevron-up"
-          />
-
-          <template #content>
-            <Placeholder class="w-96 m-4" />
-          </template>
-        </UDrawer>
-
-        <UDrawer direction="right">
-          <UButton
-            label="Open"
-            color="neutral"
-            variant="subtle"
-            trailing-icon="i-lucide-chevron-up"
-          />
-
-          <template #content>
-            <Placeholder class="w-96 m-4" />
-          </template>
-        </UDrawer>
-
-        <UDrawer should-scale-background>
-          <UButton
-            class="mt-3"
-            label="Open"
-            color="neutral"
-            variant="subtle"
-            trailing-icon="i-lucide-chevron-up"
-          />
-
-          <template #content>
-            <Placeholder class="h-48 m-4" />
-          </template>
-        </UDrawer>
-      </div>
+      <div class="space-y-4 space-x-4 text-center">xx</div>
     </template>
     <div class="flex justify-center items-center">
       <div class="flex flex-col items-center gap-4">
@@ -117,7 +78,7 @@ definePageMeta({
 })
 
 useSeoMeta({
-  title: "Top Models",
+  title: "Desenvolvedor Fullstack",
 })
 
 const schema = z.object({

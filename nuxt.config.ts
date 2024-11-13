@@ -1,12 +1,26 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxt/ui", "@pinia/nuxt"],
+  modules: ["@nuxt/ui", "@pinia/nuxt", "@nuxthub/core"],
+
   srcDir: "app/",
 
-  colorMode: {
-    preference: "light",
+  hub: {
+    remote: true,
+    ai: false,
+    blob: true,
+    database: true
+  }
+  
+  nitro: {
+    experimental: {
+      openAPI: true
+    }
   },
-  devtools: { enabled: true },
 
+  colorMode: {
+    preference: "dark",
+  },
+
+  devtools: { enabled: true },
   compatibilityDate: "2024-04-03",
 })
