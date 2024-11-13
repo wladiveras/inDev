@@ -10,6 +10,7 @@ export default withNuxt({
         '@stylistic/indent-binary-ops': 'off',
         'stylistic/indent-binary-ops': 'off',
         'stylistic/brace-style': 'off',
-        'vue/singleline-html-element-content-newline': 'off'
+        'vue/singleline-html-element-content-newline': 'off',
+        'vue/html-self-closing': 'off'
     }
 })

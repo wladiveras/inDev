@@ -363,7 +363,8 @@
         color: '#000000',
         opacity: 1,
         preserveAspectRatio: 'xMidYMid meet',
-        className: 'cursor-pointer hover:opacity-75 logo-animate'
+        className:
+            'cursor-pointer hover:opacity-75 animate__animated animate__zoomInDown'
     })
 </script>
 

@@ -15,6 +15,7 @@
     "editor.formatOnSave": true,
     "cSpell.words": [
         "cloudflare",
+        "devicon",
         "linebreak",
         "lintfix",
         "nuxthub",
@@ -23,6 +24,7 @@
         "rabbitmq",
         "slideover",
         "Slideover",
-        "unhead"
+        "unhead",
+        "wordpress"
     ]
 }

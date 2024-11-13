@@ -17,7 +17,7 @@
                     <div
                         class="flex align-center justify-center items-center min-h-full"
                     >
-                        <Logo
+                        <MainLogo
                             width="50"
                             height="50"
                             color="#4f46e5"
@@ -50,7 +50,7 @@
                 @click="open"
             />
             <div class="flex-grow flex justify-center">
-                <Logo
+                <MainLogo
                     width="50"
                     height="50"
                     color="#4f46e5"
@@ -63,6 +63,7 @@
 
 <script lang="ts" setup>
     import { ModalNavigationMenu } from '#components'
+
     const slideover = useSlideover()
     const header = ref(null)
     const isHeaderHidden = ref(false)
