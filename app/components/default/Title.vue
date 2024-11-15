@@ -5,8 +5,20 @@
             :class="{ 'pl-4': !center }"
         >
             <MotionGroup
-                preset="slideVisibleLeft"
-                :duration="600"
+                :initial="{
+                    x: -100,
+                    opacity: 0
+                }"
+                :visible-once="{
+                    x: 0,
+                    opacity: 1,
+                    transition: {
+                        delay: 0,
+                        duration: 600,
+                        type: 'keyframes',
+                        ease: 'easeIn'
+                    }
+                }"
             >
                 <h2
                     :class="{ 'text-center w-full': center }"

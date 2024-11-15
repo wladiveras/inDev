@@ -14,10 +14,20 @@
         >
             <article class="flex flex-col gap-6">
                 <MotionGroup
-                    preset="slideVisibleLeft"
-                    :duration="600"
-                    :delay="100"
-                    :variants="{ visible: { once: true } }"
+                    :initial="{
+                        x: -100,
+                        opacity: 0
+                    }"
+                    :visible-once="{
+                        x: 0,
+                        opacity: 1,
+                        transition: {
+                            delay: 300,
+                            duration: 1000,
+                            type: 'keyframes',
+                            ease: 'easeIn'
+                        }
+                    }"
                 >
                     <p>
                         Olá! Meu nome é Wladi, e minha paixão é criar soluções
@@ -58,10 +68,20 @@
 
             <ul class="technology-ul flex flex-wrap">
                 <MotionGroup
-                    preset="slideVisibleLeft"
-                    :duration="1000"
-                    :delay="200"
-                    :enter="{ opacity: 1, y: 0, scale: 1 }"
+                    :initial="{
+                        x: -100,
+                        opacity: 0
+                    }"
+                    :visible-once="{
+                        x: 0,
+                        opacity: 1,
+                        transition: {
+                            delay: 600,
+                            duration: 1000,
+                            type: 'keyframes',
+                            ease: 'easeIn'
+                        }
+                    }"
                 >
                     <li
                         v-for="tech in technologies"

@@ -22,6 +22,7 @@
                             height="50"
                             color="#4f46e5"
                             alt="Logo"
+                            class="ml-10"
                         />
                     </div>
                 </template>
@@ -31,7 +32,7 @@
                         icon="mdi:resume"
                         variant="outline"
                         size="xl"
-                        class="text-indigo-500 border-1 border-indigo-500/100 cursor-pointer animate__fadeInTopLeft"
+                        class="text-indigo-500 border-1 border-indigo-500/100 cursor-pointer mr-10"
                     >
                         Currículo
                     </UButton>
