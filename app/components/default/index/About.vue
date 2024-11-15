@@ -17,6 +17,7 @@
                     preset="slideVisibleLeft"
                     :duration="600"
                     :delay="100"
+                    :variants="{ visible: { once: true } }"
                 >
                     <p>
                         Olá! Meu nome é Wladi, e minha paixão é criar soluções
@@ -47,7 +48,7 @@
                         tragam valor para o dia a dia dos nossos clientes.
                     </p>
                     <p
-                        class="mt-10 border-l-4 border-indigo-500 pl-4 font-normal"
+                        class="mt-10 mb-10 border-l-4 border-indigo-500 pl-4 font-normal"
                     >
                         aqui estão algumas tecnologias com as quais tenho
                         trabalhado recentemente.
@@ -60,6 +61,7 @@
                     preset="slideVisibleLeft"
                     :duration="1000"
                     :delay="200"
+                    :enter="{ opacity: 1, y: 0, scale: 1 }"
                 >
                     <li
                         v-for="tech in technologies"
@@ -150,15 +152,6 @@
             icon: 'i-logos-rabbitmq-icon',
             size: '1rem'
         }
-    ]
-
-    const personalPhotos = [
-        'https://picsum.photos/640/640?random=1',
-        'https://picsum.photos/640/640?random=2',
-        'https://picsum.photos/640/640?random=3',
-        'https://picsum.photos/640/640?random=4',
-        'https://picsum.photos/640/640?random=5',
-        'https://picsum.photos/640/640?random=6'
     ]
 </script>
 

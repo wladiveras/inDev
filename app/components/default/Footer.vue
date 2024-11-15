@@ -1,7 +1,7 @@
 <template>
     <section
         id="footer"
-        class="mt-40 mb-10 text-center"
+        class="mt-40 mb-20 text-center"
     >
         <section>
             <a
@@ -9,7 +9,9 @@
                 type="_blank"
             >
                 <p>Planejado e Desenvolvido por wladi veras</p>
-                <div>
+                <div
+                    class="flex items-center justify-between m-auto max-w-[10rem] mt-2"
+                >
                     <span><UIcon name="line-md:star-twotone" /> 9.548</span>
 
                     <span><UIcon name="line-md:github-loop" />3.223</span>
