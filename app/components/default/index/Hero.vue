@@ -10,11 +10,23 @@
             <section
                 class="w-full md:w-1/1 container px-4 sm:px-6 lg:px-8 m-auto flex justify-center items-center"
             >
-                <section>
-                    <MotionGroup
-                        preset="slideVisibleRight"
-                        :duration="600"
-                    >
+                <MotionGroup
+                    :initial="{
+                        x: 100,
+                        opacity: 0
+                    }"
+                    :visible-once="{
+                        x: 0,
+                        opacity: 1,
+                        transition: {
+                            delay: 300,
+                            duration: 600,
+                            type: 'keyframes',
+                            ease: 'fadeIn'
+                        }
+                    }"
+                >
+                    <section>
                         <span class="text-indigo-500 text-xl md:text-2xl">
                             Olá, eu me chamo
                         </span>
@@ -49,14 +61,26 @@
                                 usuários.
                             </p>
                         </section>
-                    </MotionGroup>
-                </section>
+                    </section>
+                </MotionGroup>
             </section>
 
             <section class="w-full md:w-1/2">
                 <MotionGroup
-                    preset="slideVisibleLeft"
-                    :duration="600"
+                    :initial="{
+                        x: -100,
+                        opacity: 0
+                    }"
+                    :visible-once="{
+                        x: 0,
+                        opacity: 1,
+                        transition: {
+                            delay: 300,
+                            duration: 600,
+                            type: 'keyframes',
+                            ease: 'fadeIn'
+                        }
+                    }"
                 >
                     <div class="relative group">
                         <div

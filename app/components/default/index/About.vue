@@ -12,23 +12,23 @@
         <section
             class="flex flex-col gap-4 font-thin justify-center items-center px-5"
         >
-            <article class="flex flex-col gap-6">
-                <MotionGroup
-                    :initial="{
-                        x: -100,
-                        opacity: 0
-                    }"
-                    :visible-once="{
-                        x: 0,
-                        opacity: 1,
-                        transition: {
-                            delay: 300,
-                            duration: 1000,
-                            type: 'keyframes',
-                            ease: 'easeIn'
-                        }
-                    }"
-                >
+            <MotionGroup
+                :initial="{
+                    x: -100,
+                    opacity: 0
+                }"
+                :visible-once="{
+                    x: 0,
+                    opacity: 1,
+                    transition: {
+                        delay: 300,
+                        duration: 600,
+                        type: 'keyframes',
+                        ease: 'easeIn'
+                    }
+                }"
+            >
+                <article class="flex flex-col gap-6">
                     <p>
                         Olá! Meu nome é Wladi, e minha paixão é criar soluções
                         digitais inovadoras. Minha trajetória no desenvolvimento
@@ -63,8 +63,8 @@
                         aqui estão algumas tecnologias com as quais tenho
                         trabalhado recentemente.
                     </p>
-                </MotionGroup>
-            </article>
+                </article>
+            </MotionGroup>
 
             <ul class="technology-ul flex flex-wrap">
                 <MotionGroup
