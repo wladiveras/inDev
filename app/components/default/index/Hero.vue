@@ -1,5 +1,6 @@
 <template>
     <section
+        id="hero-home"
         class="hero max-w-[62rem] mt-30 md:mt-60 h-screen mx-auto w-full px-4 md:px-6"
         aria-labelledby="main-heading"
     >
@@ -65,7 +66,7 @@
                             class="absolute -inset-1 bg-gradient-to-r from-primary to-indigo-500 rounded-full blur-xl opacity-75 group-hover:opacity-100 transition duration-1000"
                         ></div>
                         <div
-                            class="relative mt-20 md:mt-0 animate__animated animate__bounceIn"
+                            class="relative mt-20 md:mt-0 animate__animated animate__bounceIn float"
                         >
                             <img
                                 src="/images/me-ia.png"

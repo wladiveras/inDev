@@ -6,7 +6,8 @@ export default defineNuxtConfig({
         '@nuxt/eslint',
         '@nuxthub/core',
         '@nuxt/image',
-        '@vueuse/motion/nuxt'
+        '@vueuse/motion/nuxt',
+        '@nuxt/test-utils/module'
     ],
 
     hub: {

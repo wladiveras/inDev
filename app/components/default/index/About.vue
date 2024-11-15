@@ -10,7 +10,7 @@
         />
 
         <section
-            class="flex flex-col gap-4 font-thin justify-center items-center"
+            class="flex flex-col gap-4 font-thin justify-center items-center px-5"
         >
             <article class="flex flex-col gap-6">
                 <MotionGroup
