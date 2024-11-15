@@ -4,7 +4,17 @@
 
 :root {
     font-family: 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-    --font-family-sans: 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+}
+
+.dark {
+    --ui-primary: var(--ui-color-primary-200);
+
+    --color-primary: #6366f1;
+    --font-family-primary: 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+}
+
+@theme {
+    --font-family-sans: var(--font-family-primary);
 
     --breakpoint-3xl: 1920px;
 
@@ -25,23 +35,4 @@
     --ui-border: var(--ui-color-neutral-200);
     --ui-border-accented: var(--ui-color-neutral-300);
     --ui-border-inverted: var(--ui-color-neutral-900);
-}
-
-.dark {
-    --ui-primary: var(--ui-color-primary-200);
-
-    --ui-text-dimmed: var(--ui-color-neutral-500);
-    --ui-text-muted: var(--ui-color-neutral-400);
-    --ui-text-toned: var(--ui-color-neutral-300);
-    --ui-text: var(--ui-color-neutral-200);
-    --ui-text-highlighted: var(--color-white);
-
-    --ui-bg: var(--ui-color-neutral-900);
-    --ui-bg-elevated: var(--ui-color-neutral-800);
-    --ui-bg-accented: var(--ui-color-neutral-700);
-    --ui-bg-inverted: var(--color-white);
-
-    --ui-border: var(--ui-color-neutral-800);
-    --ui-border-accented: var(--ui-color-neutral-700);
-    --ui-border-inverted: var(--color-white);
 }

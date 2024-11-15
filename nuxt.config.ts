@@ -2,8 +2,6 @@
 export default defineNuxtConfig({
     modules: ['@nuxt/ui', '@pinia/nuxt', '@nuxt/eslint', '@nuxthub/core'],
 
-    ssr: true,
-
     hub: {
         remote: false,
         ai: false,

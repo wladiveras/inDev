@@ -9,8 +9,6 @@
     </div>
 </template>
 
-<script lang="ts" setup>
-    const slideover = useSlideover()
-</script>
+<script lang="ts" setup></script>
 
 <style></style>

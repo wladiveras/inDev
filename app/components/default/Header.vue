@@ -81,7 +81,6 @@
     const handleScroll = () => {
         const currentScrollPosition = window.scrollY
 
-        // Don't do anything if we haven't scrolled enough
         if (
             Math.abs(currentScrollPosition - lastScrollPosition.value) <
             scrollThreshold
@@ -89,17 +88,12 @@
             return
         }
 
-        // Show header when scrolling up or at top
         if (
             currentScrollPosition < lastScrollPosition.value ||
             currentScrollPosition < 50
         ) {
             isHeaderHidden.value = false
-            // eslint-disable-next-line @stylistic/brace-style
-        }
-
-        // Hide header when scrolling down and not at top
-        else if (
+        } else if (
             currentScrollPosition > lastScrollPosition.value &&
             currentScrollPosition > 50
         ) {

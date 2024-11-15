@@ -2,6 +2,7 @@ export default defineAppConfig({
     ui: {
         colors: {
             primary: 'indigo',
+            main: 'indigo',
             neutral: 'slate'
         },
         theme: {
@@ -51,7 +52,7 @@ export default defineAppConfig({
             }
         },
         container: {
-            base: 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'
+            base: 'max-w-full mx-auto px-0 py-0 lg:px-9 sm:px-0 ps-0 lg:px-0'
         }
     }
 })
