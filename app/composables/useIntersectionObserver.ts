@@ -1,23 +1,43 @@
-export function useIntersectionObserver(options = {}) {
-    const targetRef = ref<HTMLElement | null>(null)
-    const isVisible = ref(false)
+export function useAnimateObserver(options = {}) {
+    const elements = ref<Element[]>([])
 
-    const observer = new IntersectionObserver(
-        ([entry]) => {
-            isVisible.value = entry.isIntersecting
-        },
-        {
-            threshold: 0.1,
-            ...options
-        }
-    )
+    onMounted(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-delay')
+                    }
+                })
+            },
+            {
+                threshold: 0.5,
+                ...options
+            }
+        )
 
-    onUnmounted(() => {
-        observer.disconnect()
+        elements.value.forEach((element) => {
+            if (element) {
+                observer.observe(element)
+            }
+        })
+
+        onUnmounted(() => {
+            elements.value.forEach((element) => {
+                if (element) {
+                    observer.unobserve(element)
+                }
+            })
+        })
     })
 
+    const observe = (element: Element) => {
+        if (element) {
+            elements.value.push(element)
+        }
+    }
+
     return {
-        targetRef,
-        isVisible
+        observe
     }
 }
