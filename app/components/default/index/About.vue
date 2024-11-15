@@ -1,16 +1,15 @@
 <template>
-    <section id="about">
+    <section
+        id="about"
+        class="md:container md:mx-auto md:px-[400px]"
+    >
         <DefaultTitle
-            class="mt-33"
+            class="mt-20 md:mt-0"
             title="Um pouco"
             subtitle="sobre mim"
-            center
         />
 
-        <UCard
-            id="about"
-            class="mt-20"
-        >
+        <UCard id="about">
             <div class="flex justify-center items-center">
                 <div class="flex flex-col gap-4 font-thin">
                     <section class="flex flex-col gap-6">

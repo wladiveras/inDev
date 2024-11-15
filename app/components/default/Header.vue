@@ -31,7 +31,7 @@
                         icon="mdi:resume"
                         variant="outline"
                         size="xl"
-                        class="text-indigo-500 border-1 border-indigo-500/100 cursor-pointer"
+                        class="text-indigo-500 border-1 border-indigo-500/100 cursor-pointer animate__fadeInTopLeft"
                     >
                         Currículo
                     </UButton>
@@ -40,7 +40,7 @@
         </div>
 
         <div
-            class="flex md:hidden m-1 border-b border-gray-800 flex items-center justify-between w-full h-14 p-2"
+            class="flex md:hidden m-1 border-b border-gray-800 items-center justify-between w-full h-14 p-2"
         >
             <UIcon
                 name="line-md:menu"

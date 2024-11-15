@@ -18,10 +18,12 @@
     },
     "dependencies": {
         "@nuxt/eslint": "^0.6.1",
+        "@nuxt/image": "^1.8.1",
         "@nuxt/ui": "^3.0.0-alpha.8",
         "@nuxthub/core": "^0.8.7",
         "@nuxtjs/eslint-module": "^4.1.0",
         "@pinia/nuxt": "^0.7.0",
+        "@vueuse/motion": "^2.2.6",
         "add": "^2.0.6",
         "animate.css": "^4.1.1",
         "nuxt": "^3.14.159",
@@ -33,5 +35,6 @@
     "devDependencies": {
         "eslint-plugin-nuxt": "^4.0.0",
         "wrangler": "^3.86.1"
-    }
+    },
+    "packageManager": "pnpm@9.11.0+sha512.0a203ffaed5a3f63242cd064c8fb5892366c103e328079318f78062f24ea8c9d50bc6a47aa3567cabefd824d170e78fa2745ed1f16b132e16436146b7688f19b"
 }

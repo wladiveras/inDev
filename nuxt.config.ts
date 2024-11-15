@@ -1,6 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    modules: ['@nuxt/ui', '@pinia/nuxt', '@nuxt/eslint', '@nuxthub/core'],
+    modules: [
+        '@nuxt/ui',
+        '@pinia/nuxt',
+        '@nuxt/eslint',
+        '@nuxthub/core',
+        '@nuxt/image',
+        '@vueuse/motion/nuxt'
+    ],
 
     hub: {
         remote: false,

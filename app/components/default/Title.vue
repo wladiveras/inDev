@@ -1,23 +1,36 @@
 <template>
     <div>
         <section
-            :class="{ center: 'text-center' }"
             class="mt-10"
+            :class="{ 'pl-4': !center }"
         >
-            <h2
-                class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl"
+            <MotionGroup
+                preset="slideVisibleLeft"
+                :duration="600"
             >
-                <span>
-                    {{ props.title }} <br />
-                    <span
-                        v-if="props.subtitle"
-                        class="ml-5 text-indigo-500"
-                    >
-                        {{ props.subtitle }}
+                <h2
+                    :class="{ 'text-center w-full': center }"
+                    class="text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-3xl lg:text-4xl"
+                >
+                    <span>
+                        {{ props.title }} <br />
+                        <span
+                            v-if="props.subtitle"
+                            :class="{
+                                'ml-10': !center
+                            }"
+                            class="text-indigo-500"
+                        >
+                            {{ props.subtitle }}
+                        </span>
                     </span>
-                </span>
-            </h2>
+                </h2>
+            </MotionGroup>
         </section>
+        <USeparator
+            type="solid"
+            class="mt-5"
+        />
     </div>
 </template>
 
@@ -26,7 +39,22 @@
         title: string
         subtitle?: string
         center?: boolean
-        animate?: boolean
+        direction?: {
+            type:
+                | 'slideVisibleLeft'
+                | 'slideVisibleRight'
+                | 'slideVisibleTop'
+                | 'slideVisibleBottom'
+            default:
+                | 'slideVisibleLeft'
+                | 'slideVisibleRight'
+                | 'slideVisibleTop'
+                | 'slideVisibleBottom'
+        }
+        animate?: {
+            type: boolean
+            default: true
+        }
     }>()
 </script>
 
