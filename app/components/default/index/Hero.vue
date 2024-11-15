@@ -10,66 +10,73 @@
                 class="w-full md:w-1/1 container px-4 sm:px-6 lg:px-8 m-auto flex justify-center items-center"
             >
                 <section>
-                    <span
-                        class="text-indigo-500 text-xl md:text-2xl animate__animated animate__fadeInUp"
+                    <MotionGroup
+                        preset="slideVisibleRight"
+                        :duration="600"
                     >
-                        Olá, eu me chamo
-                    </span>
-
-                    <h1
-                        id="main-heading"
-                        class="text-5xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-7xl animate__animated animate__fadeInUp"
-                    >
-                        Wladi
-                        <span class="underline decoration-indigo-500">
-                            Veras
+                        <span class="text-indigo-500 text-xl md:text-2xl">
+                            Olá, eu me chamo
                         </span>
-                    </h1>
 
-                    <h2
-                        id="main-heading"
-                        class="text-5xl font-bold tracking-tight text-gray-900 dark:text-slate-500 sm:text-6xl animate__animated animate__fadeInUp"
-                    >
-                        Crio soluções para a web.
-                    </h2>
+                        <h1
+                            id="main-heading"
+                            class="text-5xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-7xl"
+                        >
+                            Wladi
+                            <span class="underline decoration-indigo-500">
+                                Veras
+                            </span>
+                        </h1>
 
-                    <section
-                        class="text-1xl gap-2 max-w-[40rem] text-slate-300 mt-10 animate__animated animate__fadeInUp"
-                    >
-                        <p>
-                            Sou especializado em criar soluções digitais
-                            robustas e de alta qualidade. Com mais de 8 anos de
-                            experiência, trabalhei em projetos como o chatbot e
-                            o gateway de pagamento, focando sempre na segurança,
-                            escalabilidade e na entrega de produtos que atendem
-                            às necessidades dos usuários.
-                        </p>
-                    </section>
+                        <h2
+                            id="main-heading"
+                            class="text-5xl font-bold tracking-tight text-gray-900 dark:text-slate-500 sm:text-6xlp"
+                        >
+                            Crio soluções para a web.
+                        </h2>
+
+                        <section
+                            class="text-1xl gap-2 max-w-[40rem] text-slate-300 mt-10"
+                        >
+                            <p>
+                                Sou especializado em criar soluções digitais
+                                robustas e de alta qualidade. Com mais de 8 anos
+                                de experiência, trabalhei em projetos como o
+                                chatbot e o gateway de pagamento, focando sempre
+                                na segurança, escalabilidade e na entrega de
+                                produtos que atendem às necessidades dos
+                                usuários.
+                            </p>
+                        </section>
+                    </MotionGroup>
                 </section>
             </section>
 
             <section class="w-full md:w-1/2">
-                <div class="relative group">
-                    <div
-                        class="absolute -inset-2 bg-gradient-to-r from-white to-indigo-600 rounded-full blur-xl opacity-75 group-hover:opacity-100 transition duration-1000"
-                    />
-                    <div
-                        class="absolute -inset-1 bg-gradient-to-r from-primary to-indigo-500 rounded-full blur-xl opacity-75 group-hover:opacity-100 transition duration-1000"
-                    ></div>
-                    <div class="relative animate__animated animate__bounceIn">
-                        <img
-                            src="/images/me-ia.png"
-                            alt="Profile"
-                            class="w-64 h-110 rounded-md m-auto object-cover border-4 border-white/50 shadow-xl md:transform -translate-x-4 -translate-y-4 md:hover:translate-x-0 md:hover:translate-y-0 transition duration-300"
+                <MotionGroup
+                    preset="slideVisibleLeft"
+                    :duration="600"
+                >
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-2 bg-gradient-to-r from-white to-indigo-600 rounded-full blur-xl opacity-75 group-hover:opacity-100 transition duration-1000"
                         />
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-primary to-indigo-500 rounded-full blur-xl opacity-75 group-hover:opacity-100 transition duration-1000"
+                        ></div>
+                        <div
+                            class="relative mt-20 md:mt-0 animate__animated animate__bounceIn"
+                        >
+                            <img
+                                src="/images/me-ia.png"
+                                alt="Profile"
+                                class="w-64 h-110 rounded-md m-auto object-cover border-4 border-white/50 shadow-xl md:transform -translate-x-4 -translate-y-4 md:hover:translate-x-0 md:hover:translate-y-0 transition duration-300"
+                            />
+                        </div>
                     </div>
-                </div>
+                </MotionGroup>
             </section>
         </section>
-        <div
-            id="snows"
-            class="snows"
-        ></div>
     </section>
 </template>
 

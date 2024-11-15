@@ -1,7 +1,7 @@
 <template>
     <div>
         <section
-            class="mt-10"
+            class="mt-10 mb-10 border-b-2 pb-6 border-indigo-500"
             :class="{ 'pl-4': !center }"
         >
             <MotionGroup
@@ -27,10 +27,6 @@
                 </h2>
             </MotionGroup>
         </section>
-        <USeparator
-            type="solid"
-            class="mt-5"
-        />
     </div>
 </template>
 
@@ -39,22 +35,6 @@
         title: string
         subtitle?: string
         center?: boolean
-        direction?: {
-            type:
-                | 'slideVisibleLeft'
-                | 'slideVisibleRight'
-                | 'slideVisibleTop'
-                | 'slideVisibleBottom'
-            default:
-                | 'slideVisibleLeft'
-                | 'slideVisibleRight'
-                | 'slideVisibleTop'
-                | 'slideVisibleBottom'
-        }
-        animate?: {
-            type: boolean
-            default: true
-        }
     }>()
 </script>
 

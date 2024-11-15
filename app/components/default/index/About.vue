@@ -9,79 +9,74 @@
             subtitle="sobre mim"
         />
 
-        <UCard id="about">
-            <div class="flex justify-center items-center">
-                <div class="flex flex-col gap-4 font-thin">
-                    <section class="flex flex-col gap-6">
-                        <p>
-                            Olá! Meu nome é Wladi, e minha paixão é criar
-                            soluções digitais inovadoras. Minha trajetória no
-                            desenvolvimento web começou quando eu ainda era
-                            jovem, experimentando personalizações em plataformas
-                            como o WordPress. Essa experiência inicial me
-                            ensinou muito sobre HTML, CSS e a base da
-                            programação.
-                        </p>
-                        <p>
-                            Ao longo dos anos, tive a oportunidade de trabalhar
-                            em agências de publicidade, start-ups e me aventurar
-                            no empreendedorismo, desenvolvendo projetos que
-                            uniam tecnologia e inovação. Criei desde um sistema
-                            de RP para restaurantes até um gateway de pagamento
-                            completo, com integrações complexas. Hoje, meu foco
-                            principal está em criar produtos digitais acessíveis
-                            e inclusivos, oferecendo experiências ricas e
-                            práticas para os usuários.
-                        </p>
+        <section
+            class="flex flex-col gap-4 font-thin justify-center items-center"
+        >
+            <article class="flex flex-col gap-6">
+                <MotionGroup
+                    preset="slideVisibleLeft"
+                    :duration="600"
+                    :delay="100"
+                >
+                    <p>
+                        Olá! Meu nome é Wladi, e minha paixão é criar soluções
+                        digitais inovadoras. Minha trajetória no desenvolvimento
+                        web começou quando eu ainda era jovem, experimentando
+                        personalizações em plataformas como o WordPress. Essa
+                        experiência inicial me ensinou muito sobre HTML, CSS e a
+                        base da programação.
+                    </p>
+                    <p>
+                        Ao longo dos anos, tive a oportunidade de trabalhar em
+                        agências de publicidade, start-ups e me aventurar no
+                        empreendedorismo, desenvolvendo projetos que uniam
+                        tecnologia e inovação. Criei desde um sistema de RP para
+                        restaurantes até um gateway de pagamento completo, com
+                        integrações complexas. Hoje, meu foco principal está em
+                        criar produtos digitais acessíveis e inclusivos,
+                        oferecendo experiências ricas e práticas para os
+                        usuários.
+                    </p>
 
-                        <p>
-                            Recentemente, lancei a ferramenta chatbot, onde
-                            apliquei minha expertise em micro-serviços, banco de
-                            dados e arquiteturas backend e frontend. Com mais de
-                            8 anos de experiência e uma formação técnica sólida,
-                            continuo comprometido em desenvolver soluções
-                            automatizadas que tragam valor para o dia a dia dos
-                            nossos clientes.
-                        </p>
-                        <p class="mt-10">
-                            aqui estão algumas tecnologias com as quais tenho
-                            trabalhado recentemente.
-                        </p>
-                    </section>
-
-                    <ul class="technology-ul flex flex-wrap">
-                        <li
-                            v-for="tech in technologies"
-                            :key="tech.name"
-                            class="technology-list w-1/2 md:w-1/3 lg:w-1/4 p-2 flex items-center gap-2"
-                        >
-                            <UIcon
-                                :name="tech.icon"
-                                :size="tech.size"
-                            />
-                            {{ tech.name }}
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <template #footer>
-                <div class="flex justify-center items-center">
-                    <UCarousel
-                        v-slot="{ item }"
-                        :items="personalPhotos"
-                        :ui="{ item: 'basis-1/3' }"
+                    <p>
+                        Recentemente, lancei a ferramenta chatbot, onde apliquei
+                        minha expertise em micro-serviços, banco de dados e
+                        arquiteturas backend e frontend. Com mais de 8 anos de
+                        experiência e uma formação técnica sólida, continuo
+                        comprometido em desenvolver soluções automatizadas que
+                        tragam valor para o dia a dia dos nossos clientes.
+                    </p>
+                    <p
+                        class="mt-10 border-l-4 border-indigo-500 pl-4 font-normal"
                     >
-                        <img
-                            :src="item"
-                            width="234"
-                            height="234"
-                            class="rounded-lg"
+                        aqui estão algumas tecnologias com as quais tenho
+                        trabalhado recentemente.
+                    </p>
+                </MotionGroup>
+            </article>
+
+            <ul class="technology-ul flex flex-wrap">
+                <MotionGroup
+                    preset="slideVisibleLeft"
+                    :duration="1000"
+                    :delay="200"
+                >
+                    <li
+                        v-for="tech in technologies"
+                        :key="tech.name"
+                        class="technology-list w-1/2 md:w-1/3 lg:w-1/4 p-2 flex items-center gap-2"
+                    >
+                        <UIcon
+                            :name="tech.icon"
+                            :size="tech.size"
                         />
-                    </UCarousel>
-                </div>
-            </template>
-        </UCard>
+                        <strong class="font-bold">
+                            {{ tech.name }}
+                        </strong>
+                    </li>
+                </MotionGroup>
+            </ul>
+        </section>
     </section>
 </template>
 
