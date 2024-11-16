@@ -2,9 +2,9 @@
     <section
         ref="elementRef"
         :class="[
-            'transition-all',
-            isVisible ? animationClasses : initialClasses,
-            customClass
+            customClass,
+            'animate__animated',
+            isVisible ? animationClass : ''
         ]"
         :style="style"
     >
@@ -17,17 +17,27 @@
 
     const props = withDefaults(
         defineProps<{
-            preset?: 'fadeIn' | 'slideUp' | 'slideLeft' | 'slideRight' | 'scale'
+            animation?:
+                | 'fadeIn'
+                | 'fadeInTopRight'
+                | 'fadeInTopLeft'
+                | 'fadeInUp'
+                | 'slideUp'
+                | 'slideDown'
+                | 'slideLeft'
+                | 'slideRight'
+                | 'zoomIn'
+
             delay?: number
             duration?: number
             customClass?: string
-            repeat?: boolean // Controls if animation should repeat
-            repeatOnce?: boolean // Controls if animation should repeat only once
-            threshold?: number // Customizable intersection threshold
-            resetOnExit?: boolean // Reset animation when element exits viewport
+            repeat?: boolean
+            repeatOnce?: boolean
+            threshold?: number
+            resetOnExit?: boolean
         }>(),
         {
-            preset: 'fadeIn',
+            animation: 'fadeIn',
             delay: 0,
             duration: 1000,
             customClass: '',
@@ -42,35 +52,23 @@
     const isVisible = ref(false)
     const hasAnimatedOnce = ref(false)
 
-    const presets = {
-        fadeIn: {
-            initial: 'opacity-0',
-            animate: 'opacity-100'
-        },
-        slideUp: {
-            initial: 'opacity-0 translate-y-8',
-            animate: 'opacity-100 translate-y-0'
-        },
-        slideLeft: {
-            initial: 'opacity-0 -translate-x-8',
-            animate: 'opacity-100 translate-x-0'
-        },
-        slideRight: {
-            initial: 'opacity-0 translate-x-8',
-            animate: 'opacity-100 translate-x-0'
-        },
-        scale: {
-            initial: 'opacity-0 scale-95',
-            animate: 'opacity-100 scale-100'
-        }
+    const animationMap = {
+        fadeIn: 'animate__fadeIn',
+        fadeInTopRight: 'animate__fadeInTopRight',
+        fadeInTopLeft: 'animate__fadeInTopLeft',
+        fadeInUp: 'animate__fadeInUp',
+        slideUp: 'animate__slideInUp',
+        slideDown: 'animate__slideInDown',
+        slideLeft: 'animate__slideInLeft',
+        slideRight: 'animate__slideInRight',
+        zoomIn: 'animate__zoomIn'
     }
 
-    const initialClasses = computed(() => presets[props.preset].initial)
-    const animationClasses = computed(() => presets[props.preset].animate)
+    const animationClass = computed(() => animationMap[props.animation])
 
     const style = computed(() => ({
-        transitionDuration: `${props.duration}ms`,
-        transitionDelay: `${props.delay}ms`
+        '--animate-duration': `${props.duration}ms`,
+        '--animate-delay': `${props.delay}ms`
     }))
 
     onMounted(() => {
@@ -112,10 +110,3 @@
         })
     })
 </script>
-
-<style scoped>
-    .transition-all {
-        transition-property: all;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
-</style>

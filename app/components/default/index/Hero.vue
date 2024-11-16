@@ -10,7 +10,12 @@
             <section
                 class="w-full md:w-1/1 container px-4 sm:px-6 lg:px-8 m-auto flex justify-center items-center"
             >
-                <AnimateElement preset="fadeIn">
+                <AnimateElement
+                    animation="fadeInTopRight"
+                    :duration="1000"
+                    :delay="200"
+                    repeat
+                >
                     <section>
                         <span class="text-indigo-500 text-xl md:text-2xl">
                             Olá, eu me chamo
@@ -51,23 +56,30 @@
             </section>
 
             <section class="w-full md:w-1/2">
-                <div class="relative group">
-                    <div
-                        class="absolute -inset-2 bg-gradient-to-r from-white to-indigo-600 rounded-full blur-xl opacity-75 group-hover:opacity-100 transition duration-1000"
-                    />
-                    <div
-                        class="absolute -inset-1 bg-gradient-to-r from-primary to-indigo-500 rounded-full blur-xl opacity-75 group-hover:opacity-100 transition duration-1000"
-                    ></div>
-                    <div
-                        class="relative mt-20 md:mt-0 animate__animated animate__bounceIn float"
-                    >
-                        <img
-                            src="/images/me-ia.png"
-                            alt="Profile"
-                            class="w-64 h-110 rounded-md m-auto object-cover border-4 border-white/50 shadow-xl md:transform -translate-x-4 -translate-y-4 md:hover:translate-x-0 md:hover:translate-y-0 transition duration-300"
+                <AnimateElement
+                    animation="fadeInTopLeft"
+                    :duration="600"
+                    :delay="100"
+                    repeat-once
+                >
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-2 bg-gradient-to-r from-white to-indigo-600 rounded-full blur-xl opacity-75 group-hover:opacity-100 transition duration-1000"
                         />
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-primary to-indigo-500 rounded-full blur-xl opacity-75 group-hover:opacity-100 transition duration-1000"
+                        ></div>
+                        <div
+                            class="relative mt-20 md:mt-0 animate__animated animate__bounceIn float"
+                        >
+                            <img
+                                src="/images/me-ia.png"
+                                alt="Profile"
+                                class="w-64 h-110 rounded-md m-auto object-cover border-4 border-white/50 shadow-xl md:transform -translate-x-4 -translate-y-4 md:hover:translate-x-0 md:hover:translate-y-0 transition duration-300"
+                            />
+                        </div>
                     </div>
-                </div>
+                </AnimateElement>
             </section>
         </section>
     </section>
