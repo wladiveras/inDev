@@ -68,14 +68,6 @@
 </template>
 
 <script lang="ts" setup>
-    definePageMeta({
-        layout: 'default'
-    })
-
-    useSeoMeta({
-        title: 'Desenvolvedor Fullstack'
-    })
-
     const technologies = [
         {
             name: 'JavaScript (ES6+)',
