@@ -17,7 +17,7 @@
         "lint:fix": "eslint . --fix && prettier --write --list-different ."
     },
     "dependencies": {
-        "@nuxt/eslint": "^0.6.1",
+        "@nuxt/eslint": "^0.7.0",
         "@nuxt/image": "^1.8.1",
         "@nuxt/ui": "^3.0.0-alpha.8",
         "@nuxthub/core": "^0.8.7",
@@ -27,7 +27,7 @@
         "animate.css": "^4.1.1",
         "jsdom": "^25.0.1",
         "nuxt": "^3.14.159",
-        "tailwindcss": "^4.0.0-alpha.33",
+        "tailwindcss": "^4.0.0-alpha.34",
         "vue": "latest",
         "vue-router": "latest",
         "zod": "^3.23.8"
@@ -40,7 +40,7 @@
         "happy-dom": "^15.11.6",
         "playwright-core": "^1.48.2",
         "vitest": "^2.1.5",
-        "wrangler": "^3.86.1"
+        "wrangler": "^3.87.0"
     },
-    "packageManager": "pnpm@9.11.0+sha512.0a203ffaed5a3f63242cd064c8fb5892366c103e328079318f78062f24ea8c9d50bc6a47aa3567cabefd824d170e78fa2745ed1f16b132e16436146b7688f19b"
+    "packageManager": "pnpm@9.13.2+sha512.88c9c3864450350e65a33587ab801acf946d7c814ed1134da4a924f6df5a2120fd36b46aab68f7cd1d413149112d53c7db3a4136624cfd00ff1846a0c6cef48a"
 }
