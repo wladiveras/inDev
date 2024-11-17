@@ -46,6 +46,13 @@
     }
 }
 
+.zoom {
+    transition: transform 1s;
+}
+.zoom:hover {
+    transform: scale(2);
+}
+
 .float {
     transform: translatey(0px);
     animation: float 6s ease-in-out infinite;

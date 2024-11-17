@@ -9,6 +9,7 @@
                 highlight
                 :items="navigationMenu"
                 orientation="horizontal"
+                variant="link"
                 class="data-[orientation=horizontal]:border-b data-[orientation=vertical]:border-l border-[var(--ui-border)]"
                 trailing-icon="i-lucide-arrow-down"
                 color="primary"

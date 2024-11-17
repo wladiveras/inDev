@@ -9,17 +9,17 @@ export const navigationMenu = ref<NavigationMenuItem[][]>([
         {
             label: 'Sobre',
             icon: 'line-md:coffee-half-empty-filled-loop',
-            to: '#about'
+            to: '/#about'
         },
         {
             label: 'Experiência',
             icon: 'line-md:clipboard-list',
-            to: '#jobs'
+            to: '/#jobs'
         },
         {
             label: 'Projetos',
             icon: 'line-md:folder-settings',
-            to: '#projects'
+            to: '/#projects'
         }
     ],
     [

@@ -13,6 +13,7 @@
                     <UIcon
                         :name="media.icon"
                         size="1.5rem"
+                        class="hover:text-indigo-500 transition-all duration-300"
                     />
                 </a>
             </UTooltip>
@@ -60,14 +61,14 @@
             link: 'https://x.com/wladiveras'
         },
         {
-            icon: 'line-md:linkedin',
-            tooltip: 'LinkedIn',
-            link: 'https://linkedin.com/in/wladiveras'
-        },
-        {
             icon: 'line-md:github',
             tooltip: 'Instagram',
             link: 'https://github.com/wladiveras'
+        },
+        {
+            icon: 'line-md:linkedin',
+            tooltip: 'LinkedIn',
+            link: 'https://linkedin.com/in/wladiveras'
         }
     ]
 </script>
