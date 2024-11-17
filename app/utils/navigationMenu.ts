@@ -20,6 +20,11 @@ export const navigationMenu = ref<NavigationMenuItem[][]>([
             label: 'Projetos',
             icon: 'line-md:folder-settings',
             to: '/#projects'
+        },
+        {
+            label: 'Contato',
+            icon: 'line-md:folder-settings',
+            to: '/#contact'
         }
     ],
     [

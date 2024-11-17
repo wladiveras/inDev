@@ -34,7 +34,7 @@
                             class="relative top-1 mr-2"
                             name="line-md:star-twotone"
                         />
-                        3.121
+                        1
                     </span>
 
                     <span class="flex justify-center">
@@ -42,7 +42,7 @@
                             class="relative top-1 mr-2"
                             name="line-md:round-ramp-right"
                         />
-                        5.121
+                        1
                     </span>
                 </div>
             </a>

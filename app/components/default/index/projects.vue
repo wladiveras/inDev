@@ -18,7 +18,7 @@
                 <section class="w-full md:w-1/2">
                     <img
                         src="/images/project-chatbot.png"
-                        class="rounded saturate-50 hover:saturate-150 content-center mb-10 md:mb-0"
+                        class="rounded saturate-50 hover:saturate-150 content-center mb-10 md:mb-0 w-full h-full"
                     />
                 </section>
                 <section class="w-full md:w-1/2">
@@ -63,7 +63,10 @@
                             </a>
                         </div>
                     </div>
-                    <USeparator class="mb-5" />
+                    <USeparator
+                        type="dashed"
+                        class="mb-5"
+                    />
                     <p class="font-thin text-sm">
                         O chatbot foi desenvolvido para empresas que buscam
                         otimizar o atendimento e criar conexões ágeis com seus
@@ -84,7 +87,16 @@
                 </section>
             </article>
 
-            <USeparator class="mb-10 mt-10" />
+            <USeparator class="mb-10 mt-10">
+                <template #default>
+                    <MainLogo
+                        width="25"
+                        height="25"
+                        color="#4f46e5"
+                        alt="Logo"
+                    />
+                </template>
+            </USeparator>
 
             <!-- Second Project (Right Image) -->
             <article class="flex flex-col md:flex-row justify-center gap-6">
@@ -130,7 +142,10 @@
                             </a>
                         </div>
                     </div>
-                    <USeparator class="mb-5" />
+                    <USeparator
+                        type="dashed"
+                        class="mb-5"
+                    />
                     <p class="font-thin text-sm">
                         O Linksplit é uma ferramenta que cria um único link para
                         dividir e direcionar leads para diferentes destinos de
@@ -151,11 +166,21 @@
                 <section class="w-full md:w-1/2 order-1 md:order-2">
                     <img
                         src="/images/project-linksplit.png"
-                        class="rounded saturate-50 hover:saturate-150 content-center mb-10 md:mb-0"
+                        class="rounded saturate-50 hover:saturate-150 content-center mb-10 md:mb-0 w-full h-full"
                     />
                 </section>
             </article>
-            <USeparator class="mb-10 mt-10" />
+
+            <USeparator class="mb-10 mt-10">
+                <template #default>
+                    <MainLogo
+                        width="25"
+                        height="25"
+                        color="#4f46e5"
+                        alt="Logo"
+                    />
+                </template>
+            </USeparator>
 
             <div class="container mx-auto py-16 px-4">
                 <h1 class="text-2xl font-bold mb-8 text-center">

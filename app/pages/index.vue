@@ -4,6 +4,7 @@
         <DefaultIndexAbout />
         <DefaultIndexJobs />
         <DefaultIndexProjects />
+        <DefaultIndexContact />
     </section>
 </template>
 

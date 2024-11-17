@@ -1,12 +1,12 @@
 <template>
     <section
         id="about"
-        class="md:container md:mx-auto mt-70 md:mt-0"
+        class="md:container md:mx-auto md:mt-0"
     >
         <DefaultTitle
             class="mt-20 md:mt-0"
             title="Um pouco"
-            subtitle="sobre mim"
+            subtitle="Sobre mim"
             icon="line-md:coffee-half-empty-filled-loop"
         />
 

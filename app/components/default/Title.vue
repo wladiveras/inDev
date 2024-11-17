@@ -7,7 +7,7 @@
     >
         <section
             :ref="title"
-            class="mt-50 mb-10 border-b-2 pb-6 border-indigo-500 text-center md:text-left flex items-center justify-between gap-4"
+            class="mt-0 md:mt-50 mb-10 border-b-2 pb-6 border-indigo-500 text-center md:text-left flex items-center justify-between gap-4"
             :class="{ 'md:pl-4': !center }"
         >
             <h2
@@ -29,6 +29,7 @@
             </h2>
 
             <UIcon
+                v-if="props.icon"
                 :name="props.icon"
                 size="3rem"
                 class="flex-shrink-0 self-center hidden md:flex"
@@ -42,6 +43,6 @@
         title: string
         subtitle?: string
         center?: boolean
-        icon: string
+        icon?: string
     }>()
 </script>

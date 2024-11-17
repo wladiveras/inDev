@@ -9,41 +9,6 @@ export default defineNuxtConfig({
         '@nuxt/test-utils/module'
     ],
 
-    hub: {
-        remote: false,
-        ai: false,
-        blob: true,
-        database: true
-    },
-
-    typescript: {
-        strict: false
-    },
-
-    nitro: {
-        prerender: {
-            routes: ['/'],
-            crawlLinks: true
-        }
-    },
-
-    routeRules: {
-        '/': { prerender: true }
-    },
-
-    future: {
-        compatibilityVersion: 4
-    },
-
-    eslint: {
-        config: {
-            stylistic: {
-                commaDangle: 'never',
-                braceStyle: '1tbs'
-            }
-        }
-    },
-
     devtools: {
         enabled: true,
         timeline: {
@@ -55,5 +20,40 @@ export default defineNuxtConfig({
         preference: 'dark'
     },
 
-    compatibilityDate: '2024-04-03'
+    routeRules: {
+        '/': { prerender: true }
+    },
+
+    future: {
+        compatibilityVersion: 4
+    },
+
+    compatibilityDate: '2024-04-03',
+
+    nitro: {
+        prerender: {
+            routes: ['/'],
+            crawlLinks: true
+        }
+    },
+
+    hub: {
+        remote: false,
+        ai: false,
+        blob: true,
+        database: true
+    },
+
+    typescript: {
+        strict: false
+    },
+
+    eslint: {
+        config: {
+            stylistic: {
+                commaDangle: 'never',
+                braceStyle: '1tbs'
+            }
+        }
+    }
 })

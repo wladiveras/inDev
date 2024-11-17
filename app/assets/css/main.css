@@ -7,7 +7,7 @@
     --font-family-sans: var(--font-family-primary);
     --breakpoint-3xl: 1920px;
     --ui-primary: var(--ui-color-primary-700);
-    --ui-radius: var(--radius-md);
+    --ui-radius: var(--radius-sm);
 }
 
 .dark {
