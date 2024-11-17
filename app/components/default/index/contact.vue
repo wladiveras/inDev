@@ -21,6 +21,10 @@
                 possível!
             </p>
             <UButton
+                href="https://wa.me/5521969098986?text=Olá Wladi, gostaria de solicitar seus serviços."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="External Link"
                 icon="material-symbols:connect-without-contact"
                 variant="outline"
                 size="xl"
