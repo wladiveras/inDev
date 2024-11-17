@@ -21,7 +21,9 @@
         <section>
             <a
                 href="https://github.com/wladiveras/inDev"
-                type="_blank"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="External Link"
             >
                 <p class="mb-5">Planejado e Desenvolvido por wladi veras</p>
                 <div

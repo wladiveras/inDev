@@ -7,7 +7,7 @@
     >
         <section
             :ref="title"
-            class="mt-50 mb-10 border-b-2 pb-6 border-indigo-500 text-center md:text-left flex items-center justify-center"
+            class="mt-50 mb-10 border-b-2 pb-6 border-indigo-500 text-center md:text-left flex items-center justify-between gap-4"
             :class="{ 'md:pl-4': !center }"
         >
             <h2
@@ -27,9 +27,11 @@
                     </span>
                 </span>
             </h2>
+
             <UIcon
                 :name="props.icon"
                 size="3rem"
+                class="flex-shrink-0 self-center hidden md:flex"
             />
         </section>
     </AnimateElement>

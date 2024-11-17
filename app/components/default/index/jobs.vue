@@ -7,7 +7,7 @@
             class="mt-20 md:mt-0"
             title="Minha"
             subtitle="Experiência"
-            icon="line-md:coffee-half-empty-filled-loop"
+            icon="line-md:clipboard-list"
         />
 
         <section
