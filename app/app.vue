@@ -11,7 +11,6 @@
     const preloaderState = preloader.getState()
     const currentLayout = ref('')
 
-    // Custom class for different layouts
     const preloaderClass = computed(() => {
         return {
             'bg-white dark:bg-gray-900': currentLayout.value === 'default',
@@ -26,7 +25,6 @@
                 preloader.show()
                 currentLayout.value = newLayout as string
 
-                // Simulate loading time or wait for actual content
                 await new Promise((resolve) => setTimeout(resolve, 500))
 
                 preloader.hide()
@@ -34,9 +32,7 @@
         }
     )
 
-    // Initial mount
     onMounted(async () => {
-        // Simulate initial loading or wait for actual content
         await new Promise((resolve) => setTimeout(resolve, 1000))
         preloader.hide()
     })

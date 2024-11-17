@@ -1,6 +1,9 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
 @import 'animate.css';
+html {
+    scroll-behavior: smooth;
+}
 
 :root {
     font-family: 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;

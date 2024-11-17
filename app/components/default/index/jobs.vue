@@ -104,7 +104,7 @@
         {
             icon: 'hugeicons:job-share',
             title: 'Fullstack Developer',
-            label: 'AlternativaCard',
+            label: 'Alternativa Card',
             date: 'Julho 2021 - agosto 2022',
             content: [
                 {
