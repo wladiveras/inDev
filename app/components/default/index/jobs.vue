@@ -7,6 +7,7 @@
             class="mt-20 md:mt-0"
             title="Minha"
             subtitle="Experiência"
+            icon="line-md:coffee-half-empty-filled-loop"
         />
 
         <section
@@ -45,23 +46,32 @@
 </template>
 
 <script lang="ts" setup>
-    import type { TabsItem } from '~/types'
+    import type { CustomTabItem } from '~/types'
 
-    const items = ref<TabsItem[]>([
+    const items = ref<CustomTabItem[]>([
         {
             icon: 'hugeicons:job-share',
             title: 'Arquiteto de Soluções',
             label: 'Workana',
-            date: 'May 2018 - Present',
+            date: 'Janeiro 2024 - Presente',
             content: [
                 {
-                    text: 'exemplo 1'
+                    text: 'Estruturar e desenvolver um chatbot completo com automação, utilizando integração com inteligência artificial para personalizar respostas e otimizar o atendimento ao cliente.'
                 },
                 {
-                    text: 'exemplo 2'
+                    text: 'Projetar e implementar interfaces interativas com foco em UI/UX, garantindo uma experiência de usuário fluida e centrada nas necessidades do cliente final.'
                 },
                 {
-                    text: 'exemplo 3'
+                    text: 'Desenvolver uma solução de divisão de links (Linksplit) para campanhas de marketing, gerando URLs randômicas e rastreáveis para segmentação e análise de tráfego.'
+                },
+                {
+                    text: 'Criar um layout de checkout totalmente responsivo, priorizando usabilidade e conversão para proporcionar uma experiência de compra eficiente em múltiplos dispositivos.'
+                },
+                {
+                    text: 'Planejar o escopo do projeto e liderar o squad em todas as etapas, desde a concepção inicial até a execução e entrega final.'
+                },
+                {
+                    text: 'Gerenciar o sistema, assegurando sua escalabilidade, estabilidade e eficiência operacional, além de implementar práticas de segurança robustas e estratégias eficazes de proteção de dados.'
                 }
             ]
         },
@@ -69,16 +79,25 @@
             icon: 'hugeicons:job-share',
             title: 'Fullstack Developer',
             label: 'Greenn',
-            date: 'Maio 2018 - Presente',
+            date: 'fevereiro 2022 - Janeiro 2024',
             content: [
                 {
-                    text: 'exemplo 1'
+                    text: `Participar do desenvolvimento de soluções digitais utilizando uma stack moderna, incluindo Laravel, Lumen, Node.js, MySQL, Redis, RabbitMQ, Vue.js, Nuxt.js, TypeScript, Nuxt UI e Tailwind.`
                 },
                 {
-                    text: 'exemplo 2'
+                    text: 'Atuar em três squads, contribuindo para a criação de novas funcionalidades e manutenção de produtos como greenn.com.br, greenn.club e gdigital.com.br.'
                 },
                 {
-                    text: 'exemplo 3'
+                    text: 'Implementar soluções robustas para vendas, gateways de pagamento e checkouts, além do backend para gerenciamento de pagamentos e assinaturas recorrentes.'
+                },
+                {
+                    text: 'Desenvolver plataformas para cursos online e funis de vendas, garantindo integração e performance otimizadas.'
+                },
+                {
+                    text: 'Participar do planejamento, definição de escopo e garantia de qualidade dos projetos, assegurando entregas eficientes e de alta qualidade.'
+                },
+                {
+                    text: 'Contribuir para a estabilidade e escalabilidade das aplicações, colaborando com equipes técnicas em soluções robustas e sustentáveis.'
                 }
             ]
         },
@@ -86,16 +105,22 @@
             icon: 'hugeicons:job-share',
             title: 'Fullstack Developer',
             label: 'AlternativaCard',
-            date: 'Maio 2018 - Presente',
+            date: 'Julho 2021 - agosto 2022',
             content: [
                 {
-                    text: 'exemplo 1'
+                    text: `Estruturar e desenvolver um projeto completo utilizando Laravel, Vue 3 (Composition API), MySQL e Redis para cache, otimizando a performance do sistema.`
                 },
                 {
-                    text: 'exemplo 2'
+                    text: 'Criar o escopo do projeto e conduzir melhorias contínuas, realizando ajustes e otimizações para aprimorar desempenho e funcionalidade.'
                 },
                 {
-                    text: 'exemplo 3'
+                    text: 'Desenvolver layouts interativos, incluindo a criação de cards que permitiam aos clientes realizar pedidos diretamente pelo site e acompanhar o status em tempo real.'
+                },
+                {
+                    text: 'Gerenciar o sistema, garantindo sua estabilidade, escalabilidade e eficiência operacional.'
+                },
+                {
+                    text: 'Ser responsável pelo deployment do sistema, assegurando sua segurança e implementando práticas robustas de proteção de dados.'
                 }
             ]
         }
@@ -103,6 +128,25 @@
 </script>
 
 <style scoped>
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        position: relative;
+        padding-left: 20px;
+    }
+    ul li::before {
+        content: '▹';
+        position: absolute;
+        top: -11px;
+        left: -10px;
+        font-size: 2rem;
+        color: var(--color-indigo-500);
+    }
+
     technology-ul {
         list-style-type: none;
 

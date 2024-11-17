@@ -7,6 +7,7 @@
             class="mt-20 md:mt-0"
             title="Um pouco"
             subtitle="sobre mim"
+            icon="line-md:clipboard-list"
         />
 
         <section

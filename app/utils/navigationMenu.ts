@@ -8,17 +8,17 @@ export const navigationMenu = ref<NavigationMenuItem[][]>([
         },
         {
             label: 'Sobre',
-            icon: 'i-lucide-book-open',
+            icon: 'line-md:coffee-half-empty-filled-loop',
             to: '#about'
         },
         {
             label: 'Experiência',
-            icon: 'i-lucide-book-open',
+            icon: 'line-md:clipboard-list',
             to: '#jobs'
         },
         {
             label: 'Projetos',
-            icon: 'i-lucide-book-open',
+            icon: 'line-md:folder-settings',
             to: '#projects'
         }
     ],

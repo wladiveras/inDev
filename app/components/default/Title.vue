@@ -7,7 +7,7 @@
     >
         <section
             :ref="title"
-            class="mt-50 mb-10 border-b-2 pb-6 border-indigo-500 text-center md:text-left"
+            class="mt-50 mb-10 border-b-2 pb-6 border-indigo-500 text-center md:text-left flex items-center justify-center"
             :class="{ 'md:pl-4': !center }"
         >
             <h2
@@ -27,6 +27,10 @@
                     </span>
                 </span>
             </h2>
+            <UIcon
+                :name="props.icon"
+                size="3rem"
+            />
         </section>
     </AnimateElement>
 </template>
@@ -36,5 +40,6 @@
         title: string
         subtitle?: string
         center?: boolean
+        icon: string
     }>()
 </script>

@@ -1,18 +1,16 @@
-import type { Avatar } from '#ui/types'
+import type { Avatar, TabItem } from '#ui/types'
 
 export type UserStatus = 'subscribed' | 'unsubscribed' | 'bounced'
 
 interface ContentItem {
     text: string
 }
-export interface TabsItem {
+export interface CustomTabItem extends TabItem {
+    icon: string
     title: string
     label: string
     date: string
     content: ContentItem[]
-    icon?: string
-    disabled?: boolean
-    description?: string
 }
 
 export interface Logo {

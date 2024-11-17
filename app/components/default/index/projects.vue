@@ -7,6 +7,7 @@
             class="mt-20 md:mt-0"
             title="Meus"
             subtitle="Projetos"
+            icon="line-md:folder-settings"
         />
 
         <section
@@ -23,22 +24,7 @@
     </section>
 </template>
 
-<script lang="ts" setup>
-    const items = [
-        {
-            label: 'Chatbot',
-            icon: 'i-lucide-user'
-        },
-        {
-            label: 'Greenn',
-            icon: 'i-lucide-user'
-        },
-        {
-            label: 'Alternativa Card',
-            icon: 'i-lucide-lock'
-        }
-    ]
-</script>
+<script lang="ts" setup></script>
 
 <style scoped>
     technology-ul {
