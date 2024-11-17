@@ -13,33 +13,13 @@ export const navigationMenu = ref<NavigationMenuItem[][]>([
         },
         {
             label: 'Experiência',
-            icon: 'i-lucide-book-open'
+            icon: 'i-lucide-book-open',
+            to: '#jobs'
         },
         {
             label: 'Projetos',
             icon: 'i-lucide-book-open',
-            children: [
-                {
-                    label: 'Projeto 1',
-                    description: 'Descrição.',
-                    icon: 'i-lucide-house'
-                },
-                {
-                    label: 'Projeto 2',
-                    description: 'Descrição.',
-                    icon: 'i-lucide-house'
-                },
-                {
-                    label: 'Projeto 3',
-                    description: 'Descrição.',
-                    icon: 'i-lucide-house'
-                },
-                {
-                    label: 'Projeto 4',
-                    description: 'Descrição.',
-                    icon: 'i-lucide-house'
-                }
-            ]
+            to: '#projects'
         }
     ],
     [

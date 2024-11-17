@@ -4,6 +4,10 @@
 
 :root {
     font-family: 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    --font-family-sans: var(--font-family-primary);
+    --breakpoint-3xl: 1920px;
+    --ui-primary: var(--ui-color-primary-700);
+    --ui-radius: var(--radius-md);
 }
 
 .dark {
@@ -14,13 +18,6 @@
 }
 
 @theme {
-    --font-family-sans: var(--font-family-primary);
-
-    --breakpoint-3xl: 1920px;
-
-    --ui-primary: var(--ui-color-primary-700);
-    --ui-radius: var(--radius-md);
-
     --ui-text-dimmed: var(--ui-color-neutral-400);
     --ui-text-muted: var(--ui-color-neutral-500);
     --ui-text-toned: var(--ui-color-neutral-600);

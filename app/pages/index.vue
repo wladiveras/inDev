@@ -2,7 +2,8 @@
     <section>
         <DefaultIndexHero />
         <DefaultIndexAbout />
-        <DefaultIndexWork />
+        <DefaultIndexJobs />
+        <DefaultIndexProjects />
     </section>
 </template>
 

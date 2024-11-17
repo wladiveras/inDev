@@ -2,6 +2,19 @@ import type { Avatar } from '#ui/types'
 
 export type UserStatus = 'subscribed' | 'unsubscribed' | 'bounced'
 
+interface ContentItem {
+    text: string
+}
+export interface TabsItem {
+    title: string
+    label: string
+    date: string
+    content: ContentItem[]
+    icon?: string
+    disabled?: boolean
+    description?: string
+}
+
 export interface Logo {
     width?: number | string
     height?: number | string
