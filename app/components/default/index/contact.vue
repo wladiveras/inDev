@@ -21,7 +21,7 @@
                 possível!
             </p>
             <UButton
-                icon="mdi:resume"
+                icon="material-symbols:connect-without-contact"
                 variant="outline"
                 size="xl"
                 class="text-indigo-500 border-1 border-indigo-500/100 cursor-pointer mr-10"

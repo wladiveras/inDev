@@ -23,7 +23,7 @@ export const navigationMenu = ref<NavigationMenuItem[][]>([
         },
         {
             label: 'Contato',
-            icon: 'line-md:folder-settings',
+            icon: 'material-symbols:connect-without-contact',
             to: '/#contact'
         }
     ],
