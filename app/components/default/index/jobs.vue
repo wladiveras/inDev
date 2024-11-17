@@ -29,7 +29,7 @@
 
                             <p class="text-md mb-8">{{ item.date }}</p>
 
-                            <ul class="list-disc pl-8 space-y-4">
+                            <ul class="list-disc pl-8 space-y-4 jobs">
                                 <li
                                     v-for="(content, index) in item.content"
                                     :key="`${item.label}-${index}`"
@@ -128,17 +128,17 @@
 </script>
 
 <style scoped>
-    ul {
+    .jobs {
         list-style: none;
         padding: 0;
         margin: 0;
     }
 
-    li {
+    .jobs li {
         position: relative;
         padding-left: 20px;
     }
-    ul li::before {
+    .jobs li::before {
         content: '▹';
         position: absolute;
         top: -11px;
