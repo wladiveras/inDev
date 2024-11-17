@@ -58,8 +58,8 @@
 
     useSeoMeta({
         titleTemplate: 'Wladi Veras  • %s',
-        ogImage: 'https://saas-template.nuxt.dev/social-card.png',
-        twitterImage: 'https://saas-template.nuxt.dev/social-card.png',
+        ogImage: '/images/seo.png',
+        twitterImage: '/images/seo.png',
         twitterCard: 'summary_large_image'
     })
 </script>
