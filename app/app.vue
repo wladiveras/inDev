@@ -1,10 +1,45 @@
 <script setup lang="ts">
     import favicon from '~/assets/images/favicon.svg'
 
+    const route = useRoute()
     const colorMode = useColorMode()
     const color = computed(() =>
         colorMode.value === 'dark' ? '#111827' : 'white'
     )
+
+    const preloader = usePreloader()
+    const preloaderState = preloader.getState()
+    const currentLayout = ref('')
+
+    // Custom class for different layouts
+    const preloaderClass = computed(() => {
+        return {
+            'bg-white dark:bg-gray-900': currentLayout.value === 'default',
+            'bg-gray-100 dark:bg-gray-800': currentLayout.value === 'admin'
+        }
+    })
+
+    watch(
+        () => route.meta.layout,
+        async (newLayout) => {
+            if (newLayout !== currentLayout.value) {
+                preloader.show()
+                currentLayout.value = newLayout as string
+
+                // Simulate loading time or wait for actual content
+                await new Promise((resolve) => setTimeout(resolve, 500))
+
+                preloader.hide()
+            }
+        }
+    )
+
+    // Initial mount
+    onMounted(async () => {
+        // Simulate initial loading or wait for actual content
+        await new Promise((resolve) => setTimeout(resolve, 1000))
+        preloader.hide()
+    })
 
     useHead({
         meta: [
@@ -34,7 +69,12 @@
         <NuxtLoadingIndicator />
         <NuxtRouteAnnouncer />
 
-        <NuxtLayout>
+        <PreloaderOverlay
+            :custom-class="preloaderClass"
+            :show="preloaderState.isLoading"
+        />
+
+        <NuxtLayout v-if="!preloaderState.isLoading">
             <NuxtPage />
         </NuxtLayout>
 

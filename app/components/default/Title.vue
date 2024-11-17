@@ -6,22 +6,22 @@
         repeat-once
     >
         <section
-            ref="heroTitle"
-            class="mt-10 mb-10 border-b-2 pb-6 border-indigo-500"
-            :class="{ 'pl-4': !center }"
+            :ref="title"
+            class="mt-50 mb-10 border-b-2 pb-6 border-indigo-500 text-center md:text-left"
+            :class="{ 'md:pl-4': !center }"
         >
             <h2
-                :class="{ 'text-center w-full': center }"
-                class="text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-3xl lg:text-4xl"
+                :class="{ 'md:text-center md:w-full': center }"
+                class="text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-3xl lg:text-4xl w-full"
             >
                 <span>
                     {{ props.title }} <br />
                     <span
                         v-if="props.subtitle"
                         :class="{
-                            'ml-10': !center
+                            'md:ml-10': !center
                         }"
-                        class="text-indigo-500"
+                        class="text-indigo-500 block md:inline"
                     >
                         {{ props.subtitle }}
                     </span>

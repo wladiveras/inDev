@@ -1,7 +1,7 @@
 <template>
     <section
         id="hero-home"
-        class="hero max-w-[62rem] mt-30 md:mt-60 h-screen mx-auto w-full px-4 md:px-6"
+        class="hero max-w-[62rem] mt-30 md:mt-60 mx-auto w-full px-4 md:px-6"
         aria-labelledby="main-heading"
     >
         <section
@@ -13,8 +13,9 @@
                 <AnimateElement
                     animation="fadeInTopRight"
                     :duration="1000"
-                    :delay="200"
+                    :delay="700"
                     repeat
+                    mobile-animation="none"
                 >
                     <section>
                         <span class="text-indigo-500 text-xl md:text-2xl">
@@ -61,6 +62,7 @@
                     :duration="600"
                     :delay="100"
                     repeat-once
+                    mobile-animation="none"
                 >
                     <div class="relative group">
                         <div

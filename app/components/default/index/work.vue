@@ -1,7 +1,7 @@
 <template>
     <section
         id="work"
-        class="md:container md:mx-auto md:px-[400px]"
+        class="md:container md:mx-auto"
     >
         <DefaultTitle
             class="mt-20 md:mt-0"

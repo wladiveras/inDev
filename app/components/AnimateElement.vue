@@ -4,7 +4,7 @@
         :class="[
             customClass,
             'animate__animated',
-            isVisible ? animationClass : ''
+            shouldAnimate ? currentAnimationClass : ''
         ]"
         :style="style"
     >
@@ -15,19 +15,22 @@
 <script lang="ts" setup>
     import { ref, computed, onMounted } from 'vue'
 
+    type AnimationType =
+        | 'fadeIn'
+        | 'fadeInTopRight'
+        | 'fadeInTopLeft'
+        | 'fadeInUp'
+        | 'slideUp'
+        | 'slideDown'
+        | 'slideLeft'
+        | 'slideRight'
+        | 'zoomIn'
+
     const props = withDefaults(
         defineProps<{
-            animation?:
-                | 'fadeIn'
-                | 'fadeInTopRight'
-                | 'fadeInTopLeft'
-                | 'fadeInUp'
-                | 'slideUp'
-                | 'slideDown'
-                | 'slideLeft'
-                | 'slideRight'
-                | 'zoomIn'
-
+            animation?: AnimationType
+            mobileAnimation?: AnimationType | 'none'
+            mobileBreakpoint?: number
             delay?: number
             duration?: number
             customClass?: string
@@ -38,8 +41,10 @@
         }>(),
         {
             animation: 'fadeIn',
+            mobileAnimation: undefined,
+            mobileBreakpoint: 768,
             delay: 0,
-            duration: 1000,
+            duration: 600,
             customClass: '',
             repeat: false,
             repeatOnce: false,
@@ -51,6 +56,16 @@
     const elementRef = ref<HTMLElement | null>(null)
     const isVisible = ref(false)
     const hasAnimatedOnce = ref(false)
+    const isMobile = ref(false)
+
+    // Get preloader state
+    const preloader = usePreloader()
+    const preloaderState = preloader.getState()
+
+    // Only animate when element is visible AND preloader is ready
+    const shouldAnimate = computed(
+        () => isVisible.value && preloaderState.isReady
+    )
 
     const animationMap = {
         fadeIn: 'animate__fadeIn',
@@ -64,14 +79,30 @@
         zoomIn: 'animate__zoomIn'
     }
 
-    const animationClass = computed(() => animationMap[props.animation])
+    // Determine which animation to use based on screen size
+    const currentAnimationClass = computed(() => {
+        if (isMobile.value && props.mobileAnimation) {
+            return props.mobileAnimation === 'none'
+                ? ''
+                : animationMap[props.mobileAnimation]
+        }
+        return animationMap[props.animation]
+    })
 
     const style = computed(() => ({
         '--animate-duration': `${props.duration}ms`,
         '--animate-delay': `${props.delay}ms`
     }))
 
+    const updateMobileState = () => {
+        isMobile.value = window.innerWidth < props.mobileBreakpoint
+    }
+
     onMounted(() => {
+        updateMobileState()
+
+        window.addEventListener('resize', updateMobileState)
+
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -107,6 +138,7 @@
                 observer.unobserve(elementRef.value)
             }
             observer.disconnect()
+            window.removeEventListener('resize', updateMobileState)
         })
     })
 </script>
