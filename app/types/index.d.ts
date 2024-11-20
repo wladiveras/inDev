@@ -18,6 +18,7 @@ export interface ColorTheme {
     icon?: string
     slot: string
     class: string
+    color: string
     onSelect: () => void
 }
 export interface Logo {

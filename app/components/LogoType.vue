@@ -21,14 +21,14 @@
         </defs>
         <g clip-path="url(#d6f82dfa5e)">
             <path
-                :fill="props.color"
+                :fill="currentColor"
                 d="M 107.046875 5 L 167.050781 105.363281 C 167.644531 106.359375 168.722656 106.972656 169.886719 106.972656 C 171.050781 106.972656 172.125 106.359375 172.722656 105.363281 L 199.886719 59.925781 L 227.050781 105.363281 C 227.648438 106.359375 228.722656 106.972656 229.886719 106.972656 C 231.050781 106.972656 232.125 106.359375 232.722656 105.363281 L 292.726562 5 C 293.335938 3.980469 293.351562 2.707031 292.761719 1.671875 C 292.175781 0.636719 291.078125 0 289.886719 0 L 259.546875 0 C 258.371094 0 257.285156 0.621094 256.691406 1.632812 L 232.90625 42.1875 C 231.980469 43.761719 232.511719 45.785156 234.085938 46.710938 C 235.660156 47.632812 237.683594 47.105469 238.605469 45.53125 L 261.4375 6.609375 L 284.0625 6.609375 L 229.886719 97.222656 L 203.738281 53.484375 L 232.722656 5 C 233.335938 3.980469 233.347656 2.707031 232.761719 1.671875 C 232.175781 0.636719 231.078125 0 229.886719 0 L 199.542969 0 C 198.371094 0 197.285156 0.621094 196.691406 1.632812 L 172.90625 42.1875 C 171.980469 43.761719 172.507812 45.785156 174.082031 46.710938 C 175.65625 47.632812 177.683594 47.105469 178.605469 45.53125 L 201.4375 6.609375 L 224.058594 6.609375 L 197.058594 51.773438 C 197.050781 51.785156 197.042969 51.800781 197.03125 51.816406 L 169.886719 97.222656 L 115.714844 6.609375 L 164.324219 6.609375 L 157.679688 18.832031 C 156.804688 20.433594 157.398438 22.441406 159.003906 23.316406 C 160.605469 24.1875 162.613281 23.59375 163.484375 21.992188 L 172.789062 4.882812 C 173.347656 3.859375 173.324219 2.617188 172.726562 1.617188 C 172.132812 0.613281 171.050781 0 169.886719 0 L 109.886719 0 C 108.695312 0 107.597656 0.636719 107.011719 1.671875 C 106.421875 2.707031 106.4375 3.980469 107.046875 5 "
                 :fill-opacity="props.opacity"
                 fill-rule="nonzero"
             />
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(70.718902, 155.614922)">
@@ -40,7 +40,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(109.728056, 155.614922)">
@@ -52,7 +52,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(130.430368, 155.614922)">
@@ -64,7 +64,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(156.585781, 155.614922)">
@@ -76,7 +76,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(184.026569, 155.614922)">
@@ -88,13 +88,13 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(196.062344, 155.614922)"><g /></g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(205.644223, 155.614922)">
@@ -106,7 +106,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(231.799636, 155.614922)">
@@ -118,7 +118,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(256.046465, 155.614922)">
@@ -130,7 +130,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(280.741226, 155.614922)">
@@ -142,7 +142,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(306.89664, 155.614922)">
@@ -154,7 +154,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(58.958174, 178.478595)">
@@ -166,7 +166,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(74.732611, 178.478595)">
@@ -178,7 +178,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(93.97379, 178.478595)">
@@ -190,7 +190,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(110.446685, 178.478595)">
@@ -202,7 +202,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(127.439168, 178.478595)">
@@ -214,7 +214,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(150.555947, 178.478595)">
@@ -226,7 +226,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(167.965802, 178.478595)">
@@ -238,7 +238,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(184.626091, 178.478595)">
@@ -250,13 +250,13 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(201.533389, 178.478595)"><g /></g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(212.614514, 178.478595)">
@@ -268,7 +268,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(229.521812, 178.478595)">
@@ -280,7 +280,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(247.894172, 178.478595)">
@@ -292,7 +292,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(267.067203, 178.478595)">
@@ -304,7 +304,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(278.318685, 178.478595)">
@@ -316,7 +316,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(296.691044, 178.478595)">
@@ -328,7 +328,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(313.598342, 178.478595)">
@@ -340,7 +340,7 @@
             </g>
         </g>
         <g
-            :fill="props.color"
+            :fill="currentColor"
             :fill-opacity="props.opacity"
         >
             <g transform="translate(330.50564, 178.478595)">
@@ -360,12 +360,13 @@
     const props = withDefaults(defineProps<Logo>(), {
         width: 500,
         height: 500,
-        color: '#000000',
         opacity: 1,
         preserveAspectRatio: 'xMidYMid meet',
         className:
             'cursor-pointer hover:opacity-75 animate__animated animate__zoomInDown'
     })
+
+    const { currentColor } = useTheme()
 </script>
 
 <style scoped>

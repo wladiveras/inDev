@@ -28,6 +28,10 @@
         </template>
 
         <template #footer>
+            <div class="flex items-center gap-5 m-auto mb-5">
+                <SetTheme />
+                <SetColor />
+            </div>
             <UButton
                 icon="mdi:resume"
                 variant="outline"

@@ -2,10 +2,6 @@
     import favicon from '~/assets/images/favicon.svg'
 
     const route = useRoute()
-    const colorMode = useColorMode()
-    const color = computed(() =>
-        colorMode.value === 'dark' ? '#111827' : 'white'
-    )
 
     const preloader = usePreloader()
     const preloaderState = preloader.getState()
@@ -13,8 +9,8 @@
 
     const preloaderClass = computed(() => {
         return {
-            'bg-white dark:bg-gray-900': currentLayout.value === 'default',
-            'bg-gray-100 dark:bg-gray-800': currentLayout.value === 'admin'
+            'bg-white dark:bg-slate-900': currentLayout.value === 'default',
+            'bg-gray-100 dark:bg-slate-800': currentLayout.value === 'admin'
         }
     })
 
@@ -43,8 +39,7 @@
             {
                 name: 'viewport',
                 content: 'width=device-width, initial-scale=1'
-            },
-            { key: 'theme-color', name: 'theme-color', content: color }
+            }
         ],
         link: [{ rel: 'icon', type: 'image/svg+xml', href: favicon }],
         htmlAttrs: {

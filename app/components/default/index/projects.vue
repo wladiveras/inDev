@@ -96,7 +96,6 @@
                         <MainLogo
                             width="25"
                             height="25"
-                            color="#4f46e5"
                             alt="Logo"
                         />
                     </template>

@@ -21,7 +21,6 @@
                         <MainLogo
                             width="50"
                             height="50"
-                            color="#4f46e5"
                             alt="Logo"
                             class="ml-10"
                         />
@@ -30,6 +29,7 @@
 
                 <template #resume-label>
                     <div class="flex items-center gap-5">
+                        <SetTheme />
                         <SetColor />
 
                         <UButton
@@ -46,7 +46,7 @@
         </div>
 
         <div
-            class="flex md:hidden m-1 border-b border-gray-800 items-center justify-between w-full h-14 p-2"
+            class="flex md:hidden m-1 border-b var(--ui-border); dark:border-gray-800 items-center justify-between w-full h-14 p-2"
         >
             <UIcon
                 name="line-md:menu"
@@ -59,7 +59,6 @@
                 <MainLogo
                     width="50"
                     height="50"
-                    color="#4f46e5"
                 />
             </div>
 
@@ -72,6 +71,7 @@
     import { ModalNavigationMenu } from '#components'
 
     const slideover = useSlideover()
+
     const header = ref(null)
     const isHeaderHidden = ref(false)
     const lastScrollPosition = ref(0)

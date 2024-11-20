@@ -10,14 +10,13 @@
     >
         <div
             v-if="show"
-            class="fixed inset-0 z-100 flex items-top mt-50 justify-center backdrop-blur bg-slate-900"
+            class="fixed inset-0 z-100 flex items-top mt-50 justify-center backdrop-blur bg-white dark:bg-slate-900"
             :class="customClass"
         >
             <div class="text-center">
                 <LogoType
                     width="400"
                     height="400"
-                    color="#4f46e5"
                 />
             </div>
         </div>
