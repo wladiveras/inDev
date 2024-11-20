@@ -20,6 +20,7 @@
                 possível!
             </p>
             <UButton
+                :href="mail"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="External Link"
@@ -27,7 +28,6 @@
                 variant="outline"
                 size="xl"
                 class="text-primary-500 border-1 border-primary-500/100 cursor-pointer mr-10"
-                @click="handleGeneratePDF"
             >
                 Entre em contato
             </UButton>
@@ -36,11 +36,7 @@
 </template>
 
 <script lang="ts" setup>
-    const { generatePDFWithCustomization } = usePDF()
-
-    const handleGeneratePDF = () => {
-        generatePDFWithCustomization()
-    }
+    const mail = ref('mailto:hi@wladi.com.br')
 </script>
 
 <style scoped></style>

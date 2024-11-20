@@ -9,22 +9,25 @@ export const navigationMenu = ref<NavigationMenuItem[][]>([
         {
             label: 'Sobre',
             icon: 'line-md:coffee-half-empty-filled-loop',
-            to: '/#about'
+            active: false,
+            onSelect: () => {
+                navigateTo('#about')
+            }
         },
         {
             label: 'Experiência',
             icon: 'line-md:clipboard-list',
-            to: '/#jobs'
+            active: false
         },
         {
             label: 'Projetos',
             icon: 'line-md:folder-settings',
-            to: '/#projects'
+            active: false
         },
         {
             label: 'Contato',
             icon: 'material-symbols:connect-without-contact',
-            to: '/#contact'
+            active: false
         }
     ],
     [

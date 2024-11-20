@@ -46,4 +46,6 @@
 
 <script setup lang="ts">
     import LogoType from '../LogoType.vue'
+
+    const mail = ref('mailto:hi@wladi.com.br')
 </script>

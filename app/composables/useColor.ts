@@ -61,6 +61,15 @@ export const useTheme = () => {
             }
         },
         {
+            label: 'emerald',
+            slot: 'profile',
+            class: 'text-emerald-500',
+            color: '#10b981',
+            onSelect() {
+                changeColor('emerald')
+            }
+        },
+        {
             label: 'sky',
             slot: 'profile',
             class: 'text-sky-500',

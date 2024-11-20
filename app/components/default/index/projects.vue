@@ -220,6 +220,26 @@
             image: '/images/project-linksplit.png',
             preview: '',
             github: 'XXXXXXXXXXXXXXXX'
+        },
+        {
+            title: 'Linksplit',
+            star: false,
+            description:
+                'O Linksplit é uma ferramenta que cria um único link para dividir e direcionar leads para diferentes destinos de forma automática e aleatória. Ideal para campanhas de marketing e testes A/B, ele permite separar o tráfego entre vários links, facilitando a análise de dados e o rastreamento de desempenho. Com o Linksplit, você pode segmentar leads e otimizar estratégias, enquanto monitora a performance em tempo real.',
+            technologies: ['Nuxt 3', 'Pinia', 'Laravel', 'Mysql'],
+            image: '/images/project-linksplit.png',
+            preview: '',
+            github: 'XXXXXXXXXXXXXXXX'
+        },
+        {
+            title: 'Linksplit',
+            star: false,
+            description:
+                'O Linksplit é uma ferramenta que cria um único link para dividir e direcionar leads para diferentes destinos de forma automática e aleatória. Ideal para campanhas de marketing e testes A/B, ele permite separar o tráfego entre vários links, facilitando a análise de dados e o rastreamento de desempenho. Com o Linksplit, você pode segmentar leads e otimizar estratégias, enquanto monitora a performance em tempo real.',
+            technologies: ['Nuxt 3', 'Pinia', 'Laravel', 'Mysql'],
+            image: '/images/project-linksplit.png',
+            preview: '',
+            github: 'XXXXXXXXXXXXXXXX'
         }
     ]
 

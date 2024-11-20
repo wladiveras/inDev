@@ -18,17 +18,23 @@
                     mobile-animation="none"
                 >
                     <section>
-                        <span class="text-primary-500 text-xl md:text-2xl">
-                            Olá, eu me chamo
+                        <span
+                            v-if="hero.label"
+                            class="text-primary-500 text-xl md:text-2xl"
+                        >
+                            {{ hero.label }}
                         </span>
 
                         <h1
                             id="main-heading"
                             class="text-5xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-7xl"
                         >
-                            Wladi
-                            <span class="underline decoration-primary-500">
-                                Veras
+                            {{ hero.header }}
+                            <span
+                                v-if="hero.subHeader"
+                                class="underline decoration-primary-500"
+                            >
+                                {{ hero.subHeader }}
                             </span>
                         </h1>
 
@@ -36,20 +42,14 @@
                             id="main-heading"
                             class="text-5xl font-bold tracking-tight text-gray-900 dark:text-slate-500 sm:text-6xlp"
                         >
-                            Crio soluções para a web.
+                            {{ hero.title }}
                         </h2>
 
                         <section
                             class="text-1xl gap-2 max-w-[40rem] text-slate-400 dark:text-slate-300 mt-10"
                         >
                             <p>
-                                Sou especializado em criar soluções digitais
-                                robustas e de alta qualidade. Com mais de 8 anos
-                                de experiência, trabalhei em projetos como o
-                                chatbot e o gateway de pagamento, focando sempre
-                                na segurança, escalabilidade e na entrega de
-                                produtos que atendem às necessidades dos
-                                usuários.
+                                {{ hero.description }}
                             </p>
                         </section>
                     </section>
@@ -75,7 +75,7 @@
                             class="relative mt-20 md:mt-0 animate__animated animate__bounceIn float"
                         >
                             <img
-                                src="/images/me-ia.png"
+                                :src="hero.image"
                                 alt="Profile"
                                 class="w-64 h-110 rounded-md m-auto object-cover border-4 border-white/50 shadow-xl md:transform -translate-x-4 -translate-y-4 md:hover:translate-x-0 md:hover:translate-y-0 transition duration-300"
                             />
@@ -87,6 +87,17 @@
     </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+    const hero = {
+        label: 'Olá, eu me chamo',
+        header: 'Wladi',
+        subHeader: 'Veras',
+        title: 'Crio soluções para a web.',
+        image: '/images/me-ia.png',
+
+        description:
+            'Com mais de 8 anos de experiência, trabalhei em projetos como o chatbot e o gateway de pagamento, focando sempre na segurança, escalabilidade e na entrega de produtos que atendem às necessidades dos usuários.'
+    }
+</script>
 
 <style lang="css" scoped></style>
