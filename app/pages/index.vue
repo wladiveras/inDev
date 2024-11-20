@@ -2,7 +2,7 @@
     <section>
         <DefaultIndexHero />
         <DefaultIndexAbout />
-        <DefaultIndexJobs />
+        <DefaultIndexExperience />
         <DefaultIndexProjects />
         <DefaultIndexContact />
     </section>
