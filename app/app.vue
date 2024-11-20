@@ -29,6 +29,7 @@
     )
 
     onMounted(async () => {
+        setupNavigation()
         await new Promise((resolve) => setTimeout(resolve, 1000))
         preloader.hide()
     })
@@ -48,7 +49,17 @@
     })
 
     useSeoMeta({
-        titleTemplate: 'Wladi Veras  • %s',
+        titleTemplate: (title) => {
+            return title
+                ? `Wladi Veras • ${title}`
+                : 'Wladi Veras • Desenvolvedor Fullstack'
+        },
+        keywords:
+            'Laravel, Vue.js, Nuxt.js, PHP, Tailwind CSS, Bootstrap, frameworks, bibliotecas, programador, desenvolvedor, fullstack, backend, frontend, back-end, front-end, ia, inteligencia artificial, responsivo, profissional de TI, profissional ',
+        description:
+            'Desenvolvedor Fullstack com 8 anos experiência em Laravel, Vue.js, Nuxt.js, PHP, Tailwind CSS, Bootstrap, e outros frameworks e bibliotecas.',
+        ogDescription:
+            'Desenvolvedor Fullstack com 8 anos experiência em Laravel, Vue.js, Nuxt.js, PHP, Tailwind CSS, Bootstrap, e outros frameworks e bibliotecas.',
         ogImage: '/images/seo.png',
         twitterImage: '/images/seo.png',
         twitterCard: 'summary_large_image'
