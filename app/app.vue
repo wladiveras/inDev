@@ -53,6 +53,8 @@
                 ? `Wladi Veras • ${title}`
                 : 'Wladi Veras • Desenvolvedor Fullstack'
         },
+
+        contentSecurityPolicy: {},
         keywords:
             'Laravel, Vue.js, Nuxt.js, PHP, Tailwind CSS, Bootstrap, frameworks, bibliotecas, programador, desenvolvedor, fullstack, backend, frontend, back-end, front-end, ia, inteligencia artificial, responsivo, profissional de TI, profissional ',
         description:
@@ -73,11 +75,11 @@
         <PreloaderOverlay
             :custom-class="preloaderClass"
             :show="preloaderState.isLoading"
-        />
-
-        <NuxtLayout v-if="!preloaderState.isLoading">
-            <NuxtPage />
-        </NuxtLayout>
+        >
+            <NuxtLayout>
+                <NuxtPage />
+            </NuxtLayout>
+        </PreloaderOverlay>
 
         <UNotifications />
     </UApp>

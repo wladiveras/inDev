@@ -20,6 +20,9 @@
                 />
             </div>
         </div>
+        <div v-else>
+            <slot />
+        </div>
     </Transition>
 </template>
 
