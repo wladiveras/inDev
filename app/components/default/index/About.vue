@@ -42,7 +42,7 @@
                     tragam valor para o dia a dia dos nossos clientes.
                 </p>
                 <p
-                    class="mt-10 mb-10 border-l-4 border-indigo-500 pl-4 font-normal"
+                    class="mt-10 mb-10 border-l-4 border-primary-500 pl-4 font-normal"
                 >
                     aqui estão algumas tecnologias com as quais tenho trabalhado
                     recentemente.

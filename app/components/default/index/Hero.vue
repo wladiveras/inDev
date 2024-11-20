@@ -18,7 +18,7 @@
                     mobile-animation="none"
                 >
                     <section>
-                        <span class="text-indigo-500 text-xl md:text-2xl">
+                        <span class="text-primary-500 text-xl md:text-2xl">
                             Olá, eu me chamo
                         </span>
 
@@ -27,7 +27,7 @@
                             class="text-5xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-7xl"
                         >
                             Wladi
-                            <span class="underline decoration-indigo-500">
+                            <span class="underline decoration-primary-500">
                                 Veras
                             </span>
                         </h1>
@@ -40,7 +40,7 @@
                         </h2>
 
                         <section
-                            class="text-1xl gap-2 max-w-[40rem] text-slate-300 mt-10"
+                            class="text-1xl gap-2 max-w-[40rem] text-slate-400 dark:text-slate-300 mt-10"
                         >
                             <p>
                                 Sou especializado em criar soluções digitais
@@ -66,10 +66,10 @@
                 >
                     <div class="relative group">
                         <div
-                            class="absolute -inset-2 bg-gradient-to-r from-white to-indigo-600 rounded-full blur-xl opacity-75 group-hover:opacity-100 transition duration-1000"
+                            class="absolute -inset-2 bg-gradient-to-r from-slate-600 dark:from-white to-primary-600 rounded-full blur-xl opacity-75 group-hover:opacity-100 transition duration-1000"
                         />
                         <div
-                            class="absolute -inset-1 bg-gradient-to-r from-primary to-indigo-500 rounded-full blur-xl opacity-75 group-hover:opacity-100 transition duration-1000"
+                            class="absolute -inset-1 bg-gradient-to-r from-primary to-primary-500 rounded-full blur-xl opacity-75 group-hover:opacity-100 transition duration-1000"
                         ></div>
                         <div
                             class="relative mt-20 md:mt-0 animate__animated animate__bounceIn float"

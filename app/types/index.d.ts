@@ -13,6 +13,13 @@ export interface CustomTabItem extends TabItem {
     content: ContentItem[]
 }
 
+export interface ColorTheme {
+    label: string
+    icon?: string
+    slot: string
+    class: string
+    onSelect: () => void
+}
 export interface Logo {
     width?: number | string
     height?: number | string

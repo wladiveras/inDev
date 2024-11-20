@@ -29,14 +29,18 @@
                 </template>
 
                 <template #resume-label>
-                    <UButton
-                        icon="mdi:resume"
-                        variant="outline"
-                        size="xl"
-                        class="text-indigo-500 border-1 border-indigo-500/100 cursor-pointer mr-10"
-                    >
-                        Currículo
-                    </UButton>
+                    <div class="flex items-center gap-5">
+                        <SetColor />
+
+                        <UButton
+                            icon="mdi:resume"
+                            variant="outline"
+                            size="xl"
+                            class="text-primary-500 border-1 border-primary-500/100 cursor-pointer mr-10"
+                        >
+                            Currículo
+                        </UButton>
+                    </div>
                 </template>
             </UNavigationMenu>
         </div>
@@ -58,6 +62,7 @@
                     color="#4f46e5"
                 />
             </div>
+
             <DefaultSearch />
         </div>
     </header>

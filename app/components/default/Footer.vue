@@ -13,7 +13,7 @@
                     <UIcon
                         :name="media.icon"
                         size="1.5rem"
-                        class="hover:text-indigo-500 transition-all duration-300"
+                        class="hover:text-primary-500 transition-all duration-300"
                     />
                 </a>
             </UTooltip>

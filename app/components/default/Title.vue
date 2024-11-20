@@ -7,7 +7,7 @@
     >
         <section
             :ref="title"
-            class="mt-0 md:mt-50 mb-10 border-b-2 pb-6 border-indigo-500 text-center md:text-left flex items-center justify-between gap-4"
+            class="mt-0 md:mt-50 mb-10 border-b-2 pb-6 border-primary-500 text-center md:text-left flex items-center justify-between gap-4"
             :class="{ 'md:pl-4': !center }"
         >
             <h2
@@ -21,7 +21,7 @@
                         :class="{
                             'md:ml-10': !center
                         }"
-                        class="text-indigo-500 block md:inline"
+                        class="text-primary-500 block md:inline"
                     >
                         {{ props.subtitle }}
                     </span>

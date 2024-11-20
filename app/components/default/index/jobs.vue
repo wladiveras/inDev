@@ -22,7 +22,7 @@
                         <div class="container mx-auto px-4 py-16">
                             <h1 class="text-2xl font-bold mb-4">
                                 {{ item.title }}
-                                <span class="text-indigo-500">
+                                <span class="text-primary-500">
                                     @{{ item.label }}
                                 </span>
                             </h1>
@@ -144,7 +144,7 @@
         top: -11px;
         left: -10px;
         font-size: 2rem;
-        color: var(--color-indigo-500);
+        color: var(--color-primary-500);
     }
 
     technology-ul {
