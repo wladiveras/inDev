@@ -29,7 +29,6 @@
     )
 
     onMounted(async () => {
-        setupNavigation()
         await new Promise((resolve) => setTimeout(resolve, 1000))
         preloader.hide()
     })
