@@ -9,6 +9,8 @@ export default defineNuxtConfig({
         '@nuxt/test-utils/module'
     ],
 
+    ssr: true,
+
     devtools: {
         enabled: true,
         timeline: {
@@ -29,6 +31,7 @@ export default defineNuxtConfig({
     future: {
         compatibilityVersion: 4
     },
+
     experimental: {
         payloadExtraction: true
     },
@@ -37,6 +40,8 @@ export default defineNuxtConfig({
 
     nitro: {
         compressPublicAssets: true,
+        minify: true,
+        timing: true,
         prerender: {
             routes: ['/'],
             crawlLinks: true
@@ -48,6 +53,15 @@ export default defineNuxtConfig({
         ai: false,
         blob: true,
         database: true
+    },
+
+    vite: {
+        build: {
+            cssMinify: true
+        },
+        optimizeDeps: {
+            include: ['vue', 'vue-router']
+        }
     },
 
     typescript: {
@@ -62,9 +76,10 @@ export default defineNuxtConfig({
             }
         }
     },
+
     image: {
-        format: ['webp'],
         provider: 'ipx',
+        format: ['webp', 'avif'],
         screens: {
             xs: 320,
             sm: 640,
