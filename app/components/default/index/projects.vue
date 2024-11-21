@@ -43,10 +43,10 @@
                             >
                                 <div>
                                     <span
-                                        class="relative text-amber-600 dark:text-amber-400"
+                                        class="relative text-primary-600 dark:text-primary-400"
                                     >
                                         <UIcon
-                                            class="relative top-1 text-amber-600 dark:text-amber-400"
+                                            class="relative top-1 text-primary-600 dark:text-primary-400"
                                             name="line-md:star"
                                             size="1.2rem"
                                         />

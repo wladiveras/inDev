@@ -11,6 +11,34 @@
             : 'bg-gray-100 dark:bg-slate-800'
     )
 
+    const seo = {
+        title: 'Wladi Veras',
+        titleCallback: 'Wladi Veras • Desenvolvedor Fullstack',
+        website: 'https://wladi.com.br',
+        keywords:
+            'Laravel, Vue.js, Nuxt.js, PHP, Tailwind CSS, Bootstrap, frameworks, bibliotecas, programador, desenvolvedor, fullstack, backend, frontend, back-end, front-end, ia, inteligencia artificial, responsivo, profissional de TI, profissional',
+        description:
+            'Desenvolvedor Fullstack com 8 anos experiência em Laravel, Vue.js, Nuxt.js, PHP, Tailwind CSS, Bootstrap, e outros frameworks e bibliotecas.',
+        image: '/images/seo.png'
+    }
+
+    useSeoMeta({
+        titleTemplate: (title) => {
+            return title ? `${seo.title} • ${title}` : seo.titleCallback
+        },
+        contentSecurityPolicy: {},
+        keywords: seo.keywords,
+        description: seo.description,
+        ogUrl: seo.website,
+        ogType: 'website',
+        ogDescription: seo.description,
+        ogImage: seo.image,
+        twitterTitle: seo.title || seo.titleCallback,
+        twitterDescription: seo.description,
+        twitterImage: seo.image,
+        twitterCard: 'summary_large_image'
+    })
+
     onMounted(() => {
         requestAnimationFrame(() => {
             preloader.hide()
@@ -41,25 +69,6 @@
         htmlAttrs: {
             lang: 'en'
         }
-    })
-
-    useSeoMeta({
-        titleTemplate: (title) => {
-            return title
-                ? `Wladi Veras • ${title}`
-                : 'Wladi Veras • Desenvolvedor Fullstack'
-        },
-
-        contentSecurityPolicy: {},
-        keywords:
-            'Laravel, Vue.js, Nuxt.js, PHP, Tailwind CSS, Bootstrap, frameworks, bibliotecas, programador, desenvolvedor, fullstack, backend, frontend, back-end, front-end, ia, inteligencia artificial, responsivo, profissional de TI, profissional ',
-        description:
-            'Desenvolvedor Fullstack com 8 anos experiência em Laravel, Vue.js, Nuxt.js, PHP, Tailwind CSS, Bootstrap, e outros frameworks e bibliotecas.',
-        ogDescription:
-            'Desenvolvedor Fullstack com 8 anos experiência em Laravel, Vue.js, Nuxt.js, PHP, Tailwind CSS, Bootstrap, e outros frameworks e bibliotecas.',
-        ogImage: '/images/seo.png',
-        twitterImage: '/images/seo.png',
-        twitterCard: 'summary_large_image'
     })
 </script>
 
