@@ -3,9 +3,18 @@ import type { ColorTheme } from '~/types'
 export const useTheme = () => {
     const config = useAppConfig()
     const currentTheme = ref(config.ui.colors.primary)
-    const currentColor = ref('#6366f1')
+    const currentColor = ref('#ef4444')
 
     const colorThemes: ColorTheme[] = [
+        {
+            label: 'red',
+            slot: 'profile',
+            class: 'text-red-500',
+            color: '#ef4444',
+            onSelect() {
+                changeColor('red')
+            }
+        },
         {
             label: 'indigo',
             slot: 'profile',
@@ -22,15 +31,6 @@ export const useTheme = () => {
             color: '#f59e0b',
             onSelect() {
                 changeColor('amber')
-            }
-        },
-        {
-            label: 'red',
-            slot: 'profile',
-            class: 'text-red-500',
-            color: '#ef4444',
-            onSelect() {
-                changeColor('red')
             }
         },
         {
@@ -95,7 +95,7 @@ export const useTheme = () => {
         config.ui.colors.primary = color
         currentTheme.value = color
         currentColor.value =
-            colorThemes.find((c) => c.label === color)?.color || '#6366f1'
+            colorThemes.find((c) => c.label === color)?.color || '#ef4444'
     }
 
     return {

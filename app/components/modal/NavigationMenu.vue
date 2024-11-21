@@ -37,7 +37,7 @@
                 icon="mdi:resume"
                 variant="outline"
                 size="xl"
-                class="text-primary-500 border-1 border-primary-500/100 m-auto"
+                class="text-primary-400 border-1 border-primary-500/100 m-auto"
             >
                 Currículo
             </UButton>

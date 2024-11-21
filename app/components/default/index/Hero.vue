@@ -20,7 +20,7 @@
                     <section>
                         <span
                             v-if="hero.label"
-                            class="text-primary-500 text-xl md:text-2xl"
+                            class="text-primary-400 text-xl md:text-2xl"
                         >
                             {{ hero.label }}
                         </span>
