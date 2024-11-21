@@ -1,6 +1,7 @@
 <template>
     <div>
         <UButton
+            aria-label="select theme"
             class="text-[var(--ui-primary)]"
             variant="outline"
             :icon="

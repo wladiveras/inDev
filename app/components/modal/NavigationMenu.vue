@@ -33,6 +33,7 @@
                 <SetColor />
             </div>
             <UButton
+                aria-label="Currículo"
                 icon="mdi:resume"
                 variant="outline"
                 size="xl"

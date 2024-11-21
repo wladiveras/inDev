@@ -5,6 +5,7 @@
             :ui="{ content: 'w-48' }"
         >
             <UButton
+                aria-label="select color"
                 class="text-[var(--ui-primary)]"
                 variant="outline"
                 icon="mdi:color"

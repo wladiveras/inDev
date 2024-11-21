@@ -1,6 +1,7 @@
 <template>
     <UDrawer :handle="false">
         <UButton
+            aria-label="Buscar"
             color="neutral"
             variant="link"
             size="xl"

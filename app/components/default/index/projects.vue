@@ -23,6 +23,8 @@
                     <div class="w-full md:w-1/2">
                         <NuxtImg
                             format="webp"
+                            width="auto"
+                            height="auto"
                             :src="project.image"
                             :alt="project.title"
                             class="rounded-lg w-full"
