@@ -75,6 +75,7 @@
                             class="relative mt-20 md:mt-0 animate__animated animate__bounceIn float"
                         >
                             <NuxtImg
+                                densities="x1 x2"
                                 format="webp"
                                 :src="hero.image"
                                 :alt="hero.header"
