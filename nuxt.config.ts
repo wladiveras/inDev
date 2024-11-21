@@ -80,6 +80,7 @@ export default defineNuxtConfig({
         cloudflare: {
             baseURL: 'https://wladi.com.br'
         },
+        provider: 'cloudflare',
         format: ['webp', 'avif'],
         screens: {
             xs: 320,
