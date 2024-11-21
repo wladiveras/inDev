@@ -1,8 +1,6 @@
 <script setup lang="ts">
     import favicon from '~/assets/images/favicon.svg'
 
-    const route = useRoute()
-
     const preloader = usePreloader()
     const preloaderState = preloader.getState()
     const currentLayout = ref('')
@@ -11,19 +9,6 @@
         currentLayout.value === 'default'
             ? 'bg-white dark:bg-slate-900'
             : 'bg-gray-100 dark:bg-slate-800'
-    )
-
-    watch(
-        () => route.meta.layout,
-        (newLayout) => {
-            if (newLayout !== currentLayout.value) {
-                requestAnimationFrame(() => {
-                    preloader.show()
-                    currentLayout.value = newLayout as string
-                    preloader.hide()
-                })
-            }
-        }
     )
 
     onMounted(() => {
