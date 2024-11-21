@@ -19,25 +19,32 @@
                     class="w-full"
                 >
                     <template #content="{ item }">
-                        <div class="container mx-auto px-4 py-16">
-                            <h1 class="text-2xl font-bold mb-4">
-                                {{ item.title }}
-                                <span class="text-primary-500">
-                                    @{{ item.label }}
-                                </span>
-                            </h1>
+                        <AnimateElement
+                            animation="fadeIn"
+                            :duration="2000"
+                            :delay="300"
+                            repeat-once
+                        >
+                            <div class="container mx-auto px-4 py-16">
+                                <h1 class="text-2xl font-bold mb-4">
+                                    {{ item.title }}
+                                    <span class="text-primary-500">
+                                        @{{ item.label }}
+                                    </span>
+                                </h1>
 
-                            <p class="text-md mb-8">{{ item.date }}</p>
+                                <p class="text-md mb-8">{{ item.date }}</p>
 
-                            <ul class="list-disc pl-8 space-y-4 jobs">
-                                <li
-                                    v-for="(content, index) in item.content"
-                                    :key="`${item.label}-${index}`"
-                                >
-                                    <p>{{ content.text }}</p>
-                                </li>
-                            </ul>
-                        </div>
+                                <ul class="list-disc pl-8 space-y-4 jobs">
+                                    <li
+                                        v-for="(content, index) in item.content"
+                                        :key="`${item.label}-${index}`"
+                                    >
+                                        <p>{{ content.text }}</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </AnimateElement>
                     </template>
                 </UTabs>
             </article>

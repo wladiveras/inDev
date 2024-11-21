@@ -1,11 +1,11 @@
 <template>
     <div>
-        <DefaultHeader />
+        <LazyDefaultHeader />
 
-        <UContainer>
+        <LazyUContainer>
             <slot />
-        </UContainer>
-        <DefaultFooter />
+        </LazyUContainer>
+        <LazyDefaultFooter />
     </div>
 </template>
 

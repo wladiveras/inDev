@@ -25,6 +25,8 @@
         | 'slideLeft'
         | 'slideRight'
         | 'zoomIn'
+        | 'lightSpeedInRight'
+        | 'lightSpeedInLeft'
 
     const props = withDefaults(
         defineProps<{
@@ -76,7 +78,9 @@
         slideDown: 'animate__slideInDown',
         slideLeft: 'animate__slideInLeft',
         slideRight: 'animate__slideInRight',
-        zoomIn: 'animate__zoomIn'
+        zoomIn: 'animate__zoomIn',
+        lightSpeedInRight: 'animate__lightSpeedInRight',
+        lightSpeedInLeft: 'animate__lightSpeedInLeft'
     }
 
     // Determine which animation to use based on screen size

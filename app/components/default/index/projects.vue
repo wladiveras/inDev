@@ -14,88 +14,95 @@
                 v-for="(project, index) in starredProjects"
                 :key="index"
             >
-                <article
-                    :class="[
-                        'flex flex-wrap md:flex-nowrap gap-10 mb-10',
-                        { 'md:flex-row-reverse': index % 2 !== 0 }
-                    ]"
+                <AnimateElement
+                    :animation="index % 2 !== 0 ? 'slideLeft' : 'slideRight'"
+                    :duration="1000"
+                    :delay="300"
+                    repeat-once
                 >
-                    <div class="w-full md:w-1/2">
-                        <NuxtImg
-                            format="webp"
-                            sizes="100vw sm:50vw md:700px"
-                            densities="x1 x2"
-                            :src="project.image"
-                            :alt="project.title"
-                            class="rounded-lg w-full"
-                        />
-                    </div>
+                    <article
+                        :class="[
+                            'flex flex-wrap md:flex-nowrap gap-10 mb-10',
+                            { 'md:flex-row-reverse': index % 2 !== 0 }
+                        ]"
+                    >
+                        <div class="w-full md:w-1/2">
+                            <NuxtImg
+                                format="webp"
+                                sizes="100vw sm:50vw md:700px"
+                                densities="x1 x2"
+                                :src="project.image"
+                                :alt="project.title"
+                                class="rounded-lg w-full"
+                            />
+                        </div>
 
-                    <div class="w-full md:w-1/2">
-                        <div
-                            class="flex flex-nowrap justify-between items-center"
-                        >
-                            <div>
-                                <span
-                                    class="relative text-amber-600 dark:text-amber-400"
-                                >
-                                    <UIcon
-                                        class="relative top-1 text-amber-600 dark:text-amber-400"
-                                        name="line-md:star"
-                                        size="1.2rem"
-                                    />
-                                    Destacado
-                                </span>
-                                <h1 class="text-lg font-bold mb-5">
-                                    {{ project.title }}
-                                </h1>
-                            </div>
-                            <div class="flex justify-center">
-                                <a
-                                    v-if="project.github"
-                                    :href="project.github"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="External Link"
-                                >
-                                    <UIcon
-                                        class="mr-1.5 relative top-[-0.1rem] hover:text-primary-500 transition-all duration-300 cursor-pointer"
-                                        name="line-md:github"
-                                        size="1.5rem"
-                                    />
-                                </a>
-                                <a
-                                    v-if="project.preview"
-                                    :href="project.preview"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="External Link"
-                                >
-                                    <UIcon
-                                        class="mr-1.5 relative top-[-0.1rem] hover:text-primary-500 transition-all duration-300 cursor-pointer"
-                                        name="line-md:external-link"
-                                        size="1.5rem"
-                                    />
-                                </a>
-                            </div>
-                        </div>
-                        <USeparator
-                            type="dashed"
-                            class="mb-5"
-                        />
-                        <p class="font-thin text-sm">
-                            {{ project.description }}
-                        </p>
-                        <div class="flex flex-wrap gap-2 mt-5 mb-5">
-                            <UBadge
-                                v-for="technologies in project.technologies"
-                                :key="technologies"
+                        <div class="w-full md:w-1/2">
+                            <div
+                                class="flex flex-nowrap justify-between items-center"
                             >
-                                {{ technologies }}
-                            </UBadge>
+                                <div>
+                                    <span
+                                        class="relative text-amber-600 dark:text-amber-400"
+                                    >
+                                        <UIcon
+                                            class="relative top-1 text-amber-600 dark:text-amber-400"
+                                            name="line-md:star"
+                                            size="1.2rem"
+                                        />
+                                        Destacado
+                                    </span>
+                                    <h1 class="text-lg font-bold mb-5">
+                                        {{ project.title }}
+                                    </h1>
+                                </div>
+                                <div class="flex justify-center">
+                                    <a
+                                        v-if="project.github"
+                                        :href="project.github"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="External Link"
+                                    >
+                                        <UIcon
+                                            class="mr-1.5 relative top-[-0.1rem] hover:text-primary-500 transition-all duration-300 cursor-pointer"
+                                            name="line-md:github"
+                                            size="1.5rem"
+                                        />
+                                    </a>
+                                    <a
+                                        v-if="project.preview"
+                                        :href="project.preview"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="External Link"
+                                    >
+                                        <UIcon
+                                            class="mr-1.5 relative top-[-0.1rem] hover:text-primary-500 transition-all duration-300 cursor-pointer"
+                                            name="line-md:external-link"
+                                            size="1.5rem"
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                            <USeparator
+                                type="dashed"
+                                class="mb-5"
+                            />
+                            <p class="font-thin text-sm">
+                                {{ project.description }}
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-5 mb-5">
+                                <UBadge
+                                    v-for="technologies in project.technologies"
+                                    :key="technologies"
+                                >
+                                    {{ technologies }}
+                                </UBadge>
+                            </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
+                </AnimateElement>
                 <USeparator class="mb-10 mt-10">
                     <template #default>
                         <MainLogo

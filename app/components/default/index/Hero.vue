@@ -46,7 +46,7 @@
                         </h2>
 
                         <section
-                            class="text-1xl gap-2 max-w-[40rem] text-slate-400 dark:text-slate-300 mt-10"
+                            class="text-1xl gap-2 max-w-[40rem] text-slate-600 dark:text-slate-300 mt-10"
                         >
                             <p>
                                 {{ hero.description }}
