@@ -10,7 +10,6 @@
                 <LogoType
                     width="200"
                     height="200"
-                    color="#4f46e5"
                     alt="Logo"
                     class="center"
                 />

@@ -3,7 +3,7 @@ import type { ColorTheme } from '~/types'
 export const useTheme = () => {
     const config = useAppConfig()
     const currentTheme = ref(config.ui.colors.primary)
-    const currentColor = ref('#ef4444')
+    const currentColor = ref('')
 
     const colorThemes: ColorTheme[] = [
         {
@@ -95,7 +95,8 @@ export const useTheme = () => {
         config.ui.colors.primary = color
         currentTheme.value = color
         currentColor.value =
-            colorThemes.find((c) => c.label === color)?.color || '#ef4444'
+            colorThemes.find((c) => c.label === color)?.color ||
+            config.ui.colors.primary
     }
 
     return {
