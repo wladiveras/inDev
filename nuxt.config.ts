@@ -21,7 +21,6 @@ export default defineNuxtConfig({
     colorMode: {
         preference: 'dark'
     },
-
     routeRules: {
         '/**': {
             prerender: true
@@ -78,7 +77,9 @@ export default defineNuxtConfig({
     },
 
     image: {
-        provider: 'ipx',
+        cloudflare: {
+            baseURL: 'https://wladi.com.br'
+        },
         format: ['webp', 'avif'],
         screens: {
             xs: 320,
