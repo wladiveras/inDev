@@ -9,9 +9,11 @@
                 :key="index"
                 :text="media.tooltip"
             >
-                <a :href="media.link">
+                <a
+                    :href="media.link"
+                    :aria-label="media.tooltip"
+                >
                     <UIcon
-                        :aria-label="media.tooltip"
                         :name="media.icon"
                         size="1.5rem"
                         class="hover:text-primary-500 transition-all duration-300"
