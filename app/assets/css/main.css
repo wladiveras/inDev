@@ -1,14 +1,10 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
 @import 'animate.css';
-html {
-    scroll-behavior: smooth;
-}
-body {
-    transition: background-color 0.6s;
-}
 
 :root {
+    --scrollbar-width: calc(100vw - 100%);
+
     font-family: 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 
     --ui-primary: var(--ui-color-primary-700);
@@ -66,6 +62,26 @@ body {
     --ui-error: var(--ui-color-error-400);
 }
 
+html {
+    scroll-behavior: smooth;
+    margin-right: calc(-1 * var(--scrollbar-width));
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+body {
+    transition: background-color 0.6s;
+
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    padding-right: var(--scrollbar-width);
+    transition: background-color var(--transition-speed) ease;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
 @keyframes float {
     0% {
         transform: translatey(0px);
@@ -88,4 +104,11 @@ body {
 .float {
     transform: translatey(0px);
     animation: float 6s ease-in-out infinite;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    html,
+    body {
+        touch-action: pan-y pinch-zoom;
+    }
 }

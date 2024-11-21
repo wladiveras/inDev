@@ -369,7 +369,7 @@
     const { currentColor } = useTheme()
 </script>
 
-<style scoped>
+<style lang="css" scoped>
     svg {
         transition: all 0.3s ease;
     }
