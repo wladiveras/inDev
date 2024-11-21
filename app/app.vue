@@ -20,7 +20,7 @@
                 requestAnimationFrame(() => {
                     preloader.show()
                     currentLayout.value = newLayout as string
-                    setTimeout(() => preloader.hide(), 300)
+                    preloader.hide()
                 })
             }
         }
@@ -28,7 +28,7 @@
 
     onMounted(() => {
         requestAnimationFrame(() => {
-            setTimeout(() => preloader.hide(), 300)
+            preloader.hide()
         })
     })
 
