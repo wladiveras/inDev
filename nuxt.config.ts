@@ -1,11 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     modules: [
-        '@nuxt/ui',
         '@pinia/nuxt',
+        '@nuxt/ui',
+        '@nuxt/image',
         '@nuxt/eslint',
         '@nuxthub/core',
-        '@nuxt/image',
         '@nuxt/test-utils/module'
     ],
 

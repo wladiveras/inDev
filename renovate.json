@@ -1,6 +1,6 @@
 {
-  "extends": ["github>nuxt/renovate-config-nuxt"],
-  "lockFileMaintenance": {
-    "enabled": true
-  }
+    "extends": ["github>nuxt/renovate-config-nuxt"],
+    "lockFileMaintenance": {
+        "enabled": true
+    }
 }

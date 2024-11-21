@@ -72,8 +72,6 @@
                 </ul>
             </section>
         </AnimateElement>
-
-        >
     </section>
 </template>
 
@@ -87,7 +85,7 @@
         {
             name: 'TypeScript',
             icon: 'i-logos-typescript-icon',
-            size: ''
+            size: '1rem'
         },
         {
             name: 'Vue.js',
