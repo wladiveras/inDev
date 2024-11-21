@@ -77,7 +77,6 @@ export default defineNuxtConfig({
     },
 
     image: {
-        provider: 'cloudflare',
         format: ['webp', 'avif'],
         screens: {
             xs: 320,
