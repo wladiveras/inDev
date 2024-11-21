@@ -36,9 +36,11 @@
                             class="flex flex-nowrap justify-between items-center"
                         >
                             <div>
-                                <span class="relative text-amber-400">
+                                <span
+                                    class="relative text-amber-600 dark:text-amber-400"
+                                >
                                     <UIcon
-                                        class="relative top-1 text-amber-400"
+                                        class="relative top-1 text-amber-600 dark:text-amber-400"
                                         name="line-md:star"
                                         size="1.2rem"
                                     />

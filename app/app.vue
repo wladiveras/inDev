@@ -64,21 +64,18 @@
 </script>
 
 <template>
-    <UApp>
-        <LazyNuxtLoadingIndicator />
-        <LazyNuxtRouteAnnouncer />
-
-        <LazyPreloaderOverlay
-            :custom-class="preloaderClass"
-            :show="preloaderState.isLoading"
-        >
-            <LazyNuxtLayout>
-                <LazyNuxtPage />
-            </LazyNuxtLayout>
-        </LazyPreloaderOverlay>
-
-        <LazyUNotifications />
-    </UApp>
+    <PreloaderOverlay
+        :custom-class="preloaderClass"
+        :show="preloaderState.isLoading"
+    >
+        <UApp>
+            <NuxtLayout>
+                <NuxtLoadingIndicator />
+                <NuxtPage />
+                <UNotifications />
+            </NuxtLayout>
+        </UApp>
+    </PreloaderOverlay>
 </template>
 
 <style>
