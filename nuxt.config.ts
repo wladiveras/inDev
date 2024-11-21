@@ -21,6 +21,7 @@ export default defineNuxtConfig({
     colorMode: {
         preference: 'dark'
     },
+
     routeRules: {
         '/**': {
             prerender: true
@@ -32,7 +33,10 @@ export default defineNuxtConfig({
     },
 
     experimental: {
-        payloadExtraction: true
+        payloadExtraction: true,
+        treeshakeClientOnly: true,
+        viewTransition: true,
+        renderJsonPayloads: true
     },
 
     compatibilityDate: '2024-04-03',
@@ -59,7 +63,8 @@ export default defineNuxtConfig({
             cssMinify: true
         },
         optimizeDeps: {
-            include: ['vue', 'vue-router']
+            include: ['vue', 'vue-router', '@vueuse/core'],
+            exclude: ['nuxt/app']
         }
     },
 
@@ -77,6 +82,7 @@ export default defineNuxtConfig({
     },
 
     image: {
+        provider: 'ipx',
         format: ['webp', 'avif'],
         screens: {
             xs: 320,
@@ -85,6 +91,15 @@ export default defineNuxtConfig({
             lg: 1024,
             xl: 1280,
             xxl: 1536
+        },
+        presets: {
+            avatar: {
+                modifiers: {
+                    format: 'webp',
+                    width: 80,
+                    height: 80
+                }
+            }
         }
     }
 })
