@@ -5,6 +5,7 @@ export default defineNuxtConfig({
         '@nuxt/ui',
         '@nuxt/image',
         '@nuxt/eslint',
+        '@nuxthq/studio',
         '@nuxthub/core',
         '@nuxt/test-utils/module'
     ],
