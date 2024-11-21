@@ -7,30 +7,29 @@
     const preloaderState = preloader.getState()
     const currentLayout = ref('')
 
-    const preloaderClass = computed(() => {
-        return {
-            'bg-white dark:bg-slate-900': currentLayout.value === 'default',
-            'bg-gray-100 dark:bg-slate-800': currentLayout.value === 'admin'
-        }
-    })
+    const preloaderClass = computed(() =>
+        currentLayout.value === 'default'
+            ? 'bg-white dark:bg-slate-900'
+            : 'bg-gray-100 dark:bg-slate-800'
+    )
 
     watch(
         () => route.meta.layout,
-        async (newLayout) => {
+        (newLayout) => {
             if (newLayout !== currentLayout.value) {
-                preloader.show()
-                currentLayout.value = newLayout as string
-
-                await new Promise((resolve) => setTimeout(resolve, 500))
-
-                preloader.hide()
+                requestAnimationFrame(() => {
+                    preloader.show()
+                    currentLayout.value = newLayout as string
+                    setTimeout(() => preloader.hide(), 300)
+                })
             }
         }
     )
 
-    onMounted(async () => {
-        await new Promise((resolve) => setTimeout(resolve, 1000))
-        preloader.hide()
+    onMounted(() => {
+        requestAnimationFrame(() => {
+            setTimeout(() => preloader.hide(), 300)
+        })
     })
 
     useHead({
@@ -41,7 +40,19 @@
                 content: 'width=device-width, initial-scale=1'
             }
         ],
-        link: [{ rel: 'icon', type: 'image/svg+xml', href: favicon }],
+        link: [
+            {
+                rel: 'icon',
+                type: 'image/svg+xml',
+                href: favicon,
+                crossorigin: 'anonymous'
+            },
+            {
+                rel: 'preconnect',
+                href: 'https://fonts.googleapis.com',
+                crossorigin: 'anonymous'
+            }
+        ],
         htmlAttrs: {
             lang: 'en'
         }
@@ -69,19 +80,19 @@
 
 <template>
     <UApp>
-        <NuxtLoadingIndicator />
-        <NuxtRouteAnnouncer />
+        <LazyNuxtLoadingIndicator />
+        <LazyNuxtRouteAnnouncer />
 
-        <PreloaderOverlay
+        <LazyPreloaderOverlay
             :custom-class="preloaderClass"
             :show="preloaderState.isLoading"
         >
-            <NuxtLayout>
-                <NuxtPage />
-            </NuxtLayout>
-        </PreloaderOverlay>
+            <LazyNuxtLayout>
+                <LazyNuxtPage />
+            </LazyNuxtLayout>
+        </LazyPreloaderOverlay>
 
-        <UNotifications />
+        <LazyUNotifications />
     </UApp>
 </template>
 

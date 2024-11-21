@@ -21,16 +21,22 @@ export default defineNuxtConfig({
     },
 
     routeRules: {
-        '/': { prerender: true }
+        '/**': {
+            prerender: true
+        }
     },
 
     future: {
         compatibilityVersion: 4
     },
+    experimental: {
+        payloadExtraction: true
+    },
 
     compatibilityDate: '2024-04-03',
 
     nitro: {
+        compressPublicAssets: true,
         prerender: {
             routes: ['/'],
             crawlLinks: true
@@ -54,6 +60,17 @@ export default defineNuxtConfig({
                 commaDangle: 'never',
                 braceStyle: '1tbs'
             }
+        }
+    },
+    image: {
+        provider: 'ipx',
+        screens: {
+            xs: 320,
+            sm: 640,
+            md: 768,
+            lg: 1024,
+            xl: 1280,
+            xxl: 1536
         }
     }
 })
