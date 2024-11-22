@@ -34,6 +34,7 @@
                                 :src="project.image"
                                 :alt="project.title"
                                 class="inset-0 w-full h-full object-cover rounded-lg"
+                                loading="lazy"
                             />
                         </div>
 
