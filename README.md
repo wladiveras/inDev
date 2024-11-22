@@ -1,5 +1,7 @@
 # InDev - Your professional copilot
 
+![Meu portfólio](https://wladi.com.com.br/project-indev.png)
+
 A project designed to be a powerful assistant for developers who work as freelancers or want to showcase their projects. This platform streamlines project management, highlights your skills, and presents your portfolio in a polished, professional way—helping you stand out and attract new clients or collaborators.
 
 ## Setup
