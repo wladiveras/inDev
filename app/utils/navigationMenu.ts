@@ -10,25 +10,31 @@ export const navigationMenu = ref<NavigationMenuItem[][]>([
             label: 'Sobre',
             icon: 'line-md:coffee-half-empty-filled-loop',
             active: false,
-            href: '#about'
+            href: '/#about'
         },
         {
             label: 'Experiência',
             icon: 'line-md:clipboard-list',
             active: false,
-            href: '#experience'
+            href: '/#experience'
         },
         {
             label: 'Projetos',
             icon: 'line-md:folder-settings',
             active: false,
-            href: '#projects'
+            href: '/#projects'
         },
         {
             label: 'Workana',
             icon: 'material-symbols:connect-without-contact',
             active: false,
-            href: '#contact'
+            href: '/#contact'
+        },
+        {
+            label: 'Time',
+            icon: 'ri:team-line',
+            active: false,
+            href: '/team'
         }
     ],
     [

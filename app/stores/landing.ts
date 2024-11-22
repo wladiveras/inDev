@@ -175,7 +175,7 @@ export const useLandingStore = defineStore('landing', {
                     icon: 'hugeicons:job-share',
                     title: 'Fullstack Developer',
                     label: 'Alternativa Card',
-                    url: 'https://alternativacard.com.br',
+                    url: 'https://alternativafc.com.br/',
                     date: 'Julho 2021 - agosto 2022',
                     content: [
                         {
