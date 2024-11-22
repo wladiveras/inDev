@@ -31,12 +31,12 @@
                         >
                             <NuxtImg
                                 format="webp"
-                                width="auto"
-                                height="350"
+                                width="100%"
+                                height="auto"
                                 densities="x1 x2"
                                 :src="project.image"
                                 :alt="project.title"
-                                class="inset-0 w-full h-full cover rounded-lg"
+                                class="inset-0 w-full h-full rounded-lg object-cover"
                                 loading="lazy"
                             />
                         </div>
