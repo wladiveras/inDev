@@ -5,7 +5,7 @@ WhatsApp Chatbot for E-commerce
 This is a WhatsApp chatbot project that helps customers with their purchases on an e-commerce store. The chatbot uses a workflow gerated by a flow chart creator per connection. It integrates with the e-commerce store's API to provide a seamless customer experience.
 
 
-![[Chatbot]()](https://i.imgur.com/FgPbPGA.png)
+![[Chatbot]()](https://wladi.com.br/images/project-indev.png)
     
   
  
