@@ -123,62 +123,70 @@
                 <div
                     v-for="(project, index) in nonStarredProjects"
                     :key="index"
-                    class="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-8"
                 >
-                    <div class="flex justify-between items-center mb-4">
-                        <UIcon
-                            name="line-md:folder"
-                            size="3rem"
-                            class="text-primary-500 relative top-[-0.3rem]"
-                        />
+                    <AnimateElement
+                        animation="fadeIn"
+                        :duration="1000"
+                        :delay="300"
+                        repeat-once
+                        class="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-8"
+                    >
+                        <div class="flex justify-between items-center mb-4">
+                            <UIcon
+                                name="line-md:folder"
+                                size="3rem"
+                                class="text-primary-500 relative top-[-0.3rem]"
+                            />
 
-                        <div class="flex justify-center">
-                            <a
-                                v-if="project.github"
-                                :href="project.github"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="External Link"
-                            >
-                                <UIcon
-                                    class="mr-1.5 relative top-[-0.1rem] hover:text-primary-500 transition-all duration-300 cursor-pointer"
-                                    name="line-md:github"
-                                    size="1.5rem"
-                                />
-                            </a>
-                            <a
-                                v-if="project.preview"
-                                :href="project.preview"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="External Link"
-                            >
-                                <UIcon
-                                    class="mr-1.5 relative top-[-0.1rem] hover:text-primary-500 transition-all duration-300 cursor-pointer"
-                                    name="line-md:external-link"
-                                    size="1.5rem"
-                                />
-                            </a>
+                            <div class="flex justify-center">
+                                <a
+                                    v-if="project.github"
+                                    :href="project.github"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="External Link"
+                                >
+                                    <UIcon
+                                        class="mr-1.5 relative top-[-0.1rem] hover:text-primary-500 transition-all duration-300 cursor-pointer"
+                                        name="line-md:github"
+                                        size="1.5rem"
+                                    />
+                                </a>
+                                <a
+                                    v-if="project.preview"
+                                    :href="project.preview"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="External Link"
+                                >
+                                    <UIcon
+                                        class="mr-1.5 relative top-[-0.1rem] hover:text-primary-500 transition-all duration-300 cursor-pointer"
+                                        name="line-md:external-link"
+                                        size="1.5rem"
+                                    />
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex mb-4">
-                        <h2 class="text-md font-bold">
-                            {{ project.title }}
-                        </h2>
-                    </div>
 
-                    <p class="text-gray-400 text-xs">
-                        {{ project.description }}
-                    </p>
+                        <div class="flex mb-4">
+                            <h2 class="text-md font-bold">
+                                {{ project.title }}
+                            </h2>
+                        </div>
 
-                    <div class="flex flex-wrap gap-2 mt-5 mb-5">
-                        <UBadge
-                            v-for="technologies in project.technologies"
-                            :key="technologies"
-                        >
-                            {{ technologies }}
-                        </UBadge>
-                    </div>
+                        <p class="text-gray-400 text-xs">
+                            {{ project.description }}
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mt-5 mb-5">
+                            <UBadge
+                                v-for="technologies in project.technologies"
+                                :key="technologies"
+                            >
+                                {{ technologies }}
+                            </UBadge>
+                        </div>
+                    </AnimateElement>
                 </div>
             </section>
         </div>
