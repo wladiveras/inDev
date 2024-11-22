@@ -12,6 +12,8 @@
                 <a
                     :href="media.link"
                     :aria-label="media.tooltip"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
                     <UIcon
                         :name="media.icon"
