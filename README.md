@@ -1,32 +1,83 @@
-# InDev - Your professional copilot
+# Chatbot
 
-([https://wladi.com.com.br/project-indev.png](https://wladi.com.br/images/project-indev.png))
+WhatsApp Chatbot for E-commerce
 
-A project designed to be a powerful assistant for developers who work as freelancers or want to showcase their projects. This platform streamlines project management, highlights your skills, and presents your portfolio in a polished, professional way—helping you stand out and attract new clients or collaborators.
+This is a WhatsApp chatbot project that helps customers with their purchases on an e-commerce store. The chatbot uses a workflow gerated by a flow chart creator per connection. It integrates with the e-commerce store's API to provide a seamless customer experience.
 
+
+![[Chatbot]()](https://i.imgur.com/FgPbPGA.png)
+    
+  
+ 
+## Features
+
+    Responds to customer inquiries about products
+    Recommends products based on customer preferences
+    Provides product information and pricing
+    Allows customers to make purchases directly from the chatbot
+    Integrates with e-commerce store's API for seamless checkout
+    
+  
+ 
+## Technologies Used
+
+    Javascript
+    Typescript
+    Nuxt 3
+    Nuxt UI PRO
+    Eslint
+    Pinia Store
+    Zod Validation
+    Laravel Reverb websocket
+    NVM(Node Version Module)
+
+      
 ## Setup
 
-Make sure to install dependencies and pnpm:
+Step to setup project in your machine.
+    
+### node setup
+
+Welcome to chatbot, create a new branch and starting coding with us.
+
+Skip this step if you already use node 21.
+Install NVM by downloading the install script from their GitHub page. You can use curl or wget:
+
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+#or
+
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+```
+
+Now, you can install a specific version of Node.js using NVM. For example, to install Node.js 21, you would use:
 
 ```bash
+nvm install 21
+```
 
-#install pnpm
-npm install -g pnpm
+You can switch between installed Node versions with:
 
+```bash
+nvm use <version>
+```
+
+### project setup
+
+Make sure to install the dependencies:
+
+```bash
 # pnpm
 pnpm install
-
 ```
 
 ## Development Server
 
-Start the development server on `http://localhost:3000`:
+Start the development server on `http://localhost:3000`
 
 ```bash
-
-# pnpm
-pnpm dev
-
+pnpm run dev
 ```
 
 ## Production
@@ -34,31 +85,23 @@ pnpm dev
 Build the application for production:
 
 ```bash
-
-# pnpm
-pnpm build
-
+pnpm run build
 ```
 
 Locally preview production build:
 
 ```bash
-
-# pnpm
-pnpm preview
-
+pnpm run preview
 ```
 
-## Brainstorm Ideas
+Check out the [nuxt 3 documentation](https://nuxt.com/docs) and [nuxt UI](https://ui.nuxt.com/getting-started/) for more information.
 
-> Ideas for Project Success and Creating Use Cases and MVP Features
+## Utils Links
 
-* Customizable Profile - Users can personalize their profile by selecting the front-end/back-end stacks they use, displayed as badges.
-* Landing Page - A parallax-style introduction page that summarizes the users professional experiences and journey (using GPT to create a storyline with related topics).
-* Members Area - A private area for self-management, with task lists, priorities, a clock, Pomodoro technique, to-do list, and daily motivational quotes.
-* Contact - Resume Generator - A system capable of generating a downloadable resume automatically filled with the user's data.
-* Chatbot - A chatbot to assist visitors accessing the system, with messages also sent directly to the user's WhatsApp.
-* Related Links - Links to projects, landing pages on Figma, portfolio tips, other landing page ideas, and more.
-* Tech Stack - Environment with Docker, automated testing, Nuxt 3/Nuxt UI, and Pinia as core technologies, with integration to Facebook/WhatsApp chatbots.
-* LinkedIn Integration - Integration with LinkedIn for easy implementation of data such as recommendations to be displayed. Example 1 Example 2
-* Story-Based Experiences - Ability to create case studies (in a modal or dedicated pages), each detailing a story about experience in a particular area. Example: a story generated in GPT based on experience, challenges, and solutions in developing, maintaining, and adding new features to a course membership area and streaming service, using languages like PHP, Lumen framework, and RabbitMQ for queues.
+[iconify icons](https://icon-sets.iconify.design/)
+[Tailwind css](https://tailwindcss.com/docs/)
+[Animate Style css](https://animate.style/)
+
+## Licence
+
+[MIT](./LICENSE)
