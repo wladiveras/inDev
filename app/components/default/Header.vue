@@ -33,14 +33,15 @@
                         <SetColor />
 
                         <UButton
-                            aria-label="Currículo"
+                            aria-label="Contato"
                             icon="mdi:resume"
                             variant="outline"
                             size="xl"
                             class="text-primary-400 border-1 border-primary-500/100 cursor-pointer mr-10"
-                            @click="downloadResume"
+                            :to="contact.url"
+                            target="_blank"
                         >
-                            Currículo
+                            Contato
                         </UButton>
                     </div>
                 </template>
@@ -71,6 +72,9 @@
 
 <script lang="ts" setup>
     import { ModalNavigationMenu } from '#components'
+
+    const landingStore = useLandingStore()
+    const { contact } = storeToRefs(landingStore)
 
     const slideover = useSlideover()
 

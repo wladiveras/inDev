@@ -25,7 +25,7 @@ export const navigationMenu = ref<NavigationMenuItem[][]>([
             href: '#projects'
         },
         {
-            label: 'Contato',
+            label: 'Workana',
             icon: 'material-symbols:connect-without-contact',
             active: false,
             href: '#contact'

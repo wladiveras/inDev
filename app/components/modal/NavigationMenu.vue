@@ -32,14 +32,15 @@
                 <SetColor />
             </div>
             <UButton
-                aria-label="Currículo"
+                aria-label="Contato"
                 icon="mdi:resume"
                 variant="outline"
                 size="xl"
                 class="text-primary-400 border-1 border-primary-500/100 m-auto"
-                @click="downloadResume"
+                :to="contact.url"
+                target="_blank"
             >
-                Currículo
+                Contato
             </UButton>
         </template>
     </UDrawer>
@@ -47,4 +48,7 @@
 
 <script setup lang="ts">
     import LogoType from '../LogoType.vue'
+
+    const landingStore = useLandingStore()
+    const { contact } = storeToRefs(landingStore)
 </script>
