@@ -202,11 +202,11 @@
                 'LLama 3.2'
             ],
             image: '/images/project-chatbot.png',
-            preview: 'XXXXXXXXXXXXXXXX',
-            github: 'XXXXXXXXXXXXXXXX'
+            preview: 'https://marinabot.com.br',
+            github: ''
         },
         {
-            title: 'Chatbot',
+            title: 'Linksplit',
             star: true,
             description:
                 'O chatbot foi desenvolvido para empresas que buscam otimizar o atendimento e criar conexões ágeis com seus clientes. Com funcionalidades como fluxos automatizados, envio de áudios e respostas naturais, ele transforma a comunicação em um processo mais simples e eficiente, entregando resultados reais para o negócio.',
@@ -220,11 +220,11 @@
                 'LLama 3.2'
             ],
             image: '/images/project-chatbot.png',
-            preview: 'XXXXXXXXXXXXXXXX',
-            github: 'XXXXXXXXXXXXXXXX'
+            preview: 'https://linksplit.com.br',
+            github: ''
         },
         {
-            title: 'Linksplit',
+            title: 'in Dev',
             star: false,
             description:
                 'O Linksplit é uma ferramenta que cria um único link para dividir e direcionar leads para diferentes destinos de forma automática e aleatória. Ideal para campanhas de marketing e testes A/B, ele permite separar o tráfego entre vários links, facilitando a análise de dados e o rastreamento de desempenho. Com o Linksplit, você pode segmentar leads e otimizar estratégias, enquanto monitora a performance em tempo real.',

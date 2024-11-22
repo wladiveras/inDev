@@ -1,16 +1,6 @@
 <script setup lang="ts">
     import favicon from '~/assets/images/favicon.svg'
 
-    const preloader = usePreloader()
-    const preloaderState = preloader.getState()
-    const currentLayout = ref('')
-
-    const preloaderClass = computed(() =>
-        currentLayout.value === 'default'
-            ? 'bg-white dark:bg-slate-900'
-            : 'bg-gray-100 dark:bg-slate-800'
-    )
-
     const seo = {
         title: 'Wladi Veras',
         titleCallback: 'Wladi Veras • Desenvolvedor Fullstack',
@@ -37,12 +27,6 @@
         twitterDescription: seo.description,
         twitterImage: seo.image,
         twitterCard: 'summary_large_image'
-    })
-
-    onMounted(() => {
-        requestAnimationFrame(() => {
-            preloader.hide()
-        })
     })
 
     useHead({
@@ -73,18 +57,14 @@
 </script>
 
 <template>
-    <LazyPreloaderOverlay
-        :custom-class="preloaderClass"
-        :show="preloaderState.isLoading"
-    >
-        <UApp>
-            <NuxtLayout>
-                <LazyNuxtLoadingIndicator />
-                <LazyNuxtPage />
-                <LazyUNotifications />
-            </NuxtLayout>
-        </UApp>
-    </LazyPreloaderOverlay>
+    <UApp>
+        <NuxtLoadingIndicator />
+        <NuxtRouteAnnouncer />
+        <NuxtLayout>
+            <NuxtPage :page-key="(route) => route.fullPath" />
+        </NuxtLayout>
+        <!-- <UNotifications /> -->
+    </UApp>
 </template>
 
 <style>
