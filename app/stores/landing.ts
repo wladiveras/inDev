@@ -270,7 +270,8 @@ export const useLandingStore = defineStore('landing', {
         contact: {
             title: 'Entre em',
             subtitle: 'Contato',
-            email: 'hi@wladi.com.br',
+            contact:
+                'https://www.workana.com/freelancer/5529756ca94d0028765b33de5136df7f',
             description: `minha caixa de entrada está sempre aberta. Se você tiver alguma
                 dúvida, projeto interessante ou apenas quiser trocar uma ideia,
                 será um prazer conversar com você. Responderei assim que

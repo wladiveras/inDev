@@ -17,7 +17,7 @@
                 {{ contact.description }}
             </p>
             <UButton
-                :href="`mailto:${contact.email}`"
+                :href="`${contact.url}`"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="External Link"
