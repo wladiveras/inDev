@@ -233,7 +233,7 @@ export const useLandingStore = defineStore('landing', {
                         'typescript'
                     ],
                     image: '/images/project-justdocash.png',
-                    preview: '',
+                    preview: 'https://justdo.cash',
                     github: '',
                     video: ''
                 },
@@ -260,8 +260,8 @@ export const useLandingStore = defineStore('landing', {
                         'nuxthub',
                         'typescript'
                     ],
-                    image: '/images/project-linksplit.png',
-                    preview: '',
+                    image: '/images/project-indev.png',
+                    preview: 'https://wladi.com.br',
                     github: 'https://github.com/wladiveras/inDev',
                     video: ''
                 },
