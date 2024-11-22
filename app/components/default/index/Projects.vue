@@ -26,14 +26,17 @@
                             { 'md:flex-row-reverse': index % 2 !== 0 }
                         ]"
                     >
-                        <div class="w-full md:w-1/2 cursor-pointer">
+                        <div
+                            class="w-full md:w-1/2 cursor-pointer max-h-[350px]"
+                        >
                             <NuxtImg
                                 format="webp"
-                                sizes="100vw sm:50vw md:700px"
+                                width="auto"
+                                height="350"
                                 densities="x1 x2"
                                 :src="project.image"
                                 :alt="project.title"
-                                class="inset-0 w-full h-full object-cover rounded-lg"
+                                class="inset-0 w-full h-full cover rounded-lg"
                                 loading="lazy"
                             />
                         </div>
@@ -71,6 +74,20 @@
                                             size="1.5rem"
                                         />
                                     </a>
+                                    <a
+                                        v-if="project.video"
+                                        :href="project.video"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="External Link"
+                                    >
+                                        <UIcon
+                                            class="mr-1.5 relative top-[-0.1rem] hover:text-primary-500 transition-all duration-300 cursor-pointer"
+                                            name="mdi:video"
+                                            size="1.5rem"
+                                        />
+                                    </a>
+
                                     <a
                                         v-if="project.preview"
                                         :href="project.preview"

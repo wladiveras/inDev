@@ -202,7 +202,7 @@ export const useLandingStore = defineStore('landing', {
             subtitle: 'Projetos',
             content: [
                 {
-                    title: 'Chatbot',
+                    title: 'Chatbot - Automação',
                     star: true,
                     description:
                         'O chatbot foi desenvolvido para empresas que buscam otimizar o atendimento e criar conexões ágeis com seus clientes. Com funcionalidades como fluxos automatizados, envio de áudios e respostas naturais, ele transforma a comunicação em um processo mais simples e eficiente, entregando resultados reais para o negócio.',
@@ -217,11 +217,12 @@ export const useLandingStore = defineStore('landing', {
                     ],
                     image: '/images/project-chatbot.png',
                     preview: 'https://marinabot.com.br',
-                    github: ''
+                    github: '',
+                    video: 'https://www.youtube.com/watch?v=QNYQvQ2Iisg&t'
                 },
                 {
                     title: 'Linksplit',
-                    star: true,
+                    star: false,
                     description:
                         'O Linksplit é uma ferramenta que cria um único link para dividir e direcionar leads para diferentes destinos de forma automática e aleatória. Ideal para campanhas de marketing e testes A/B, ele permite separar o tráfego entre vários links, facilitando a análise de dados e o rastreamento de desempenho. Com o Linksplit, você pode segmentar leads e otimizar estratégias, enquanto monitora a performance em tempo real.',
                     technologies: [
@@ -233,37 +234,53 @@ export const useLandingStore = defineStore('landing', {
                     ],
                     image: '/images/project-linksplit.png',
                     preview: 'https://linksplit.com.br',
-                    github: ''
+                    github: '',
+                    video: ''
                 },
                 {
-                    title: 'in Dev',
+                    title: 'inDev - portfólio',
                     star: false,
                     description:
-                        'O Linksplit é uma ferramenta que cria um único link para dividir e direcionar leads para diferentes destinos de forma automática e aleatória. Ideal para campanhas de marketing e testes A/B, ele permite separar o tráfego entre vários links, facilitando a análise de dados e o rastreamento de desempenho. Com o Linksplit, você pode segmentar leads e otimizar estratégias, enquanto monitora a performance em tempo real.',
-                    technologies: ['Nuxt 3', 'Pinia', 'Laravel', 'Mysql'],
+                        'O inDev é o seu portfólio open source, pensado para quem precisa de uma solução prática e eficiente para exibir seus serviços e conquistas. Com uma estrutura otimizada e fácil de personalizar, ele permite que você apresente sua trajetória de forma profissional e organizada, em um único lugar. Ideal para freelancers, desenvolvedores e criativos, o inDev oferece a flexibilidade necessária para destacar projetos, compartilhar experiências e atrair novas oportunidades. Simples de usar e focado em resultados, ele é a ferramenta perfeita para quem quer mostrar seu talento de maneira clara, objetiva e humana.',
+                    technologies: [
+                        'Nuxt 3',
+                        'Pinia',
+                        'cloudflare',
+                        'nuxthub',
+                        'typescript'
+                    ],
                     image: '/images/project-linksplit.png',
                     preview: '',
-                    github: 'XXXXXXXXXXXXXXXX'
+                    github: 'https://github.com/wladiveras/inDev',
+                    video: ''
                 },
                 {
-                    title: 'Linksplit',
-                    star: false,
+                    title: 'justdo.cash',
+                    star: true,
                     description:
-                        'O Linksplit é uma ferramenta que cria um único link para dividir e direcionar leads para diferentes destinos de forma automática e aleatória. Ideal para campanhas de marketing e testes A/B, ele permite separar o tráfego entre vários links, facilitando a análise de dados e o rastreamento de desempenho. Com o Linksplit, você pode segmentar leads e otimizar estratégias, enquanto monitora a performance em tempo real.',
-                    technologies: ['Nuxt 3', 'Pinia', 'Laravel', 'Mysql'],
-                    image: '/images/project-linksplit.png',
+                        'Um gerador Landing page SaaS projetada para potencializar a apresentação do seu serviço de assinatura de produtos. Com recursos de segurança integrados, ela garante a proteção de dados e transações, enquanto oferece uma experiência confiável para seus clientes. Além disso, você conta com um dashboard intuitivo, que permite monitorar facilmente vendas e assinaturas em tempo real, simplificando a gestão do seu negócio. Para completar, um checkout otimizado está pronto para vender todos os seus produtos de forma rápida e eficiente. Transforme suas ideias em resultados com uma solução prática e completa.',
+                    technologies: [
+                        'Nuxt 3',
+                        'Pinia',
+                        'Laravel',
+                        'Mysql',
+                        'typescript'
+                    ],
+                    image: '/images/project-justdocash.png',
                     preview: '',
-                    github: 'XXXXXXXXXXXXXXXX'
+                    github: '',
+                    video: ''
                 },
                 {
-                    title: 'Linksplit',
-                    star: false,
+                    title: 'Zaptus',
+                    star: true,
                     description:
-                        'O Linksplit é uma ferramenta que cria um único link para dividir e direcionar leads para diferentes destinos de forma automática e aleatória. Ideal para campanhas de marketing e testes A/B, ele permite separar o tráfego entre vários links, facilitando a análise de dados e o rastreamento de desempenho. Com o Linksplit, você pode segmentar leads e otimizar estratégias, enquanto monitora a performance em tempo real.',
-                    technologies: ['Nuxt 3', 'Pinia', 'Laravel', 'Mysql'],
-                    image: '/images/project-linksplit.png',
-                    preview: '',
-                    github: 'XXXXXXXXXXXXXXXX'
+                        'O Zaptus é uma plataforma que conecta empresas a um banco de dados de contatos verificados e segmentados, facilitando a geração de leads qualificados para diversas estratégias de marketing e vendas. Ideal para profissionais que buscam expandir sua rede de clientes de forma assertiva, o Zaptus oferece ferramentas para buscar, organizar e gerenciar contatos de forma eficiente. Com foco em inteligência de dados e automação, ele otimiza o processo de prospecção, ajudando a alcançar resultados rápidos e mensuráveis.',
+                    technologies: ['Nuxt 3', 'Pinia', 'Mysql'],
+                    image: '/images/project-zaptus.png',
+                    preview: 'https://www.zaptus.com.br/',
+                    github: '',
+                    video: ''
                 }
             ]
         },
