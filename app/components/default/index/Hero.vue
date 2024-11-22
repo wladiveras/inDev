@@ -29,12 +29,12 @@
                             id="main-heading"
                             class="text-5xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-7xl"
                         >
-                            {{ hero.header }}
+                            {{ hero.title }}
                             <span
-                                v-if="hero.subHeader"
+                                v-if="hero.subtitle"
                                 class="underline decoration-primary-500"
                             >
-                                {{ hero.subHeader }}
+                                {{ hero.subtitle }}
                             </span>
                         </h1>
 
@@ -42,7 +42,7 @@
                             id="main-heading"
                             class="text-5xl font-bold tracking-tight text-gray-900 dark:text-slate-500 sm:text-6xlp"
                         >
-                            {{ hero.title }}
+                            {{ hero.about }}
                         </h2>
 
                         <section
@@ -79,7 +79,7 @@
                                 densities="x1 x2"
                                 format="webp"
                                 :src="hero.image"
-                                :alt="hero.header"
+                                :alt="hero.title"
                                 class="w-64 h-110 rounded-md m-auto object-cover border-4 border-white/50 shadow-xl md:transform -translate-x-4 -translate-y-4 md:hover:translate-x-0 md:hover:translate-y-0 transition duration-300"
                             />
                         </div>
@@ -91,16 +91,8 @@
 </template>
 
 <script lang="ts" setup>
-    const hero = {
-        label: 'Olá, eu me chamo',
-        header: 'Wladi',
-        subHeader: 'Veras',
-        title: 'Crio soluções para a web.',
-        image: '/images/me-ia.png',
-
-        description:
-            'Com mais de 8 anos de experiência, trabalhei em projetos como o chatbot e o gateway de pagamento, focando sempre na segurança, escalabilidade e na entrega de produtos que atendem às necessidades dos usuários.'
-    }
+    const landingStore = useLandingStore()
+    const { hero } = storeToRefs(landingStore)
 </script>
 
 <style lang="css" scoped></style>

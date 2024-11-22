@@ -5,7 +5,7 @@
     >
         <section class="flex gap-5 justify-center mb-5">
             <UTooltip
-                v-for="(media, index) in medias"
+                v-for="(media, index) in footer.medias"
                 :key="index"
                 :text="media.tooltip"
             >
@@ -23,12 +23,12 @@
         </section>
         <section>
             <a
-                href="https://github.com/wladiveras/inDev"
+                :href="footer.link"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="External Link"
             >
-                <p class="mb-5">Planejado e Desenvolvido por wladi veras</p>
+                <p class="mb-5">{{ footer.text }}</p>
                 <div
                     class="flex items-center justify-between m-auto max-w-[10rem] mt-2"
                 >
@@ -54,28 +54,8 @@
 </template>
 
 <script lang="ts" setup>
-    const medias = [
-        {
-            icon: 'line-md:instagram',
-            tooltip: 'Instagram',
-            link: 'https://instagram.com/wladi_veras'
-        },
-        {
-            icon: 'line-md:twitter',
-            tooltip: 'Twitter',
-            link: 'https://x.com/wladiveras'
-        },
-        {
-            icon: 'line-md:github',
-            tooltip: 'Instagram',
-            link: 'https://github.com/wladiveras'
-        },
-        {
-            icon: 'line-md:linkedin',
-            tooltip: 'LinkedIn',
-            link: 'https://linkedin.com/in/wladiveras'
-        }
-    ]
+    const landingStore = useLandingStore()
+    const { footer } = storeToRefs(landingStore)
 </script>
 
 <style></style>

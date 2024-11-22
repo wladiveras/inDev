@@ -5,8 +5,8 @@
     >
         <DefaultTitle
             class="md:mt-0"
-            title="Entre"
-            subtitle="em contato"
+            :title="contact.title"
+            :subtitle="contact.subtitle"
             center
         />
 
@@ -14,13 +14,10 @@
             class="flex flex-col gap-4 font-thin justify-center items-center px-5 text-center"
         >
             <p class="mb-10">
-                minha caixa de entrada está sempre aberta. Se você tiver alguma
-                dúvida, projeto interessante ou apenas quiser trocar uma ideia,
-                será um prazer conversar com você. Responderei assim que
-                possível!
+                {{ contact.description }}
             </p>
             <UButton
-                :href="mail"
+                :href="`mailto:${contact.email}`"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="External Link"
@@ -36,7 +33,8 @@
 </template>
 
 <script lang="ts" setup>
-    const mail = ref('mailto:hi@wladi.com.br')
+    const landingStore = useLandingStore()
+    const { contact } = storeToRefs(landingStore)
 </script>
 
 <style scoped></style>

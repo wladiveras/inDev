@@ -5,8 +5,8 @@
     >
         <DefaultTitle
             class="mt-20 md:mt-0"
-            title="Meus"
-            subtitle="Projetos"
+            :title="projects.title"
+            :subtitle="projects.subtitle"
             icon="line-md:folder-settings"
         />
         <section>
@@ -26,14 +26,14 @@
                             { 'md:flex-row-reverse': index % 2 !== 0 }
                         ]"
                     >
-                        <div class="w-full md:w-1/2">
+                        <div class="w-full md:w-1/2 cursor-pointer">
                             <NuxtImg
                                 format="webp"
                                 sizes="100vw sm:50vw md:700px"
                                 densities="x1 x2"
                                 :src="project.image"
                                 :alt="project.title"
-                                class="rounded-lg w-full"
+                                class="inset-0 w-full h-full object-cover rounded-lg"
                             />
                         </div>
 
@@ -186,81 +186,9 @@
 </template>
 
 <script lang="ts" setup>
-    const projects = [
-        {
-            title: 'Chatbot',
-            star: true,
-            description:
-                'O chatbot foi desenvolvido para empresas que buscam otimizar o atendimento e criar conexões ágeis com seus clientes. Com funcionalidades como fluxos automatizados, envio de áudios e respostas naturais, ele transforma a comunicação em um processo mais simples e eficiente, entregando resultados reais para o negócio.',
-            technologies: [
-                'Nuxt 3',
-                'Pinia',
-                'Laravel',
-                'Mysql',
-                'Redis',
-                'Evolution Api',
-                'LLama 3.2'
-            ],
-            image: '/images/project-chatbot.png',
-            preview: 'https://marinabot.com.br',
-            github: ''
-        },
-        {
-            title: 'Linksplit',
-            star: true,
-            description:
-                'O chatbot foi desenvolvido para empresas que buscam otimizar o atendimento e criar conexões ágeis com seus clientes. Com funcionalidades como fluxos automatizados, envio de áudios e respostas naturais, ele transforma a comunicação em um processo mais simples e eficiente, entregando resultados reais para o negócio.',
-            technologies: [
-                'Nuxt 3',
-                'Pinia',
-                'Laravel',
-                'Mysql',
-                'Redis',
-                'Evolution Api',
-                'LLama 3.2'
-            ],
-            image: '/images/project-chatbot.png',
-            preview: 'https://linksplit.com.br',
-            github: ''
-        },
-        {
-            title: 'in Dev',
-            star: false,
-            description:
-                'O Linksplit é uma ferramenta que cria um único link para dividir e direcionar leads para diferentes destinos de forma automática e aleatória. Ideal para campanhas de marketing e testes A/B, ele permite separar o tráfego entre vários links, facilitando a análise de dados e o rastreamento de desempenho. Com o Linksplit, você pode segmentar leads e otimizar estratégias, enquanto monitora a performance em tempo real.',
-            technologies: ['Nuxt 3', 'Pinia', 'Laravel', 'Mysql'],
-            image: '/images/project-linksplit.png',
-            preview: '',
-            github: 'XXXXXXXXXXXXXXXX'
-        },
-        {
-            title: 'Linksplit',
-            star: false,
-            description:
-                'O Linksplit é uma ferramenta que cria um único link para dividir e direcionar leads para diferentes destinos de forma automática e aleatória. Ideal para campanhas de marketing e testes A/B, ele permite separar o tráfego entre vários links, facilitando a análise de dados e o rastreamento de desempenho. Com o Linksplit, você pode segmentar leads e otimizar estratégias, enquanto monitora a performance em tempo real.',
-            technologies: ['Nuxt 3', 'Pinia', 'Laravel', 'Mysql'],
-            image: '/images/project-linksplit.png',
-            preview: '',
-            github: 'XXXXXXXXXXXXXXXX'
-        },
-        {
-            title: 'Linksplit',
-            star: false,
-            description:
-                'O Linksplit é uma ferramenta que cria um único link para dividir e direcionar leads para diferentes destinos de forma automática e aleatória. Ideal para campanhas de marketing e testes A/B, ele permite separar o tráfego entre vários links, facilitando a análise de dados e o rastreamento de desempenho. Com o Linksplit, você pode segmentar leads e otimizar estratégias, enquanto monitora a performance em tempo real.',
-            technologies: ['Nuxt 3', 'Pinia', 'Laravel', 'Mysql'],
-            image: '/images/project-linksplit.png',
-            preview: '',
-            github: 'XXXXXXXXXXXXXXXX'
-        }
-    ]
-
-    const starredProjects = computed(() =>
-        projects.filter((project) => project.star)
-    )
-    const nonStarredProjects = computed(() =>
-        projects.filter((project) => !project.star)
-    )
+    const landingStore = useLandingStore()
+    const { projects, starredProjects, nonStarredProjects } =
+        storeToRefs(landingStore)
 </script>
 
 <style scoped>

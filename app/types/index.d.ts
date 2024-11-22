@@ -10,6 +10,7 @@ export interface CustomTabItem extends TabItem {
     title: string
     label: string
     date: string
+    url?: string
     content: ContentItem[]
 }
 
