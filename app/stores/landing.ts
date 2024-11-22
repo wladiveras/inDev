@@ -221,40 +221,6 @@ export const useLandingStore = defineStore('landing', {
                     video: 'https://www.youtube.com/watch?v=QNYQvQ2Iisg&t'
                 },
                 {
-                    title: 'Linksplit',
-                    star: false,
-                    description:
-                        'O Linksplit é uma ferramenta que cria um único link para dividir e direcionar leads para diferentes destinos de forma automática e aleatória. Ideal para campanhas de marketing e testes A/B, ele permite separar o tráfego entre vários links, facilitando a análise de dados e o rastreamento de desempenho. Com o Linksplit, você pode segmentar leads e otimizar estratégias, enquanto monitora a performance em tempo real.',
-                    technologies: [
-                        'Nuxt 3',
-                        'Pinia',
-                        'Laravel',
-                        'Mysql',
-                        'Redis'
-                    ],
-                    image: '/images/project-linksplit.png',
-                    preview: 'https://linksplit.com.br',
-                    github: '',
-                    video: ''
-                },
-                {
-                    title: 'inDev - portfólio',
-                    star: false,
-                    description:
-                        'O inDev é o seu portfólio open source, pensado para quem precisa de uma solução prática e eficiente para exibir seus serviços e conquistas. Com uma estrutura otimizada e fácil de personalizar, ele permite que você apresente sua trajetória de forma profissional e organizada, em um único lugar. Ideal para freelancers, desenvolvedores e criativos, o inDev oferece a flexibilidade necessária para destacar projetos, compartilhar experiências e atrair novas oportunidades. Simples de usar e focado em resultados, ele é a ferramenta perfeita para quem quer mostrar seu talento de maneira clara, objetiva e humana.',
-                    technologies: [
-                        'Nuxt 3',
-                        'Pinia',
-                        'cloudflare',
-                        'nuxthub',
-                        'typescript'
-                    ],
-                    image: '/images/project-linksplit.png',
-                    preview: '',
-                    github: 'https://github.com/wladiveras/inDev',
-                    video: ''
-                },
-                {
                     title: 'justdo.cash',
                     star: true,
                     description:
@@ -279,6 +245,40 @@ export const useLandingStore = defineStore('landing', {
                     technologies: ['Nuxt 3', 'Pinia', 'Mysql'],
                     image: '/images/project-zaptus.png',
                     preview: 'https://www.zaptus.com.br/',
+                    github: '',
+                    video: ''
+                },
+                {
+                    title: 'inDev - portfólio',
+                    star: false,
+                    description:
+                        'O inDev é o seu portfólio open source, pensado para quem precisa de uma solução prática e eficiente para exibir seus serviços e conquistas. Com uma estrutura otimizada e fácil de personalizar, ele permite que você apresente sua trajetória de forma profissional e organizada, em um único lugar. Ideal para freelancers, desenvolvedores e criativos, o inDev oferece a flexibilidade necessária para destacar projetos, compartilhar experiências e atrair novas oportunidades. Simples de usar e focado em resultados, ele é a ferramenta perfeita para quem quer mostrar seu talento de maneira clara, objetiva e humana.',
+                    technologies: [
+                        'Nuxt 3',
+                        'Pinia',
+                        'cloudflare',
+                        'nuxthub',
+                        'typescript'
+                    ],
+                    image: '/images/project-linksplit.png',
+                    preview: '',
+                    github: 'https://github.com/wladiveras/inDev',
+                    video: ''
+                },
+                {
+                    title: 'Linksplit',
+                    star: false,
+                    description:
+                        'O Linksplit é uma ferramenta que cria um único link para dividir e direcionar leads para diferentes destinos de forma automática e aleatória. Ideal para campanhas de marketing e testes A/B, ele permite separar o tráfego entre vários links, facilitando a análise de dados e o rastreamento de desempenho. Com o Linksplit, você pode segmentar leads e otimizar estratégias, enquanto monitora a performance em tempo real.',
+                    technologies: [
+                        'Nuxt 3',
+                        'Pinia',
+                        'Laravel',
+                        'Mysql',
+                        'Redis'
+                    ],
+                    image: '/images/project-linksplit.png',
+                    preview: 'https://linksplit.com.br',
                     github: '',
                     video: ''
                 }
