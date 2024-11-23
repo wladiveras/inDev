@@ -34,7 +34,7 @@
 
                         <UButton
                             aria-label="Contato"
-                            icon="mdi:resume"
+                            icon="material-symbols:connect-without-contact"
                             variant="outline"
                             size="xl"
                             class="text-primary-400 border-1 border-primary-500/100 cursor-pointer mr-10"
@@ -73,48 +73,13 @@
 <script lang="ts" setup>
     import { ModalNavigationMenu } from '#components'
 
+    const { navigationMenu } = useNavigation()
     const landingStore = useLandingStore()
     const { contact } = storeToRefs(landingStore)
 
     const slideover = useSlideover()
 
-    const header = ref(null)
-    const isHeaderHidden = ref(false)
-    const lastScrollPosition = ref(0)
-    const scrollThreshold = 100
-
-    onMounted(() => {
-        window.addEventListener('scroll', handleScroll)
-    })
-
-    onUnmounted(() => {
-        window.removeEventListener('scroll', handleScroll)
-    })
-
-    const handleScroll = () => {
-        const currentScrollPosition = window.scrollY
-
-        if (
-            Math.abs(currentScrollPosition - lastScrollPosition.value) <
-            scrollThreshold
-        ) {
-            return
-        }
-
-        if (
-            currentScrollPosition < lastScrollPosition.value ||
-            currentScrollPosition < 50
-        ) {
-            isHeaderHidden.value = false
-        } else if (
-            currentScrollPosition > lastScrollPosition.value &&
-            currentScrollPosition > 50
-        ) {
-            isHeaderHidden.value = true
-        }
-
-        lastScrollPosition.value = currentScrollPosition
-    }
+    const { isHeaderHidden } = useHeaderScroll()
 
     function open() {
         slideover.open(ModalNavigationMenu)

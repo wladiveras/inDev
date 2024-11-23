@@ -241,10 +241,10 @@ export const useLandingStore = defineStore('landing', {
                     title: 'Zaptus',
                     star: true,
                     description:
-                        'O Zaptus é uma plataforma que conecta empresas a um banco de dados de contatos verificados e segmentados, facilitando a geração de leads qualificados para diversas estratégias de marketing e vendas. Ideal para profissionais que buscam expandir sua rede de clientes de forma assertiva, o Zaptus oferece ferramentas para buscar, organizar e gerenciar contatos de forma eficiente. Com foco em inteligência de dados e automação, ele otimiza o processo de prospecção, ajudando a alcançar resultados rápidos e mensuráveis.',
-                    technologies: ['Nuxt 3', 'Pinia', 'Mysql'],
+                        'A Zaptus é um projeto que evoluiu para se tornar uma empresa especializada no desenvolvimento de software sob medida. Com foco em criar soluções inovadoras e eficientes, a Zaptus atende às necessidades de negócios que buscam se destacar no mercado digital. Desde sistemas robustos até aplicações personalizadas, a Zaptus combina tecnologia de ponta com metodologias ágeis para entregar resultados que realmente fazem a diferença. Nossa missão é transformar ideias em produtos funcionais e escaláveis, sempre com foco na experiência do usuário e nos objetivos estratégicos de nossos clientes. Mais do que uma empresa, a Zaptus é parceira no desenvolvimento de soluções tecnológicas que impulsionam o sucesso dos negócios.',
+                    technologies: ['React', 'Laravel', 'Mysql'],
                     image: '/images/project-zaptus.png',
-                    preview: 'https://www.zaptus.com.br/',
+                    preview: '', // preview: 'https://www.zaptus.com.br/',
                     github: '',
                     video: ''
                 },

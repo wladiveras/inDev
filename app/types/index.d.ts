@@ -36,8 +36,8 @@ export interface NavigationMenuItem {
     icon?: string
     slot?: string
     active?: boolean
-    to?: string
-    children?: NavigationMenuItem[]
+    href?: string
+    disabled?: boolean
 }
 
 export interface User {

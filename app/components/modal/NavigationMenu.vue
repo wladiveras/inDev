@@ -33,7 +33,7 @@
             </div>
             <UButton
                 aria-label="Contato"
-                icon="mdi:resume"
+                icon="material-symbols:connect-without-contact"
                 variant="outline"
                 size="xl"
                 class="text-primary-400 border-1 border-primary-500/100 m-auto"
@@ -51,4 +51,6 @@
 
     const landingStore = useLandingStore()
     const { contact } = storeToRefs(landingStore)
+
+    const { navigationMenu } = useNavigation()
 </script>
