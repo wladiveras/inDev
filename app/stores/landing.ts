@@ -366,16 +366,6 @@ export const useLandingStore = defineStore('landing', {
             link: 'https://github.com/wladiveras/inDev',
             medias: [
                 {
-                    icon: 'line-md:instagram',
-                    tooltip: 'Instagram',
-                    link: 'https://instagram.com/wladi_veras'
-                },
-                {
-                    icon: 'line-md:twitter',
-                    tooltip: 'Twitter',
-                    link: 'https://x.com/wladiveras'
-                },
-                {
                     icon: 'line-md:github',
                     tooltip: 'Instagram',
                     link: 'https://github.com/wladiveras'
