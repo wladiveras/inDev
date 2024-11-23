@@ -14,6 +14,15 @@ export interface CustomTabItem extends TabItem {
     content: ContentItem[]
 }
 
+export interface Hero {
+    image: string
+    label: string
+    title: string
+    subtitle: string
+    about: string
+    description: string
+}
+
 export interface ColorTheme {
     label: string
     icon?: string

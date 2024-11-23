@@ -23,7 +23,7 @@ export const useNavigation = () => {
                 label: 'Projetos',
                 icon: 'line-md:folder-settings',
                 active: false,
-                href: '/#projects'
+                href: '/#project'
             },
             {
                 label: 'Workana',

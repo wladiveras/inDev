@@ -2,15 +2,17 @@ import type { CustomTabItem } from '~/types'
 
 export const useLandingStore = defineStore('landing', {
     state: () => ({
-        hero: {
-            image: '/images/me-ia.png',
-            label: 'Olá, eu me chamo',
-            title: 'Wladi',
-            subtitle: ' Veras',
-            about: 'Crio soluções para a web.',
-            description:
-                'Com mais de 8 anos de experiência, trabalhei em projetos como o chatbot e o gateway de pagamento, focando sempre na segurança, escalabilidade e na entrega de produtos que atendem às necessidades dos usuários.'
-        },
+        hero: [
+            {
+                image: '/images/me-ia.png',
+                label: 'Olá, eu me chamo',
+                title: 'Wladi',
+                subtitle: ' Veras',
+                about: 'Crio soluções para a web.',
+                description:
+                    'Com mais de 8 anos de experiência, trabalhei em projetos como o chatbot e o gateway de pagamento, focando sempre na segurança, escalabilidade e na entrega de produtos que atendem às necessidades dos usuários.'
+            }
+        ],
         about: {
             title: 'Um pouco',
             subtitle: 'Sobre mim',
@@ -217,7 +219,7 @@ export const useLandingStore = defineStore('landing', {
                 }
             ]
         },
-        projects: {
+        project: {
             title: 'Meus',
             subtitle: 'Projetos',
             content: [
@@ -380,9 +382,9 @@ export const useLandingStore = defineStore('landing', {
     }),
     getters: {
         starredProjects: (state) =>
-            state.projects.content.filter((project) => project.star),
+            state.project.content.filter((project) => project.star),
         nonStarredProjects: (state) =>
-            state.projects.content.filter((project) => !project.star)
+            state.project.content.filter((project) => !project.star)
     },
     actions: {}
 })

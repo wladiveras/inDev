@@ -1,17 +1,17 @@
 <template>
     <section
-        id="projects"
+        id="project"
         class="md:container md:mx-auto"
     >
         <DefaultTitle
             class="mt-20 md:mt-0"
-            :title="projects.title"
-            :subtitle="projects.subtitle"
+            :title="project.title"
+            :subtitle="project.subtitle"
             icon="line-md:folder-settings"
         />
         <section>
             <section
-                v-for="(project, index) in starredProjects"
+                v-for="(item, index) in starredProjects"
                 :key="index"
             >
                 <AnimateElement
@@ -34,8 +34,8 @@
                                 width="100%"
                                 height="auto"
                                 densities="x1 x2"
-                                :src="project.image"
-                                :alt="project.title"
+                                :src="item.image"
+                                :alt="item.title"
                                 class="inset-0 w-full h-full rounded-lg object-cover"
                                 loading="lazy"
                             />
@@ -57,13 +57,13 @@
                                         Destacado
                                     </span>
                                     <h1 class="text-lg font-bold mb-5">
-                                        {{ project.title }}
+                                        {{ item.title }}
                                     </h1>
                                 </div>
                                 <div class="flex justify-center">
                                     <a
-                                        v-if="project.github"
-                                        :href="project.github"
+                                        v-if="item.github"
+                                        :href="item.github"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="External Link"
@@ -75,8 +75,8 @@
                                         />
                                     </a>
                                     <a
-                                        v-if="project.video"
-                                        :href="project.video"
+                                        v-if="item.video"
+                                        :href="item.video"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="External Link"
@@ -89,8 +89,8 @@
                                     </a>
 
                                     <a
-                                        v-if="project.preview"
-                                        :href="project.preview"
+                                        v-if="item.preview"
+                                        :href="item.preview"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="External Link"
@@ -108,11 +108,11 @@
                                 class="mb-5"
                             />
                             <p class="font-thin text-sm">
-                                {{ project.description }}
+                                {{ item.description }}
                             </p>
                             <div class="flex flex-wrap gap-2 mt-5 mb-5">
                                 <UBadge
-                                    v-for="technologies in project.technologies"
+                                    v-for="technologies in item.technologies"
                                     :key="technologies"
                                 >
                                     {{ technologies }}
@@ -141,11 +141,11 @@
                 class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
             >
                 <div
-                    v-for="(project, index) in nonStarredProjects"
+                    v-for="(item, index) in nonStarredProjects"
                     :key="index"
                     class="flex"
                 >
-                    <DefaultProjectCard :project="project" />
+                    <LazyDefaultProjectCard :project="item" />
                 </div>
             </section>
         </div>
@@ -154,7 +154,7 @@
 
 <script lang="ts" setup>
     const landingStore = useLandingStore()
-    const { projects, starredProjects, nonStarredProjects } =
+    const { project, starredProjects, nonStarredProjects } =
         storeToRefs(landingStore)
 </script>
 

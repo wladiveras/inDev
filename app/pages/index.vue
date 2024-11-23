@@ -3,7 +3,7 @@
         <LazyDefaultHero />
         <LazyDefaultAbout />
         <LazyDefaultExperience />
-        <LazyDefaultProjects />
+        <LazyDefaultProject />
         <LazyDefaultContact />
     </section>
 </template>
