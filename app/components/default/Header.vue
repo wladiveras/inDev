@@ -73,13 +73,13 @@
 <script lang="ts" setup>
     import { ModalNavigationMenu } from '#components'
 
-    const { navigationMenu } = useNavigation()
     const landingStore = useLandingStore()
+
     const { contact } = storeToRefs(landingStore)
+    const { isHeaderHidden } = useHeaderScroll()
+    const { navigationMenu } = useNavigation()
 
     const slideover = useSlideover()
-
-    const { isHeaderHidden } = useHeaderScroll()
 
     function open() {
         slideover.open(ModalNavigationMenu)

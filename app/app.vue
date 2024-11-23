@@ -1,31 +1,24 @@
 <script setup lang="ts">
     import favicon from '~/assets/images/favicon.svg'
 
-    const seo = {
-        title: 'Wladi Veras',
-        titleCallback: 'Wladi Veras • Desenvolvedor Fullstack',
-        website: 'https://wladi.com.br',
-        keywords:
-            'Laravel, Vue.js, Nuxt.js, PHP, Tailwind CSS, Bootstrap, frameworks, bibliotecas, programador, desenvolvedor, fullstack, backend, frontend, back-end, front-end, ia, inteligencia artificial, responsivo, profissional de TI, profissional',
-        description:
-            'Desenvolvedor Fullstack com 8 anos experiência em Laravel, Vue.js, Nuxt.js, PHP, Tailwind CSS, Bootstrap, e outros frameworks e bibliotecas.',
-        image: '/images/seo.png'
-    }
+    const seoStore = useSeoStore()
 
     useSeoMeta({
         titleTemplate: (title) => {
-            return title ? `${seo.title} • ${title}` : seo.titleCallback
+            return title
+                ? `${seoStore.title} • ${title}`
+                : seoStore.titleCallback
         },
         contentSecurityPolicy: {},
-        keywords: seo.keywords,
-        description: seo.description,
-        ogUrl: seo.website,
+        keywords: seoStore.keywords,
+        description: seoStore.description,
+        ogUrl: seoStore.website,
         ogType: 'website',
-        ogDescription: seo.description,
-        ogImage: seo.image,
-        twitterTitle: seo.title || seo.titleCallback,
-        twitterDescription: seo.description,
-        twitterImage: seo.image,
+        ogDescription: seoStore.description,
+        ogImage: seoStore.image,
+        twitterTitle: seoStore.title || seoStore.titleCallback,
+        twitterDescription: seoStore.description,
+        twitterImage: seoStore.image,
         twitterCard: 'summary_large_image'
     })
 

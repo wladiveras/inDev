@@ -4,11 +4,8 @@ WhatsApp Chatbot for E-commerce
 
 This is a WhatsApp chatbot project that helps customers with their purchases on an e-commerce store. The chatbot uses a workflow gerated by a flow chart creator per connection. It integrates with the e-commerce store's API to provide a seamless customer experience.
 
-
 ![[Chatbot]()](https://wladi.com.br/images/project-indev.png)
-    
-  
- 
+
 ## Features
 
     Responds to customer inquiries about products
@@ -16,9 +13,7 @@ This is a WhatsApp chatbot project that helps customers with their purchases on 
     Provides product information and pricing
     Allows customers to make purchases directly from the chatbot
     Integrates with e-commerce store's API for seamless checkout
-    
-  
- 
+
 ## Technologies Used
 
     Javascript
@@ -31,11 +26,10 @@ This is a WhatsApp chatbot project that helps customers with their purchases on 
     Laravel Reverb websocket
     NVM(Node Version Module)
 
-      
 ## Setup
 
 Step to setup project in your machine.
-    
+
 ### node setup
 
 Welcome to chatbot, create a new branch and starting coding with us.
