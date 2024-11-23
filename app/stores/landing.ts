@@ -110,6 +110,26 @@ export const useLandingStore = defineStore('landing', {
                     name: 'RabbitMQ',
                     icon: 'i-logos-rabbitmq-icon',
                     size: '1rem'
+                },
+                {
+                    name: 'figma',
+                    icon: 'i-logos-figma',
+                    size: '1rem'
+                },
+                {
+                    name: 'React',
+                    icon: 'i-logos-react',
+                    size: '1rem'
+                },
+                {
+                    name: 'Nest.js',
+                    icon: 'i-logos-nestjs',
+                    size: '1rem'
+                },
+                {
+                    name: 'Docker',
+                    icon: 'i-logos-docker-icon',
+                    size: '1rem'
                 }
             ]
         },
