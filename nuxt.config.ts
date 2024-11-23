@@ -52,6 +52,13 @@ export default defineNuxtConfig({
         experimental: {
             tasks: true
         },
+        cloudflare: {
+            pages: {
+                routes: {
+                    exclude: ['/docs/*', '/blog/*']
+                }
+            }
+        },
         prerender: {
             routes: ['/'],
             crawlLinks: true
