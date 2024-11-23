@@ -1,10 +1,10 @@
 <template>
     <section>
-        <LazyDefaultIndexHero />
-        <LazyDefaultIndexAbout />
-        <LazyDefaultIndexExperience />
-        <LazyDefaultIndexProjects />
-        <LazyDefaultIndexContact />
+        <LazyDefaultHero />
+        <LazyDefaultAbout />
+        <LazyDefaultExperience />
+        <LazyDefaultProjects />
+        <LazyDefaultContact />
     </section>
 </template>
 

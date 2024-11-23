@@ -40,6 +40,14 @@ export interface NavigationMenuItem {
     disabled?: boolean
 }
 
+export interface Project {
+    title: string
+    description: string
+    github?: string
+    preview?: string
+    technologies: string[]
+}
+
 export interface User {
     id: number
     name: string
