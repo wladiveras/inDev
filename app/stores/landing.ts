@@ -272,7 +272,7 @@ export const useLandingStore = defineStore('landing', {
                     title: 'inDev - portfólio',
                     star: false,
                     description:
-                        'O inDev é o seu portfólio open source, pensado para quem precisa de uma solução prática e eficiente para exibir seus serviços e conquistas. Com uma estrutura otimizada e fácil de personalizar, ele permite que você apresente sua trajetória de forma profissional e organizada, em um único lugar. Ideal para freelancers, desenvolvedores e criativos, o inDev oferece a flexibilidade necessária para destacar projetos, compartilhar experiências e atrair novas oportunidades. Simples de usar e focado em resultados, ele é a ferramenta perfeita para quem quer mostrar seu talento de maneira clara, objetiva e humana.',
+                        'O inDev é um portfólio open source, criado para quem busca uma solução prática e eficiente para exibir serviços e conquistas. Com estrutura otimizada e fácil personalização, permite apresentar sua trajetória de forma profissional e organizada. Ideal para freelancers, desenvolvedores e criativos, o inDev destaca projetos, compartilha experiências e atrai novas oportunidades. Simples de usar e focado em resultados, é a ferramenta perfeita para mostrar seu talento de forma clara e objetiva.',
                     technologies: [
                         'Nuxt 3',
                         'Pinia',
@@ -299,6 +299,54 @@ export const useLandingStore = defineStore('landing', {
                     ],
                     image: '/images/project-linksplit.png',
                     preview: 'https://linksplit.com.br',
+                    github: '',
+                    video: ''
+                },
+                {
+                    title: 'Natural Life',
+                    star: false,
+                    description:
+                        '"Transforme Seu Corpo, Transforme Sua Vida" é um template projetado para academias e espaços fitness. Ele oferece uma estrutura pronta, com design moderno e funcionalidades voltadas para destacar equipamentos, instrutores e a comunidade. O template pode ser facilmente personalizado para se adequar à identidade da academia, proporcionando uma plataforma eficiente e atraente para os visitantes.',
+                    technologies: [
+                        'React',
+                        'Typescript',
+                        'Javascript',
+                        'Nodejs'
+                    ],
+                    image: '',
+                    preview: 'https://zaptus-academia.vercel.app/',
+                    github: '',
+                    video: ''
+                },
+                {
+                    title: 'Sabor & Arte',
+                    star: false,
+                    description:
+                        '"Sabor & Arte" é um template projetado para restaurantes, oferecendo uma estrutura elegante e funcional. Com foco em destacar a experiência gastronômica, o template permite apresentar o menu, ambiente e diferenciais do restaurante de forma atraente e intuitiva. Ele pode ser facilmente personalizado para se adequar ao estilo e identidade do restaurante, proporcionando uma plataforma de fácil navegação e uma experiência digital envolvente para os visitantes.',
+                    technologies: [
+                        'React',
+                        'Typescript',
+                        'Javascript',
+                        'Nodejs'
+                    ],
+                    image: '',
+                    preview: 'https://zaptus-site-restaurante.vercel.app/',
+                    github: '',
+                    video: ''
+                },
+                {
+                    title: 'Elite Fitness',
+                    star: false,
+                    description:
+                        '"Descubra o Poder da Natureza" é um template pronto, projetado para exibir produtos naturais e promover o bem-estar. Ele oferece uma estrutura funcional e visualmente atraente, que pode ser personalizada conforme as necessidades do projeto, economizando tempo e garantindo uma navegação eficiente para os visitantes.',
+                    technologies: [
+                        'React',
+                        'Typescript',
+                        'Javascript',
+                        'Nodejs'
+                    ],
+                    image: '',
+                    preview: 'https://zaptus-natural.vercel.app/',
                     github: '',
                     video: ''
                 }
