@@ -314,7 +314,7 @@ export const useLandingStore = defineStore('landing', {
                         'Nodejs'
                     ],
                     image: '',
-                    preview: 'https://zaptus-academia.vercel.app/',
+                    preview: 'https://zaptus-natural.vercel.app/',
                     github: '',
                     video: ''
                 },
@@ -346,7 +346,7 @@ export const useLandingStore = defineStore('landing', {
                         'Nodejs'
                     ],
                     image: '',
-                    preview: 'https://zaptus-natural.vercel.app/',
+                    preview: 'https://zaptus-academia.vercel.app/',
                     github: '',
                     video: ''
                 }
