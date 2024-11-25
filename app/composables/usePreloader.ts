@@ -1,10 +1,25 @@
-export const usePreloader = () => {
-    const nuxtApp = useNuxtApp()
-    const { $preloader } = nuxtApp
+interface PreloaderState {
+    isLoading: boolean
+}
 
-    if (!$preloader) {
-        throw new Error('Preloader plugin not installed')
+export const usePreloader = () => {
+    const state = useState<PreloaderState>('preloader', () => ({
+        isLoading: true
+    }))
+
+    const show = () => {
+        state.value.isLoading = true
     }
 
-    return $preloader
+    const hide = () => {
+        state.value.isLoading = false
+    }
+
+    const getState = () => state.value
+
+    return {
+        show,
+        hide,
+        getState
+    }
 }

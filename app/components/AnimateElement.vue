@@ -66,7 +66,7 @@
 
     // Only animate when element is visible AND preloader is ready
     const shouldAnimate = computed(
-        () => isVisible.value && preloaderState.isReady
+        () => isVisible.value && !preloaderState.isLoading
     )
 
     const animationMap = {

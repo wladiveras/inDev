@@ -1,36 +1,33 @@
-<!-- components/PreloaderOverlay.vue -->
 <template>
-    <Transition
-        enter-active-class="transition-opacity duration-500"
-        enter-from-class="opacity-0"
-        enter-to-class="opacity-100"
-        leave-active-class="transition-opacity duration-500"
-        leave-from-class="opacity-100"
-        leave-to-class="opacity-0"
-    >
+    <div :class="[customClass, 'min-h-screen transition-colors duration-200']">
         <div
             v-if="show"
-            class="fixed inset-0 z-100 flex items-top mt-50 justify-center backdrop-blur bg-white dark:bg-slate-900"
-            :class="customClass"
+            class="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-slate-900"
         >
-            <div class="text-center">
-                <LogoType
-                    width="400"
-                    height="400"
-                />
+            <div class="flex flex-col items-center">
+                <div class="text-center w-1/1">
+                    <LogoType
+                        width="400"
+                        height="400"
+                    />
+                </div>
+
+                <div class="text-center">
+                    <div
+                        class="animate-spin rounded-full h-12 w-12 border-4 border-primary m-auto bg-primary border-t-transparent"
+                    />
+                </div>
             </div>
         </div>
-        <div v-else>
+        <div :class="{ 'opacity-50': show }">
             <slot />
         </div>
-    </Transition>
+    </div>
 </template>
 
 <script lang="ts" setup>
-    import LogoType from './LogoType.vue'
-
     defineProps<{
-        customClass?: string | Record<string, boolean>
         show: boolean
+        customClass?: string
     }>()
 </script>

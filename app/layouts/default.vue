@@ -1,20 +1,20 @@
 <template>
-    <LazyPreloaderOverlay
+    <PreloaderOverlay
         :custom-class="preloaderClass"
         :show="preloaderState.isLoading"
     >
-        <LazyDefaultHeader />
-        <LazyUContainer>
+        <DefaultHeader />
+        <UContainer>
             <slot />
-        </LazyUContainer>
-        <LazyDefaultFooter />
-    </LazyPreloaderOverlay>
+        </UContainer>
+        <DefaultFooter />
+    </PreloaderOverlay>
 </template>
 
 <script lang="ts" setup>
     const preloader = usePreloader()
     const preloaderState = preloader.getState()
-    const currentLayout = ref('')
+    const currentLayout = ref('default')
 
     const preloaderClass = computed(() =>
         currentLayout.value === 'default'
@@ -28,5 +28,3 @@
         })
     })
 </script>
-
-<style></style>
