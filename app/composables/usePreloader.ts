@@ -4,7 +4,7 @@ interface PreloaderState {
 
 export const usePreloader = () => {
     const state = useState<PreloaderState>('preloader', () => ({
-        isLoading: true
+        isLoading: false
     }))
 
     const show = () => {

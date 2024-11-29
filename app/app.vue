@@ -50,14 +50,19 @@
 </script>
 
 <template>
-    <UApp>
-        <NuxtLoadingIndicator />
-        <NuxtRouteAnnouncer />
-        <NuxtLayout>
-            <NuxtPage :page-key="(route) => route.fullPath" />
-        </NuxtLayout>
-        <!-- <UNotifications /> -->
-    </UApp>
+    <NuxtPwaManifest />
+    <NuxtLoadingIndicator />
+    <NuxtRouteAnnouncer />
+    <ClientOnly>
+        <UApp>
+            <CheckPwa />
+
+            <NuxtLayout>
+                <NuxtPage />
+            </NuxtLayout>
+        </UApp>
+    </ClientOnly>
+    <!-- <UNotifications /> -->
 </template>
 
 <style>

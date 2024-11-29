@@ -27,6 +27,7 @@
         "@nuxthub/core": "^0.8.7",
         "@nuxtjs/eslint-module": "^4.1.0",
         "@pinia/nuxt": "^0.7.0",
+        "@vite-pwa/nuxt": "^0.10.6",
         "@vitejs/plugin-vue": "^5.2.0",
         "animate.css": "^4.1.1",
         "drizzle-orm": "^0.36.4",
@@ -39,10 +40,6 @@
         "zod": "^3.23.8"
     },
     "devDependencies": {
-        "@iconify-json/heroicons": "^1.2.1",
-        "@iconify-json/hugeicons": "^1.2.1",
-        "@iconify-json/line-md": "^1.2.2",
-        "@iconify-json/mdi": "^1.2.1",
         "@nuxt/test-utils": "^3.14.4",
         "@vitest/ui": "2.1.5",
         "@vue/test-utils": "^2.4.6",

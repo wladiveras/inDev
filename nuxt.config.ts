@@ -6,6 +6,7 @@ export default defineNuxtConfig({
         '@nuxt/image',
         '@nuxt/eslint',
         '@nuxthub/core',
+        '@vite-pwa/nuxt',
         '@nuxt/test-utils/module'
     ],
 
@@ -115,5 +116,8 @@ export default defineNuxtConfig({
                 }
             }
         }
+    },
+    pwa: {
+        /* your pwa options */
     }
 })

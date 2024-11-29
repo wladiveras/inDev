@@ -28,7 +28,7 @@
                 </template>
 
                 <template #resume-label>
-                    <div class="flex items-center gap-5">
+                    <div class="flex items-center justify-right gap-3">
                         <SetTheme />
                         <SetColor />
 
