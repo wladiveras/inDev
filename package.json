@@ -26,7 +26,7 @@
         "@nuxt/ui": "3.0.0-alpha.9",
         "@nuxthub/core": "^0.8.7",
         "@nuxtjs/eslint-module": "^4.1.0",
-        "@pinia/nuxt": "^0.7.0",
+        "@pinia/nuxt": "^0.8.0",
         "@vitejs/plugin-vue": "^5.2.1",
         "animate.css": "^4.1.1",
         "drizzle-orm": "^0.36.4",
@@ -48,11 +48,11 @@
         "@vue/test-utils": "^2.4.6",
         "drizzle-kit": "^0.28.1",
         "eslint-plugin-nuxt": "^4.0.0",
-        "happy-dom": "^15.11.6",
+        "happy-dom": "^15.11.7",
         "playwright-core": "^1.49.0",
         "prettier": "^3.4.1",
         "vitest": "^2.1.6",
         "wrangler": "^3.91.0"
     },
-    "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387"
+    "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab"
 }
