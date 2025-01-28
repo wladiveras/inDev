@@ -27,7 +27,7 @@
         "@vite-pwa/nuxt": "^0.10.6",
         "@vitejs/plugin-vue": "^5.2.1",
         "animate.css": "^4.1.1",
-        "jsdom": "^25.0.1",
+        "jsdom": "^26.0.0",
         "jspdf": "^2.5.2",
         "nuxt": "^3.14.1592",
         "tailwindcss": "4.0.0-beta.4",
