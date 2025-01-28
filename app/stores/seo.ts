@@ -4,7 +4,7 @@ export const useSeoStore = defineStore('seo', {
         titleCallback: 'Wladi Veras • Desenvolvedor Fullstack',
         website: 'https://wladi.com.br',
         keywords:
-            'Wlad, Wladi, GTA, GTA RP, GTA ROLEPLAY, RP, roleplay, Laravel, Vue.js, Nuxt.js, PHP, Tailwind CSS, Bootstrap, frameworks, bibliotecas, programador, desenvolvedor, fullstack, backend, frontend, back-end, front-end, ia, inteligencia artificial, responsivo, profissional de TI, profissional',
+            'Vlad, Vladi, Vladi Veras, Wlad, Wladi, GTA, GTA RP, GTA ROLEPLAY, RP, roleplay, Laravel, Vue.js, Nuxt.js, PHP, Tailwind CSS, Bootstrap, frameworks, bibliotecas, programador, desenvolvedor, fullstack, backend, frontend, back-end, front-end, ia, inteligencia artificial, responsivo, profissional de TI, profissional',
         description:
             'Desenvolvedor Fullstack com 8 anos experiência em Laravel, Vue.js, Nuxt.js, PHP, Tailwind CSS, Bootstrap, e outros frameworks e bibliotecas.',
         image: '/images/seo.png'
