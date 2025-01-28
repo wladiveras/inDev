@@ -13,6 +13,7 @@
         <section
             class="flex flex-col gap-4 font-thin justify-center items-center px-5"
         >
+            <DefaultExperiences />
             <article class="flex flex-col gap-6">
                 <UTabs
                     :items="experience.content"

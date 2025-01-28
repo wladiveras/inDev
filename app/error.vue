@@ -15,8 +15,9 @@
     })
 
     useSeoMeta({
-        title: 'Page not found',
-        description: 'We are sorry but this page could not be found.'
+        title: 'Pagina não encontrada.',
+        description:
+            'Nos desculpe, a página que você está procurando não foi encontrada.'
     })
 </script>
 

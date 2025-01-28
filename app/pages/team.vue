@@ -1,7 +1,7 @@
 <template>
-    <section>
+    <UPage>
         <DefaultTeam />
-    </section>
+    </UPage>
 </template>
 
 <script setup lang="ts">

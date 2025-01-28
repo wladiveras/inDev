@@ -1,7 +1,9 @@
 <script setup lang="ts">
+    import * as locales from '@nuxt/ui/locale'
     import favicon from '~/assets/images/favicon.svg'
 
     const seoStore = useSeoStore()
+    const { locale } = useI18n()
 
     useSeoMeta({
         titleTemplate: (title) => {
@@ -50,19 +52,25 @@
 </script>
 
 <template>
-    <NuxtPwaManifest />
-    <NuxtLoadingIndicator />
-    <NuxtRouteAnnouncer />
-    <ClientOnly>
-        <UApp>
+    <UApp :locale="locales[locale]">
+        <ClientOnly>
             <CheckPwa />
+        </ClientOnly>
 
+        <NuxtPwaManifest />
+        <NuxtLoadingIndicator />
+        <NuxtRouteAnnouncer />
+
+        <UMain>
             <NuxtLayout>
+                <DefaultHeader />
                 <NuxtPage />
+                <DefaultFooter />
             </NuxtLayout>
-        </UApp>
-    </ClientOnly>
-    <!-- <UNotifications /> -->
+        </UMain>
+
+        <!-- <UNotifications /> -->
+    </UApp>
 </template>
 
 <style>

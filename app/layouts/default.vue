@@ -1,11 +1,7 @@
 <template>
-    <main>
-        <DefaultHeader />
-        <UContainer>
-            <slot />
-        </UContainer>
-        <DefaultFooter />
-    </main>
+    <div>
+        <slot />
+    </div>
 </template>
 
 <script setup lang="ts"></script>

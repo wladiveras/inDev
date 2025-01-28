@@ -2,10 +2,11 @@
 export default defineNuxtConfig({
     modules: [
         '@pinia/nuxt',
-        '@nuxt/ui',
+        '@nuxt/ui-pro',
         '@nuxt/image',
         '@nuxt/eslint',
         '@nuxthub/core',
+        '@nuxtjs/i18n',
         '@vite-pwa/nuxt',
         '@nuxt/test-utils/module'
     ],
@@ -22,6 +23,8 @@ export default defineNuxtConfig({
     app: {
         pageTransition: { name: 'page', mode: 'out-in' }
     },
+
+    css: ['~/assets/css/main.css'],
 
     colorMode: {
         preference: 'dark'
@@ -53,6 +56,7 @@ export default defineNuxtConfig({
         experimental: {
             tasks: true
         },
+
         cloudflare: {
             pages: {
                 routes: {
@@ -60,6 +64,7 @@ export default defineNuxtConfig({
                 }
             }
         },
+
         prerender: {
             routes: ['/'],
             crawlLinks: true
@@ -96,6 +101,23 @@ export default defineNuxtConfig({
         }
     },
 
+    i18n: {
+        locales: [
+            {
+                code: 'pt',
+                name: 'Português'
+            },
+            {
+                code: 'en',
+                name: 'English'
+            },
+            {
+                code: 'es',
+                name: 'Español'
+            }
+        ]
+    },
+
     image: {
         provider: 'ipx',
         format: ['webp', 'avif'],
@@ -117,7 +139,9 @@ export default defineNuxtConfig({
             }
         }
     },
-    pwa: {
-        /* your pwa options */
+    pwa: {},
+
+    uiPro: {
+        license: process.env.NUXT_UI_PRO_LICENSE
     }
 })
