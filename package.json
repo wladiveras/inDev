@@ -28,7 +28,7 @@
         "@vitejs/plugin-vue": "^5.2.1",
         "animate.css": "^4.1.1",
         "jsdom": "^25.0.1",
-        "jspdf": "^2.5.2",
+        "jspdf": "^3.0.0",
         "nuxt": "^3.14.1592",
         "tailwindcss": "4.0.0-beta.4",
         "vue": "latest",
