@@ -41,7 +41,7 @@
         "@nuxt/test-utils": "^3.15.1",
         "@nuxthub/core": "^0.8.10",
         "@nuxtjs/eslint-module": "^4.1.0",
-        "@vitest/ui": "2.1.6",
+        "@vitest/ui": "3.0.7",
         "@vue/test-utils": "^2.4.6",
         "drizzle-kit": "^0.28.1",
         "drizzle-orm": "^0.36.4",
@@ -49,7 +49,7 @@
         "happy-dom": "^15.11.7",
         "playwright-core": "^1.49.1",
         "prettier": "^3.4.2",
-        "vitest": "^2.1.8",
+        "vitest": "^3.0.7",
         "wrangler": "^3.99.0"
     },
     "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab"
